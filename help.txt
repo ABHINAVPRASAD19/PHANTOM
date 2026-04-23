@@ -1,0 +1,32 @@
+Open it in opera
+
+pip3 install -r requirements.txt
+
+cd "/Users/abhinavprasad/Downloads/HACKATHON/1ST SOLUTION GDC/"
+
+python3 server/main.py
+
+open -a "Opera" http://localhost:8000
+
+
+In WINDOWS :
+
+cd C:\path\to\downloaded-project
+
+pip install -r requirements.txt
+
+python server/main.py
+
+# To open in default browser:
+start http://localhost:8000
+
+# To specifically open in Opera (if installed):
+start opera http://localhost:8000
+
+
+
+If it doesn’t work:
+
+./start_server.sh
+
+kill -9 $(lsof -t -i:8000)
