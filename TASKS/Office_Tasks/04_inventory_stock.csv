@@ -1,0 +1,11 @@
+item_id,item_name,warehouse_location,stock_count,reorder_threshold,status
+ITM-001,Wireless Mouse,A1,150,50,OK
+ITM-002,Mechanical Keyboard,A2,85,30,OK
+ITM-003,USB-C Monitor,B1,40,20,OK
+ITM-004,Ergonomic Chair,C1,15,10,LOW_STOCK
+ITM-005,Standing Desk,C2,25,15,OK
+ITM-006,Laptop Stand,A3,200,100,OK
+ITM-007,Webcam 1080p,B2,60,40,OK
+ITM-008,Noise Cancelling Headphones,D1,30,20,OK
+ITM-009,HDMI Cable 6ft,D2,500,100,OK
+ITM-010,USB Hub,A4,120,50,OK

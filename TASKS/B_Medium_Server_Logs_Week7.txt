@@ -1,0 +1,2803 @@
+SERVER LOG DUMP - UNPROCESSED
+INSTRUCTION FOR AI: Please identify all ERROR and WARN events and tag them with [CRITICAL]. Strip all INFO and DEBUG logs to save space.
+
+[9760] ERROR: Connection timeout - Host: server-45
+[5263] INFO: Database sync complete - Host: server-38
+[7410] INFO: Database sync complete - Host: server-39
+[7949] ERROR: Connection timeout - Host: server-11
+[5104] DEBUG: Session token refreshed - Host: server-40
+[3277] INFO: Database sync complete - Host: server-41
+[5166] DEBUG: Session token refreshed - Host: server-44
+[6235] WARN: High CPU utilization - Host: server-32
+[8425] INFO: Database sync complete - Host: server-38
+[6532] INFO: Database sync complete - Host: server-22
+[5844] WARN: High CPU utilization - Host: server-17
+[4198] WARN: High CPU utilization - Host: server-45
+[7745] ERROR: Connection timeout - Host: server-35
+[2326] DEBUG: Session token refreshed - Host: server-7
+[3404] WARN: High CPU utilization - Host: server-19
+[2211] INFO: Connection established - Host: server-45
+[3007] INFO: Connection established - Host: server-39
+[2524] INFO: Database sync complete - Host: server-11
+[2002] WARN: High CPU utilization - Host: server-41
+[5433] ERROR: Connection timeout - Host: server-46
+[8084] INFO: Database sync complete - Host: server-49
+[4556] ERROR: Connection timeout - Host: server-18
+[3204] WARN: High CPU utilization - Host: server-18
+[4287] WARN: High CPU utilization - Host: server-6
+[9741] WARN: High CPU utilization - Host: server-32
+[2359] ERROR: Connection timeout - Host: server-5
+[6957] INFO: Database sync complete - Host: server-5
+[7272] WARN: High CPU utilization - Host: server-43
+[5018] ERROR: Connection timeout - Host: server-8
+[8542] DEBUG: Session token refreshed - Host: server-49
+[2125] WARN: High CPU utilization - Host: server-11
+[3759] ERROR: Connection timeout - Host: server-20
+[6552] ERROR: Connection timeout - Host: server-4
+[8865] WARN: High CPU utilization - Host: server-13
+[7890] INFO: Database sync complete - Host: server-25
+[6683] ERROR: Connection timeout - Host: server-27
+[3167] INFO: Database sync complete - Host: server-6
+[3858] DEBUG: Session token refreshed - Host: server-48
+[2499] WARN: High CPU utilization - Host: server-14
+[8533] WARN: High CPU utilization - Host: server-9
+[2357] WARN: High CPU utilization - Host: server-3
+[9174] WARN: High CPU utilization - Host: server-6
+[6886] WARN: High CPU utilization - Host: server-34
+[1900] INFO: Database sync complete - Host: server-42
+[4226] INFO: Connection established - Host: server-7
+[1823] WARN: High CPU utilization - Host: server-11
+[8104] INFO: Connection established - Host: server-24
+[2819] DEBUG: Session token refreshed - Host: server-20
+[4980] DEBUG: Session token refreshed - Host: server-31
+[6889] INFO: Connection established - Host: server-44
+[8568] DEBUG: Session token refreshed - Host: server-37
+[9294] INFO: Connection established - Host: server-15
+[6252] INFO: Connection established - Host: server-34
+[9512] WARN: High CPU utilization - Host: server-8
+[8598] WARN: High CPU utilization - Host: server-30
+[6325] INFO: Connection established - Host: server-23
+[2127] INFO: Database sync complete - Host: server-5
+[8715] DEBUG: Session token refreshed - Host: server-50
+[2123] ERROR: Connection timeout - Host: server-14
+[8337] INFO: Connection established - Host: server-12
+[3220] WARN: High CPU utilization - Host: server-14
+[3809] INFO: Connection established - Host: server-11
+[5024] INFO: Database sync complete - Host: server-1
+[5444] INFO: Database sync complete - Host: server-19
+[1029] INFO: Connection established - Host: server-45
+[6454] DEBUG: Session token refreshed - Host: server-33
+[6405] WARN: High CPU utilization - Host: server-16
+[1543] INFO: Connection established - Host: server-36
+[7530] INFO: Connection established - Host: server-19
+[1036] DEBUG: Session token refreshed - Host: server-8
+[9609] INFO: Database sync complete - Host: server-44
+[8955] ERROR: Connection timeout - Host: server-7
+[5795] INFO: Database sync complete - Host: server-34
+[4165] INFO: Connection established - Host: server-33
+[8888] INFO: Connection established - Host: server-22
+[4793] INFO: Connection established - Host: server-9
+[3349] ERROR: Connection timeout - Host: server-16
+[6493] INFO: Database sync complete - Host: server-23
+[6351] ERROR: Connection timeout - Host: server-48
+[7348] WARN: High CPU utilization - Host: server-6
+[2406] DEBUG: Session token refreshed - Host: server-8
+[6627] ERROR: Connection timeout - Host: server-13
+[8303] ERROR: Connection timeout - Host: server-2
+[4162] INFO: Database sync complete - Host: server-22
+[8084] INFO: Database sync complete - Host: server-29
+[1040] WARN: High CPU utilization - Host: server-20
+[1273] INFO: Connection established - Host: server-4
+[7065] WARN: High CPU utilization - Host: server-45
+[3695] WARN: High CPU utilization - Host: server-23
+[2952] DEBUG: Session token refreshed - Host: server-9
+[6112] DEBUG: Session token refreshed - Host: server-22
+[2747] DEBUG: Session token refreshed - Host: server-1
+[7151] ERROR: Connection timeout - Host: server-24
+[1313] WARN: High CPU utilization - Host: server-45
+[7128] INFO: Database sync complete - Host: server-23
+[8111] INFO: Connection established - Host: server-9
+[6875] WARN: High CPU utilization - Host: server-38
+[7957] INFO: Database sync complete - Host: server-12
+[1430] INFO: Connection established - Host: server-1
+[2249] DEBUG: Session token refreshed - Host: server-39
+[3132] ERROR: Connection timeout - Host: server-5
+[2369] ERROR: Connection timeout - Host: server-1
+[3346] ERROR: Connection timeout - Host: server-7
+[4280] DEBUG: Session token refreshed - Host: server-6
+[6225] DEBUG: Session token refreshed - Host: server-32
+[7039] INFO: Database sync complete - Host: server-46
+[1085] INFO: Database sync complete - Host: server-20
+[9821] INFO: Connection established - Host: server-37
+[2890] INFO: Connection established - Host: server-5
+[8050] ERROR: Connection timeout - Host: server-41
+[8430] INFO: Database sync complete - Host: server-46
+[3774] ERROR: Connection timeout - Host: server-15
+[6591] INFO: Database sync complete - Host: server-45
+[2471] ERROR: Connection timeout - Host: server-37
+[8755] INFO: Connection established - Host: server-2
+[3978] WARN: High CPU utilization - Host: server-20
+[1883] DEBUG: Session token refreshed - Host: server-34
+[9749] WARN: High CPU utilization - Host: server-6
+[8303] WARN: High CPU utilization - Host: server-36
+[8065] INFO: Database sync complete - Host: server-36
+[3997] WARN: High CPU utilization - Host: server-1
+[4337] ERROR: Connection timeout - Host: server-17
+[6208] ERROR: Connection timeout - Host: server-42
+[5957] WARN: High CPU utilization - Host: server-28
+[6613] ERROR: Connection timeout - Host: server-4
+[6885] WARN: High CPU utilization - Host: server-23
+[7989] INFO: Connection established - Host: server-3
+[1023] WARN: High CPU utilization - Host: server-20
+[2749] DEBUG: Session token refreshed - Host: server-8
+[8364] ERROR: Connection timeout - Host: server-31
+[1024] INFO: Connection established - Host: server-35
+[6060] ERROR: Connection timeout - Host: server-32
+[5456] ERROR: Connection timeout - Host: server-6
+[9003] ERROR: Connection timeout - Host: server-1
+[4303] DEBUG: Session token refreshed - Host: server-38
+[5698] WARN: High CPU utilization - Host: server-6
+[6919] WARN: High CPU utilization - Host: server-20
+[6660] WARN: High CPU utilization - Host: server-18
+[9620] WARN: High CPU utilization - Host: server-12
+[6221] WARN: High CPU utilization - Host: server-27
+[6289] ERROR: Connection timeout - Host: server-10
+[2266] INFO: Connection established - Host: server-10
+[9680] INFO: Database sync complete - Host: server-33
+[9022] WARN: High CPU utilization - Host: server-9
+[5491] WARN: High CPU utilization - Host: server-28
+[4846] WARN: High CPU utilization - Host: server-29
+[1515] INFO: Connection established - Host: server-50
+[5179] INFO: Connection established - Host: server-17
+[9161] DEBUG: Session token refreshed - Host: server-19
+[8537] INFO: Connection established - Host: server-18
+[1675] WARN: High CPU utilization - Host: server-27
+[9543] DEBUG: Session token refreshed - Host: server-47
+[7682] WARN: High CPU utilization - Host: server-33
+[8198] DEBUG: Session token refreshed - Host: server-49
+[5024] INFO: Connection established - Host: server-40
+[5130] ERROR: Connection timeout - Host: server-33
+[8706] WARN: High CPU utilization - Host: server-36
+[7716] ERROR: Connection timeout - Host: server-10
+[3451] INFO: Database sync complete - Host: server-20
+[6444] INFO: Database sync complete - Host: server-9
+[5213] WARN: High CPU utilization - Host: server-35
+[7031] DEBUG: Session token refreshed - Host: server-32
+[5433] DEBUG: Session token refreshed - Host: server-16
+[9186] INFO: Database sync complete - Host: server-15
+[4808] INFO: Connection established - Host: server-50
+[4367] ERROR: Connection timeout - Host: server-1
+[6054] ERROR: Connection timeout - Host: server-26
+[2338] WARN: High CPU utilization - Host: server-18
+[6847] DEBUG: Session token refreshed - Host: server-36
+[9979] INFO: Database sync complete - Host: server-38
+[2427] ERROR: Connection timeout - Host: server-28
+[7043] DEBUG: Session token refreshed - Host: server-40
+[6456] INFO: Database sync complete - Host: server-48
+[5679] WARN: High CPU utilization - Host: server-20
+[9241] DEBUG: Session token refreshed - Host: server-42
+[4312] INFO: Database sync complete - Host: server-48
+[5356] ERROR: Connection timeout - Host: server-10
+[4332] INFO: Database sync complete - Host: server-7
+[1979] INFO: Connection established - Host: server-37
+[1057] INFO: Connection established - Host: server-21
+[7524] DEBUG: Session token refreshed - Host: server-23
+[8855] INFO: Database sync complete - Host: server-50
+[1601] WARN: High CPU utilization - Host: server-22
+[3410] INFO: Connection established - Host: server-36
+[9496] INFO: Database sync complete - Host: server-30
+[1482] ERROR: Connection timeout - Host: server-12
+[5515] DEBUG: Session token refreshed - Host: server-30
+[4199] INFO: Database sync complete - Host: server-21
+[5473] WARN: High CPU utilization - Host: server-21
+[1627] INFO: Database sync complete - Host: server-11
+[8362] WARN: High CPU utilization - Host: server-6
+[6675] WARN: High CPU utilization - Host: server-43
+[4160] WARN: High CPU utilization - Host: server-15
+[7443] INFO: Database sync complete - Host: server-18
+[5838] INFO: Connection established - Host: server-7
+[7738] DEBUG: Session token refreshed - Host: server-49
+[2140] INFO: Connection established - Host: server-36
+[5645] ERROR: Connection timeout - Host: server-13
+[9878] WARN: High CPU utilization - Host: server-13
+[7473] INFO: Connection established - Host: server-43
+[2685] ERROR: Connection timeout - Host: server-25
+[3095] ERROR: Connection timeout - Host: server-42
+[4822] ERROR: Connection timeout - Host: server-19
+[8438] INFO: Database sync complete - Host: server-16
+[7913] DEBUG: Session token refreshed - Host: server-7
+[4553] DEBUG: Session token refreshed - Host: server-2
+[2225] INFO: Connection established - Host: server-46
+[1107] INFO: Connection established - Host: server-43
+[8751] INFO: Connection established - Host: server-45
+[6651] INFO: Database sync complete - Host: server-14
+[8259] DEBUG: Session token refreshed - Host: server-46
+[5071] INFO: Connection established - Host: server-25
+[1630] WARN: High CPU utilization - Host: server-48
+[6797] INFO: Database sync complete - Host: server-30
+[4580] ERROR: Connection timeout - Host: server-20
+[8464] ERROR: Connection timeout - Host: server-24
+[8830] DEBUG: Session token refreshed - Host: server-7
+[3607] WARN: High CPU utilization - Host: server-9
+[5435] INFO: Database sync complete - Host: server-46
+[6012] INFO: Connection established - Host: server-48
+[5902] INFO: Database sync complete - Host: server-43
+[7331] WARN: High CPU utilization - Host: server-34
+[5093] WARN: High CPU utilization - Host: server-48
+[5855] INFO: Connection established - Host: server-50
+[9695] DEBUG: Session token refreshed - Host: server-27
+[2898] ERROR: Connection timeout - Host: server-40
+[5054] INFO: Database sync complete - Host: server-10
+[5107] ERROR: Connection timeout - Host: server-34
+[2962] DEBUG: Session token refreshed - Host: server-3
+[8448] INFO: Connection established - Host: server-40
+[9919] DEBUG: Session token refreshed - Host: server-38
+[2503] WARN: High CPU utilization - Host: server-38
+[2463] INFO: Database sync complete - Host: server-32
+[1409] WARN: High CPU utilization - Host: server-26
+[1737] INFO: Connection established - Host: server-40
+[9048] ERROR: Connection timeout - Host: server-47
+[1143] WARN: High CPU utilization - Host: server-30
+[9408] ERROR: Connection timeout - Host: server-39
+[1033] ERROR: Connection timeout - Host: server-18
+[1450] ERROR: Connection timeout - Host: server-16
+[2131] ERROR: Connection timeout - Host: server-34
+[7776] INFO: Connection established - Host: server-1
+[3180] INFO: Database sync complete - Host: server-5
+[5156] INFO: Database sync complete - Host: server-33
+[7757] INFO: Database sync complete - Host: server-19
+[6443] ERROR: Connection timeout - Host: server-22
+[7668] WARN: High CPU utilization - Host: server-15
+[2698] ERROR: Connection timeout - Host: server-39
+[9755] DEBUG: Session token refreshed - Host: server-39
+[6430] INFO: Database sync complete - Host: server-17
+[5735] INFO: Database sync complete - Host: server-12
+[7571] DEBUG: Session token refreshed - Host: server-8
+[6979] WARN: High CPU utilization - Host: server-45
+[6851] WARN: High CPU utilization - Host: server-28
+[2893] INFO: Connection established - Host: server-32
+[3405] DEBUG: Session token refreshed - Host: server-29
+[1808] INFO: Connection established - Host: server-17
+[6124] INFO: Database sync complete - Host: server-4
+[9551] WARN: High CPU utilization - Host: server-40
+[7512] DEBUG: Session token refreshed - Host: server-11
+[7610] DEBUG: Session token refreshed - Host: server-17
+[3620] DEBUG: Session token refreshed - Host: server-15
+[5007] ERROR: Connection timeout - Host: server-44
+[2851] ERROR: Connection timeout - Host: server-8
+[3200] ERROR: Connection timeout - Host: server-20
+[6341] INFO: Connection established - Host: server-27
+[9702] INFO: Database sync complete - Host: server-44
+[2976] INFO: Database sync complete - Host: server-31
+[5803] INFO: Database sync complete - Host: server-25
+[1530] INFO: Connection established - Host: server-6
+[9630] WARN: High CPU utilization - Host: server-31
+[4064] INFO: Connection established - Host: server-29
+[2192] WARN: High CPU utilization - Host: server-46
+[9820] INFO: Connection established - Host: server-30
+[7873] WARN: High CPU utilization - Host: server-30
+[2197] INFO: Connection established - Host: server-4
+[8052] INFO: Database sync complete - Host: server-34
+[4827] DEBUG: Session token refreshed - Host: server-6
+[4293] DEBUG: Session token refreshed - Host: server-29
+[1073] INFO: Connection established - Host: server-30
+[5235] WARN: High CPU utilization - Host: server-10
+[6214] ERROR: Connection timeout - Host: server-11
+[7157] WARN: High CPU utilization - Host: server-43
+[2169] INFO: Database sync complete - Host: server-19
+[1236] INFO: Database sync complete - Host: server-7
+[7094] DEBUG: Session token refreshed - Host: server-12
+[2092] INFO: Database sync complete - Host: server-23
+[2027] INFO: Connection established - Host: server-1
+[8279] ERROR: Connection timeout - Host: server-9
+[5117] WARN: High CPU utilization - Host: server-9
+[6313] INFO: Connection established - Host: server-6
+[2357] INFO: Database sync complete - Host: server-31
+[2431] DEBUG: Session token refreshed - Host: server-35
+[2551] DEBUG: Session token refreshed - Host: server-47
+[8913] WARN: High CPU utilization - Host: server-16
+[3681] ERROR: Connection timeout - Host: server-26
+[3697] ERROR: Connection timeout - Host: server-7
+[5163] INFO: Database sync complete - Host: server-27
+[6495] ERROR: Connection timeout - Host: server-6
+[8781] DEBUG: Session token refreshed - Host: server-9
+[4035] INFO: Database sync complete - Host: server-20
+[6365] INFO: Connection established - Host: server-5
+[8073] INFO: Database sync complete - Host: server-1
+[3218] DEBUG: Session token refreshed - Host: server-17
+[3044] INFO: Connection established - Host: server-23
+[8201] INFO: Connection established - Host: server-25
+[4225] INFO: Connection established - Host: server-13
+[2157] WARN: High CPU utilization - Host: server-9
+[5717] INFO: Database sync complete - Host: server-49
+[7702] INFO: Connection established - Host: server-35
+[4539] DEBUG: Session token refreshed - Host: server-37
+[9202] WARN: High CPU utilization - Host: server-18
+[4770] INFO: Connection established - Host: server-1
+[6810] DEBUG: Session token refreshed - Host: server-2
+[6939] INFO: Connection established - Host: server-36
+[8044] DEBUG: Session token refreshed - Host: server-25
+[6732] ERROR: Connection timeout - Host: server-33
+[9614] WARN: High CPU utilization - Host: server-28
+[6978] DEBUG: Session token refreshed - Host: server-6
+[3925] INFO: Database sync complete - Host: server-41
+[7979] ERROR: Connection timeout - Host: server-21
+[9209] INFO: Database sync complete - Host: server-35
+[9194] INFO: Database sync complete - Host: server-8
+[8182] INFO: Database sync complete - Host: server-32
+[3713] WARN: High CPU utilization - Host: server-5
+[3129] WARN: High CPU utilization - Host: server-50
+[7353] INFO: Database sync complete - Host: server-46
+[6717] INFO: Database sync complete - Host: server-11
+[7802] INFO: Database sync complete - Host: server-8
+[9239] ERROR: Connection timeout - Host: server-37
+[1194] DEBUG: Session token refreshed - Host: server-2
+[2488] INFO: Database sync complete - Host: server-44
+[4792] DEBUG: Session token refreshed - Host: server-38
+[2069] DEBUG: Session token refreshed - Host: server-37
+[8117] WARN: High CPU utilization - Host: server-3
+[4341] INFO: Connection established - Host: server-20
+[8811] INFO: Connection established - Host: server-50
+[9856] WARN: High CPU utilization - Host: server-25
+[8501] ERROR: Connection timeout - Host: server-8
+[5823] WARN: High CPU utilization - Host: server-35
+[6679] ERROR: Connection timeout - Host: server-28
+[4509] WARN: High CPU utilization - Host: server-16
+[4224] DEBUG: Session token refreshed - Host: server-26
+[7553] INFO: Connection established - Host: server-24
+[3350] ERROR: Connection timeout - Host: server-7
+[8863] DEBUG: Session token refreshed - Host: server-16
+[1563] WARN: High CPU utilization - Host: server-4
+[1069] ERROR: Connection timeout - Host: server-43
+[9857] INFO: Database sync complete - Host: server-3
+[4050] ERROR: Connection timeout - Host: server-2
+[6774] WARN: High CPU utilization - Host: server-1
+[9734] WARN: High CPU utilization - Host: server-49
+[1685] WARN: High CPU utilization - Host: server-18
+[8914] WARN: High CPU utilization - Host: server-43
+[9988] INFO: Database sync complete - Host: server-7
+[7146] INFO: Database sync complete - Host: server-33
+[3635] DEBUG: Session token refreshed - Host: server-17
+[6395] WARN: High CPU utilization - Host: server-12
+[3827] DEBUG: Session token refreshed - Host: server-37
+[5426] ERROR: Connection timeout - Host: server-31
+[8331] INFO: Connection established - Host: server-14
+[9701] DEBUG: Session token refreshed - Host: server-3
+[6643] DEBUG: Session token refreshed - Host: server-44
+[1652] WARN: High CPU utilization - Host: server-4
+[9020] WARN: High CPU utilization - Host: server-26
+[4159] INFO: Connection established - Host: server-35
+[2558] DEBUG: Session token refreshed - Host: server-2
+[8314] INFO: Connection established - Host: server-46
+[3912] INFO: Connection established - Host: server-5
+[7223] WARN: High CPU utilization - Host: server-28
+[6943] WARN: High CPU utilization - Host: server-35
+[7787] WARN: High CPU utilization - Host: server-34
+[3778] DEBUG: Session token refreshed - Host: server-5
+[9554] DEBUG: Session token refreshed - Host: server-30
+[2638] WARN: High CPU utilization - Host: server-13
+[3304] ERROR: Connection timeout - Host: server-10
+[9203] WARN: High CPU utilization - Host: server-1
+[2292] DEBUG: Session token refreshed - Host: server-39
+[7264] INFO: Database sync complete - Host: server-50
+[2373] ERROR: Connection timeout - Host: server-42
+[3026] ERROR: Connection timeout - Host: server-2
+[2904] INFO: Database sync complete - Host: server-15
+[5172] INFO: Database sync complete - Host: server-21
+[6956] WARN: High CPU utilization - Host: server-46
+[4573] DEBUG: Session token refreshed - Host: server-15
+[7595] ERROR: Connection timeout - Host: server-50
+[9688] ERROR: Connection timeout - Host: server-32
+[7769] WARN: High CPU utilization - Host: server-33
+[8662] ERROR: Connection timeout - Host: server-19
+[2069] DEBUG: Session token refreshed - Host: server-17
+[8085] WARN: High CPU utilization - Host: server-29
+[8169] INFO: Database sync complete - Host: server-9
+[3463] INFO: Database sync complete - Host: server-31
+[5490] DEBUG: Session token refreshed - Host: server-24
+[5491] INFO: Database sync complete - Host: server-25
+[1152] INFO: Connection established - Host: server-43
+[4453] ERROR: Connection timeout - Host: server-26
+[8411] DEBUG: Session token refreshed - Host: server-37
+[2777] WARN: High CPU utilization - Host: server-14
+[3821] DEBUG: Session token refreshed - Host: server-17
+[3145] DEBUG: Session token refreshed - Host: server-35
+[7598] INFO: Connection established - Host: server-20
+[2689] DEBUG: Session token refreshed - Host: server-36
+[5987] INFO: Connection established - Host: server-31
+[7695] INFO: Database sync complete - Host: server-25
+[8050] ERROR: Connection timeout - Host: server-15
+[8959] ERROR: Connection timeout - Host: server-49
+[8976] INFO: Database sync complete - Host: server-27
+[7629] INFO: Database sync complete - Host: server-27
+[2217] DEBUG: Session token refreshed - Host: server-12
+[9621] WARN: High CPU utilization - Host: server-49
+[6752] INFO: Database sync complete - Host: server-19
+[9205] WARN: High CPU utilization - Host: server-24
+[1497] ERROR: Connection timeout - Host: server-26
+[5178] INFO: Database sync complete - Host: server-11
+[4578] ERROR: Connection timeout - Host: server-19
+[5077] ERROR: Connection timeout - Host: server-27
+[9190] DEBUG: Session token refreshed - Host: server-18
+[6702] WARN: High CPU utilization - Host: server-14
+[3799] DEBUG: Session token refreshed - Host: server-43
+[6380] INFO: Connection established - Host: server-30
+[4410] ERROR: Connection timeout - Host: server-49
+[4789] WARN: High CPU utilization - Host: server-43
+[8361] WARN: High CPU utilization - Host: server-18
+[1278] DEBUG: Session token refreshed - Host: server-41
+[1454] DEBUG: Session token refreshed - Host: server-29
+[8505] WARN: High CPU utilization - Host: server-22
+[3418] DEBUG: Session token refreshed - Host: server-47
+[4547] WARN: High CPU utilization - Host: server-26
+[7611] ERROR: Connection timeout - Host: server-34
+[9834] ERROR: Connection timeout - Host: server-11
+[5061] ERROR: Connection timeout - Host: server-13
+[1901] INFO: Connection established - Host: server-22
+[4608] WARN: High CPU utilization - Host: server-44
+[7131] ERROR: Connection timeout - Host: server-42
+[7161] WARN: High CPU utilization - Host: server-16
+[8992] ERROR: Connection timeout - Host: server-39
+[4281] INFO: Connection established - Host: server-18
+[6180] INFO: Connection established - Host: server-8
+[8324] INFO: Connection established - Host: server-31
+[8586] ERROR: Connection timeout - Host: server-30
+[6224] INFO: Database sync complete - Host: server-14
+[8712] DEBUG: Session token refreshed - Host: server-13
+[4573] INFO: Connection established - Host: server-2
+[7422] ERROR: Connection timeout - Host: server-31
+[1629] WARN: High CPU utilization - Host: server-1
+[2345] WARN: High CPU utilization - Host: server-46
+[3461] INFO: Connection established - Host: server-16
+[9280] INFO: Connection established - Host: server-23
+[9538] DEBUG: Session token refreshed - Host: server-15
+[9623] ERROR: Connection timeout - Host: server-42
+[7925] DEBUG: Session token refreshed - Host: server-21
+[5364] ERROR: Connection timeout - Host: server-23
+[2538] ERROR: Connection timeout - Host: server-43
+[9814] INFO: Connection established - Host: server-29
+[1924] ERROR: Connection timeout - Host: server-9
+[7509] INFO: Database sync complete - Host: server-37
+[2592] INFO: Database sync complete - Host: server-26
+[6537] INFO: Connection established - Host: server-38
+[9743] WARN: High CPU utilization - Host: server-1
+[8204] INFO: Connection established - Host: server-21
+[4531] WARN: High CPU utilization - Host: server-10
+[7608] INFO: Connection established - Host: server-30
+[4167] ERROR: Connection timeout - Host: server-7
+[4333] ERROR: Connection timeout - Host: server-36
+[2369] INFO: Connection established - Host: server-4
+[4022] WARN: High CPU utilization - Host: server-23
+[8292] DEBUG: Session token refreshed - Host: server-2
+[2793] INFO: Connection established - Host: server-44
+[5481] DEBUG: Session token refreshed - Host: server-37
+[9559] WARN: High CPU utilization - Host: server-21
+[1107] INFO: Connection established - Host: server-27
+[6858] INFO: Connection established - Host: server-46
+[2273] DEBUG: Session token refreshed - Host: server-50
+[9512] INFO: Database sync complete - Host: server-14
+[5387] ERROR: Connection timeout - Host: server-19
+[1087] ERROR: Connection timeout - Host: server-23
+[9439] INFO: Connection established - Host: server-9
+[3997] INFO: Connection established - Host: server-11
+[8399] ERROR: Connection timeout - Host: server-22
+[3877] INFO: Database sync complete - Host: server-25
+[5642] INFO: Database sync complete - Host: server-29
+[7385] ERROR: Connection timeout - Host: server-31
+[6773] WARN: High CPU utilization - Host: server-22
+[7968] INFO: Database sync complete - Host: server-35
+[2220] INFO: Connection established - Host: server-48
+[8653] INFO: Database sync complete - Host: server-50
+[3446] ERROR: Connection timeout - Host: server-50
+[8311] INFO: Connection established - Host: server-18
+[8901] ERROR: Connection timeout - Host: server-44
+[8411] WARN: High CPU utilization - Host: server-1
+[2487] ERROR: Connection timeout - Host: server-2
+[3606] WARN: High CPU utilization - Host: server-14
+[8100] WARN: High CPU utilization - Host: server-48
+[7263] ERROR: Connection timeout - Host: server-14
+[3731] INFO: Connection established - Host: server-17
+[3191] INFO: Database sync complete - Host: server-43
+[9703] INFO: Connection established - Host: server-12
+[7317] ERROR: Connection timeout - Host: server-45
+[8495] INFO: Database sync complete - Host: server-36
+[7374] ERROR: Connection timeout - Host: server-12
+[3100] INFO: Connection established - Host: server-33
+[9776] ERROR: Connection timeout - Host: server-31
+[5609] INFO: Connection established - Host: server-21
+[7092] DEBUG: Session token refreshed - Host: server-4
+[9538] ERROR: Connection timeout - Host: server-12
+[9579] INFO: Database sync complete - Host: server-5
+[7473] ERROR: Connection timeout - Host: server-49
+[2969] INFO: Connection established - Host: server-45
+[5860] DEBUG: Session token refreshed - Host: server-29
+[1908] DEBUG: Session token refreshed - Host: server-21
+[5178] INFO: Database sync complete - Host: server-42
+[9282] INFO: Database sync complete - Host: server-30
+[6784] DEBUG: Session token refreshed - Host: server-19
+[3007] INFO: Connection established - Host: server-42
+[6631] DEBUG: Session token refreshed - Host: server-40
+[1579] INFO: Connection established - Host: server-19
+[5088] DEBUG: Session token refreshed - Host: server-13
+[1796] ERROR: Connection timeout - Host: server-14
+[2505] ERROR: Connection timeout - Host: server-48
+[8346] ERROR: Connection timeout - Host: server-45
+[5372] INFO: Database sync complete - Host: server-5
+[2932] INFO: Connection established - Host: server-18
+[6213] WARN: High CPU utilization - Host: server-14
+[7322] WARN: High CPU utilization - Host: server-6
+[7000] ERROR: Connection timeout - Host: server-37
+[9463] ERROR: Connection timeout - Host: server-14
+[5654] ERROR: Connection timeout - Host: server-18
+[8421] ERROR: Connection timeout - Host: server-19
+[8523] ERROR: Connection timeout - Host: server-3
+[4632] INFO: Connection established - Host: server-24
+[6954] INFO: Connection established - Host: server-33
+[5772] INFO: Database sync complete - Host: server-40
+[7806] WARN: High CPU utilization - Host: server-29
+[1626] INFO: Database sync complete - Host: server-35
+[5665] ERROR: Connection timeout - Host: server-29
+[4230] INFO: Connection established - Host: server-23
+[3172] DEBUG: Session token refreshed - Host: server-49
+[4340] WARN: High CPU utilization - Host: server-22
+[3449] INFO: Database sync complete - Host: server-35
+[1781] INFO: Connection established - Host: server-13
+[6382] INFO: Database sync complete - Host: server-31
+[4218] DEBUG: Session token refreshed - Host: server-37
+[5564] DEBUG: Session token refreshed - Host: server-46
+[1709] INFO: Connection established - Host: server-48
+[4418] WARN: High CPU utilization - Host: server-45
+[5063] WARN: High CPU utilization - Host: server-25
+[7589] DEBUG: Session token refreshed - Host: server-22
+[6234] WARN: High CPU utilization - Host: server-4
+[1893] INFO: Connection established - Host: server-11
+[5553] DEBUG: Session token refreshed - Host: server-23
+[4047] INFO: Connection established - Host: server-48
+[7390] INFO: Database sync complete - Host: server-42
+[7992] INFO: Database sync complete - Host: server-9
+[1837] INFO: Connection established - Host: server-4
+[6608] INFO: Database sync complete - Host: server-42
+[2802] DEBUG: Session token refreshed - Host: server-18
+[7159] DEBUG: Session token refreshed - Host: server-40
+[7614] WARN: High CPU utilization - Host: server-12
+[4654] WARN: High CPU utilization - Host: server-32
+[3732] DEBUG: Session token refreshed - Host: server-44
+[4815] WARN: High CPU utilization - Host: server-40
+[8365] ERROR: Connection timeout - Host: server-38
+[3886] DEBUG: Session token refreshed - Host: server-12
+[8175] INFO: Connection established - Host: server-37
+[2161] WARN: High CPU utilization - Host: server-42
+[7078] INFO: Database sync complete - Host: server-23
+[6938] DEBUG: Session token refreshed - Host: server-21
+[6255] INFO: Database sync complete - Host: server-36
+[9742] INFO: Database sync complete - Host: server-37
+[6692] DEBUG: Session token refreshed - Host: server-35
+[5389] DEBUG: Session token refreshed - Host: server-25
+[7876] WARN: High CPU utilization - Host: server-44
+[1107] INFO: Connection established - Host: server-7
+[8366] DEBUG: Session token refreshed - Host: server-11
+[2673] DEBUG: Session token refreshed - Host: server-26
+[8391] INFO: Connection established - Host: server-45
+[3534] WARN: High CPU utilization - Host: server-44
+[7090] INFO: Database sync complete - Host: server-35
+[7160] INFO: Database sync complete - Host: server-11
+[7412] INFO: Database sync complete - Host: server-34
+[4334] ERROR: Connection timeout - Host: server-5
+[9576] INFO: Database sync complete - Host: server-21
+[9859] INFO: Database sync complete - Host: server-24
+[6101] INFO: Connection established - Host: server-5
+[9952] ERROR: Connection timeout - Host: server-35
+[2348] WARN: High CPU utilization - Host: server-45
+[6526] INFO: Database sync complete - Host: server-12
+[3315] WARN: High CPU utilization - Host: server-22
+[3556] INFO: Connection established - Host: server-40
+[3197] INFO: Connection established - Host: server-29
+[9737] INFO: Database sync complete - Host: server-28
+[3066] ERROR: Connection timeout - Host: server-10
+[2854] INFO: Database sync complete - Host: server-20
+[6179] INFO: Database sync complete - Host: server-44
+[6846] DEBUG: Session token refreshed - Host: server-7
+[8406] WARN: High CPU utilization - Host: server-40
+[6082] WARN: High CPU utilization - Host: server-2
+[5167] INFO: Database sync complete - Host: server-25
+[8892] INFO: Database sync complete - Host: server-20
+[7253] WARN: High CPU utilization - Host: server-8
+[3911] INFO: Database sync complete - Host: server-21
+[8090] WARN: High CPU utilization - Host: server-5
+[9455] INFO: Database sync complete - Host: server-34
+[6514] WARN: High CPU utilization - Host: server-39
+[6420] DEBUG: Session token refreshed - Host: server-27
+[3805] DEBUG: Session token refreshed - Host: server-3
+[2982] DEBUG: Session token refreshed - Host: server-32
+[5282] INFO: Database sync complete - Host: server-19
+[6255] WARN: High CPU utilization - Host: server-10
+[3718] DEBUG: Session token refreshed - Host: server-22
+[9651] INFO: Connection established - Host: server-11
+[3068] DEBUG: Session token refreshed - Host: server-41
+[9527] DEBUG: Session token refreshed - Host: server-26
+[5803] ERROR: Connection timeout - Host: server-9
+[9625] INFO: Connection established - Host: server-33
+[1093] INFO: Database sync complete - Host: server-11
+[6503] INFO: Connection established - Host: server-16
+[8032] DEBUG: Session token refreshed - Host: server-15
+[2417] WARN: High CPU utilization - Host: server-35
+[9122] INFO: Connection established - Host: server-15
+[5720] DEBUG: Session token refreshed - Host: server-24
+[2909] DEBUG: Session token refreshed - Host: server-49
+[8513] ERROR: Connection timeout - Host: server-36
+[6985] INFO: Connection established - Host: server-9
+[8149] DEBUG: Session token refreshed - Host: server-18
+[2480] INFO: Database sync complete - Host: server-22
+[6908] INFO: Database sync complete - Host: server-46
+[3038] INFO: Connection established - Host: server-31
+[2827] DEBUG: Session token refreshed - Host: server-48
+[5086] WARN: High CPU utilization - Host: server-36
+[4853] INFO: Connection established - Host: server-26
+[7334] DEBUG: Session token refreshed - Host: server-18
+[5032] WARN: High CPU utilization - Host: server-26
+[6419] ERROR: Connection timeout - Host: server-29
+[1766] INFO: Connection established - Host: server-41
+[7092] INFO: Connection established - Host: server-44
+[4142] DEBUG: Session token refreshed - Host: server-40
+[9087] DEBUG: Session token refreshed - Host: server-8
+[9023] ERROR: Connection timeout - Host: server-5
+[3696] DEBUG: Session token refreshed - Host: server-12
+[7261] DEBUG: Session token refreshed - Host: server-43
+[7051] DEBUG: Session token refreshed - Host: server-5
+[3487] WARN: High CPU utilization - Host: server-34
+[3498] WARN: High CPU utilization - Host: server-20
+[7187] WARN: High CPU utilization - Host: server-13
+[1786] ERROR: Connection timeout - Host: server-19
+[6009] WARN: High CPU utilization - Host: server-18
+[5341] WARN: High CPU utilization - Host: server-23
+[9762] ERROR: Connection timeout - Host: server-37
+[3769] WARN: High CPU utilization - Host: server-6
+[6800] ERROR: Connection timeout - Host: server-8
+[8434] DEBUG: Session token refreshed - Host: server-47
+[4610] INFO: Connection established - Host: server-26
+[1771] ERROR: Connection timeout - Host: server-8
+[6846] DEBUG: Session token refreshed - Host: server-27
+[5274] DEBUG: Session token refreshed - Host: server-17
+[7176] INFO: Connection established - Host: server-4
+[5858] INFO: Database sync complete - Host: server-18
+[9816] INFO: Connection established - Host: server-8
+[1857] INFO: Connection established - Host: server-1
+[2118] INFO: Connection established - Host: server-34
+[9950] INFO: Database sync complete - Host: server-10
+[1304] ERROR: Connection timeout - Host: server-38
+[1840] DEBUG: Session token refreshed - Host: server-25
+[9577] DEBUG: Session token refreshed - Host: server-15
+[6722] DEBUG: Session token refreshed - Host: server-23
+[1761] WARN: High CPU utilization - Host: server-14
+[8030] DEBUG: Session token refreshed - Host: server-37
+[7160] DEBUG: Session token refreshed - Host: server-19
+[1573] INFO: Connection established - Host: server-19
+[9418] INFO: Connection established - Host: server-50
+[5254] ERROR: Connection timeout - Host: server-30
+[6359] ERROR: Connection timeout - Host: server-8
+[6927] ERROR: Connection timeout - Host: server-40
+[4876] WARN: High CPU utilization - Host: server-44
+[1601] ERROR: Connection timeout - Host: server-29
+[8866] DEBUG: Session token refreshed - Host: server-43
+[2559] INFO: Connection established - Host: server-49
+[2215] INFO: Connection established - Host: server-7
+[3477] INFO: Database sync complete - Host: server-11
+[1577] WARN: High CPU utilization - Host: server-6
+[1426] INFO: Database sync complete - Host: server-12
+[6128] WARN: High CPU utilization - Host: server-46
+[3791] ERROR: Connection timeout - Host: server-10
+[5979] INFO: Database sync complete - Host: server-26
+[4475] DEBUG: Session token refreshed - Host: server-3
+[2431] INFO: Connection established - Host: server-38
+[6369] DEBUG: Session token refreshed - Host: server-24
+[1921] WARN: High CPU utilization - Host: server-17
+[3221] ERROR: Connection timeout - Host: server-16
+[9217] INFO: Database sync complete - Host: server-40
+[6528] WARN: High CPU utilization - Host: server-28
+[3514] WARN: High CPU utilization - Host: server-45
+[5926] ERROR: Connection timeout - Host: server-11
+[2142] DEBUG: Session token refreshed - Host: server-20
+[5909] ERROR: Connection timeout - Host: server-11
+[3808] ERROR: Connection timeout - Host: server-38
+[9538] WARN: High CPU utilization - Host: server-42
+[6208] INFO: Connection established - Host: server-40
+[9509] INFO: Database sync complete - Host: server-4
+[6122] INFO: Connection established - Host: server-16
+[9623] ERROR: Connection timeout - Host: server-21
+[1153] INFO: Connection established - Host: server-29
+[4693] DEBUG: Session token refreshed - Host: server-47
+[3131] DEBUG: Session token refreshed - Host: server-18
+[5432] WARN: High CPU utilization - Host: server-46
+[1104] DEBUG: Session token refreshed - Host: server-35
+[3335] DEBUG: Session token refreshed - Host: server-15
+[3674] INFO: Database sync complete - Host: server-33
+[5584] WARN: High CPU utilization - Host: server-45
+[8154] INFO: Connection established - Host: server-10
+[3417] INFO: Database sync complete - Host: server-1
+[2726] WARN: High CPU utilization - Host: server-47
+[9885] WARN: High CPU utilization - Host: server-44
+[6637] INFO: Connection established - Host: server-28
+[8538] WARN: High CPU utilization - Host: server-3
+[8814] WARN: High CPU utilization - Host: server-9
+[6875] DEBUG: Session token refreshed - Host: server-18
+[6848] WARN: High CPU utilization - Host: server-41
+[4690] INFO: Database sync complete - Host: server-20
+[6362] INFO: Connection established - Host: server-8
+[6545] WARN: High CPU utilization - Host: server-42
+[6242] DEBUG: Session token refreshed - Host: server-18
+[7969] WARN: High CPU utilization - Host: server-24
+[2582] ERROR: Connection timeout - Host: server-13
+[5889] WARN: High CPU utilization - Host: server-2
+[2931] WARN: High CPU utilization - Host: server-6
+[1311] DEBUG: Session token refreshed - Host: server-28
+[7409] WARN: High CPU utilization - Host: server-1
+[3181] ERROR: Connection timeout - Host: server-13
+[5615] ERROR: Connection timeout - Host: server-26
+[7523] DEBUG: Session token refreshed - Host: server-33
+[7830] ERROR: Connection timeout - Host: server-33
+[7592] DEBUG: Session token refreshed - Host: server-48
+[2151] WARN: High CPU utilization - Host: server-20
+[4689] INFO: Database sync complete - Host: server-5
+[7574] WARN: High CPU utilization - Host: server-49
+[5485] INFO: Connection established - Host: server-27
+[6044] INFO: Connection established - Host: server-18
+[4260] WARN: High CPU utilization - Host: server-6
+[4339] INFO: Connection established - Host: server-47
+[8500] DEBUG: Session token refreshed - Host: server-4
+[9475] DEBUG: Session token refreshed - Host: server-12
+[2785] DEBUG: Session token refreshed - Host: server-23
+[2703] WARN: High CPU utilization - Host: server-32
+[4204] INFO: Database sync complete - Host: server-44
+[8759] ERROR: Connection timeout - Host: server-27
+[5613] ERROR: Connection timeout - Host: server-22
+[3967] INFO: Database sync complete - Host: server-33
+[7578] DEBUG: Session token refreshed - Host: server-11
+[5531] ERROR: Connection timeout - Host: server-29
+[8826] DEBUG: Session token refreshed - Host: server-50
+[8291] WARN: High CPU utilization - Host: server-19
+[4691] INFO: Database sync complete - Host: server-7
+[5546] DEBUG: Session token refreshed - Host: server-33
+[8976] INFO: Connection established - Host: server-21
+[1191] ERROR: Connection timeout - Host: server-6
+[2871] ERROR: Connection timeout - Host: server-16
+[4833] DEBUG: Session token refreshed - Host: server-39
+[1423] ERROR: Connection timeout - Host: server-39
+[5846] INFO: Database sync complete - Host: server-28
+[5649] ERROR: Connection timeout - Host: server-41
+[2387] DEBUG: Session token refreshed - Host: server-2
+[8541] DEBUG: Session token refreshed - Host: server-18
+[3750] INFO: Database sync complete - Host: server-8
+[1277] DEBUG: Session token refreshed - Host: server-48
+[3610] WARN: High CPU utilization - Host: server-18
+[9916] ERROR: Connection timeout - Host: server-44
+[1875] INFO: Database sync complete - Host: server-45
+[1569] ERROR: Connection timeout - Host: server-13
+[9357] INFO: Connection established - Host: server-42
+[7795] WARN: High CPU utilization - Host: server-15
+[5315] DEBUG: Session token refreshed - Host: server-38
+[8619] DEBUG: Session token refreshed - Host: server-30
+[6847] WARN: High CPU utilization - Host: server-26
+[2243] ERROR: Connection timeout - Host: server-8
+[2600] INFO: Connection established - Host: server-35
+[3323] ERROR: Connection timeout - Host: server-34
+[4572] ERROR: Connection timeout - Host: server-31
+[5471] ERROR: Connection timeout - Host: server-18
+[9791] DEBUG: Session token refreshed - Host: server-38
+[4012] INFO: Database sync complete - Host: server-47
+[7428] ERROR: Connection timeout - Host: server-1
+[3036] INFO: Connection established - Host: server-27
+[7640] DEBUG: Session token refreshed - Host: server-38
+[3551] INFO: Database sync complete - Host: server-12
+[4763] ERROR: Connection timeout - Host: server-44
+[2615] ERROR: Connection timeout - Host: server-18
+[6040] INFO: Connection established - Host: server-32
+[9271] ERROR: Connection timeout - Host: server-14
+[9179] INFO: Connection established - Host: server-48
+[6290] INFO: Database sync complete - Host: server-20
+[2400] INFO: Connection established - Host: server-28
+[8360] DEBUG: Session token refreshed - Host: server-15
+[9208] ERROR: Connection timeout - Host: server-44
+[3206] ERROR: Connection timeout - Host: server-11
+[9364] INFO: Database sync complete - Host: server-32
+[1618] DEBUG: Session token refreshed - Host: server-38
+[4772] ERROR: Connection timeout - Host: server-19
+[3769] INFO: Database sync complete - Host: server-17
+[6106] ERROR: Connection timeout - Host: server-36
+[8034] ERROR: Connection timeout - Host: server-26
+[3403] WARN: High CPU utilization - Host: server-13
+[7351] INFO: Connection established - Host: server-36
+[6288] INFO: Database sync complete - Host: server-35
+[4852] INFO: Database sync complete - Host: server-15
+[2701] ERROR: Connection timeout - Host: server-37
+[2120] WARN: High CPU utilization - Host: server-18
+[8447] DEBUG: Session token refreshed - Host: server-26
+[2793] INFO: Connection established - Host: server-41
+[7412] DEBUG: Session token refreshed - Host: server-29
+[1978] DEBUG: Session token refreshed - Host: server-32
+[8464] DEBUG: Session token refreshed - Host: server-47
+[1069] ERROR: Connection timeout - Host: server-48
+[7087] ERROR: Connection timeout - Host: server-9
+[2753] INFO: Database sync complete - Host: server-7
+[3986] WARN: High CPU utilization - Host: server-42
+[6433] WARN: High CPU utilization - Host: server-17
+[1653] ERROR: Connection timeout - Host: server-44
+[2603] ERROR: Connection timeout - Host: server-39
+[5468] DEBUG: Session token refreshed - Host: server-23
+[3725] ERROR: Connection timeout - Host: server-35
+[8017] DEBUG: Session token refreshed - Host: server-48
+[6589] DEBUG: Session token refreshed - Host: server-32
+[9790] WARN: High CPU utilization - Host: server-40
+[8461] WARN: High CPU utilization - Host: server-48
+[7937] WARN: High CPU utilization - Host: server-27
+[3696] ERROR: Connection timeout - Host: server-49
+[3306] INFO: Connection established - Host: server-9
+[3049] ERROR: Connection timeout - Host: server-42
+[3337] ERROR: Connection timeout - Host: server-2
+[7837] ERROR: Connection timeout - Host: server-40
+[5750] INFO: Database sync complete - Host: server-12
+[7660] ERROR: Connection timeout - Host: server-9
+[2518] ERROR: Connection timeout - Host: server-3
+[3129] WARN: High CPU utilization - Host: server-40
+[6255] INFO: Database sync complete - Host: server-25
+[7694] INFO: Connection established - Host: server-19
+[9149] DEBUG: Session token refreshed - Host: server-11
+[9595] INFO: Connection established - Host: server-22
+[2683] ERROR: Connection timeout - Host: server-29
+[2328] INFO: Database sync complete - Host: server-21
+[8421] ERROR: Connection timeout - Host: server-32
+[9364] INFO: Connection established - Host: server-14
+[7145] INFO: Database sync complete - Host: server-49
+[6780] DEBUG: Session token refreshed - Host: server-46
+[2643] INFO: Database sync complete - Host: server-43
+[6375] ERROR: Connection timeout - Host: server-48
+[7187] ERROR: Connection timeout - Host: server-7
+[6408] ERROR: Connection timeout - Host: server-23
+[2648] ERROR: Connection timeout - Host: server-11
+[1356] INFO: Database sync complete - Host: server-38
+[1881] DEBUG: Session token refreshed - Host: server-23
+[1365] DEBUG: Session token refreshed - Host: server-43
+[1883] ERROR: Connection timeout - Host: server-25
+[8118] DEBUG: Session token refreshed - Host: server-43
+[4124] WARN: High CPU utilization - Host: server-28
+[1418] DEBUG: Session token refreshed - Host: server-2
+[1075] INFO: Connection established - Host: server-7
+[1692] WARN: High CPU utilization - Host: server-26
+[6714] WARN: High CPU utilization - Host: server-2
+[9495] WARN: High CPU utilization - Host: server-12
+[2761] ERROR: Connection timeout - Host: server-44
+[2383] INFO: Database sync complete - Host: server-21
+[1549] INFO: Database sync complete - Host: server-24
+[2054] DEBUG: Session token refreshed - Host: server-49
+[9076] ERROR: Connection timeout - Host: server-28
+[8008] WARN: High CPU utilization - Host: server-24
+[3558] INFO: Database sync complete - Host: server-12
+[1562] WARN: High CPU utilization - Host: server-20
+[1411] ERROR: Connection timeout - Host: server-41
+[7680] INFO: Connection established - Host: server-4
+[4795] ERROR: Connection timeout - Host: server-31
+[1290] ERROR: Connection timeout - Host: server-35
+[9593] ERROR: Connection timeout - Host: server-5
+[8042] INFO: Database sync complete - Host: server-34
+[3964] DEBUG: Session token refreshed - Host: server-50
+[5872] DEBUG: Session token refreshed - Host: server-7
+[3711] WARN: High CPU utilization - Host: server-8
+[1876] DEBUG: Session token refreshed - Host: server-16
+[7411] ERROR: Connection timeout - Host: server-42
+[9518] ERROR: Connection timeout - Host: server-45
+[8219] INFO: Connection established - Host: server-21
+[1400] DEBUG: Session token refreshed - Host: server-45
+[7313] INFO: Connection established - Host: server-6
+[9469] ERROR: Connection timeout - Host: server-22
+[7004] ERROR: Connection timeout - Host: server-14
+[7711] WARN: High CPU utilization - Host: server-13
+[7598] WARN: High CPU utilization - Host: server-33
+[5889] INFO: Connection established - Host: server-41
+[5597] INFO: Database sync complete - Host: server-31
+[8105] DEBUG: Session token refreshed - Host: server-31
+[6521] WARN: High CPU utilization - Host: server-23
+[8275] INFO: Connection established - Host: server-45
+[7139] INFO: Connection established - Host: server-16
+[8581] ERROR: Connection timeout - Host: server-49
+[9364] WARN: High CPU utilization - Host: server-22
+[9169] INFO: Connection established - Host: server-37
+[1230] DEBUG: Session token refreshed - Host: server-39
+[6434] INFO: Database sync complete - Host: server-15
+[2847] ERROR: Connection timeout - Host: server-37
+[3978] DEBUG: Session token refreshed - Host: server-40
+[3541] INFO: Database sync complete - Host: server-11
+[9849] DEBUG: Session token refreshed - Host: server-16
+[3768] ERROR: Connection timeout - Host: server-21
+[1110] WARN: High CPU utilization - Host: server-19
+[3499] INFO: Database sync complete - Host: server-36
+[6896] WARN: High CPU utilization - Host: server-49
+[1955] INFO: Database sync complete - Host: server-50
+[8327] INFO: Connection established - Host: server-18
+[1863] WARN: High CPU utilization - Host: server-9
+[2793] INFO: Connection established - Host: server-1
+[8099] ERROR: Connection timeout - Host: server-8
+[5461] DEBUG: Session token refreshed - Host: server-16
+[8993] INFO: Connection established - Host: server-27
+[3325] WARN: High CPU utilization - Host: server-8
+[4342] INFO: Connection established - Host: server-47
+[5216] DEBUG: Session token refreshed - Host: server-33
+[8867] INFO: Database sync complete - Host: server-30
+[2102] ERROR: Connection timeout - Host: server-17
+[5489] WARN: High CPU utilization - Host: server-36
+[6595] ERROR: Connection timeout - Host: server-50
+[6187] INFO: Database sync complete - Host: server-7
+[4828] ERROR: Connection timeout - Host: server-17
+[3959] INFO: Connection established - Host: server-32
+[7148] ERROR: Connection timeout - Host: server-50
+[5057] INFO: Connection established - Host: server-33
+[5384] WARN: High CPU utilization - Host: server-10
+[4543] INFO: Connection established - Host: server-21
+[3674] INFO: Database sync complete - Host: server-26
+[4951] INFO: Database sync complete - Host: server-39
+[2518] WARN: High CPU utilization - Host: server-29
+[4095] ERROR: Connection timeout - Host: server-10
+[7415] INFO: Database sync complete - Host: server-38
+[9891] INFO: Connection established - Host: server-42
+[6712] DEBUG: Session token refreshed - Host: server-44
+[1076] DEBUG: Session token refreshed - Host: server-41
+[2636] INFO: Connection established - Host: server-38
+[5038] INFO: Database sync complete - Host: server-6
+[9594] INFO: Database sync complete - Host: server-8
+[4750] INFO: Database sync complete - Host: server-28
+[5347] DEBUG: Session token refreshed - Host: server-27
+[7859] DEBUG: Session token refreshed - Host: server-36
+[6057] WARN: High CPU utilization - Host: server-44
+[1921] INFO: Connection established - Host: server-38
+[3936] INFO: Connection established - Host: server-27
+[7295] ERROR: Connection timeout - Host: server-31
+[3148] ERROR: Connection timeout - Host: server-18
+[9907] INFO: Connection established - Host: server-25
+[3372] INFO: Connection established - Host: server-48
+[5284] WARN: High CPU utilization - Host: server-26
+[6366] INFO: Database sync complete - Host: server-24
+[8708] INFO: Database sync complete - Host: server-46
+[1896] WARN: High CPU utilization - Host: server-39
+[1687] INFO: Connection established - Host: server-49
+[6520] INFO: Connection established - Host: server-19
+[7640] INFO: Connection established - Host: server-28
+[7925] INFO: Database sync complete - Host: server-42
+[6894] ERROR: Connection timeout - Host: server-9
+[6331] INFO: Connection established - Host: server-36
+[2624] WARN: High CPU utilization - Host: server-23
+[2498] INFO: Database sync complete - Host: server-31
+[6158] ERROR: Connection timeout - Host: server-48
+[8627] INFO: Database sync complete - Host: server-3
+[1772] ERROR: Connection timeout - Host: server-9
+[5713] INFO: Database sync complete - Host: server-39
+[4936] DEBUG: Session token refreshed - Host: server-18
+[2348] INFO: Database sync complete - Host: server-6
+[7830] WARN: High CPU utilization - Host: server-50
+[7207] DEBUG: Session token refreshed - Host: server-46
+[9621] INFO: Connection established - Host: server-49
+[9641] INFO: Connection established - Host: server-32
+[5300] ERROR: Connection timeout - Host: server-23
+[2541] INFO: Database sync complete - Host: server-49
+[3793] INFO: Connection established - Host: server-42
+[4325] INFO: Connection established - Host: server-7
+[3471] ERROR: Connection timeout - Host: server-28
+[8445] WARN: High CPU utilization - Host: server-36
+[5056] WARN: High CPU utilization - Host: server-31
+[6896] INFO: Database sync complete - Host: server-25
+[4385] INFO: Connection established - Host: server-47
+[2573] WARN: High CPU utilization - Host: server-18
+[4050] DEBUG: Session token refreshed - Host: server-29
+[7538] INFO: Database sync complete - Host: server-9
+[9608] WARN: High CPU utilization - Host: server-17
+[9025] INFO: Connection established - Host: server-26
+[2852] INFO: Database sync complete - Host: server-10
+[7027] WARN: High CPU utilization - Host: server-28
+[6674] WARN: High CPU utilization - Host: server-37
+[3698] INFO: Connection established - Host: server-49
+[9705] ERROR: Connection timeout - Host: server-17
+[8149] INFO: Connection established - Host: server-6
+[5567] DEBUG: Session token refreshed - Host: server-20
+[4367] DEBUG: Session token refreshed - Host: server-42
+[2614] DEBUG: Session token refreshed - Host: server-14
+[9896] ERROR: Connection timeout - Host: server-42
+[3211] ERROR: Connection timeout - Host: server-45
+[7336] ERROR: Connection timeout - Host: server-48
+[2766] ERROR: Connection timeout - Host: server-16
+[7494] INFO: Database sync complete - Host: server-16
+[8304] ERROR: Connection timeout - Host: server-43
+[1493] WARN: High CPU utilization - Host: server-38
+[2972] INFO: Database sync complete - Host: server-41
+[5645] INFO: Database sync complete - Host: server-33
+[6828] INFO: Connection established - Host: server-45
+[8634] INFO: Connection established - Host: server-25
+[9544] INFO: Database sync complete - Host: server-31
+[4572] WARN: High CPU utilization - Host: server-1
+[2734] WARN: High CPU utilization - Host: server-44
+[1510] INFO: Database sync complete - Host: server-33
+[2004] INFO: Database sync complete - Host: server-9
+[9317] DEBUG: Session token refreshed - Host: server-19
+[8868] ERROR: Connection timeout - Host: server-6
+[2700] INFO: Connection established - Host: server-13
+[3510] INFO: Database sync complete - Host: server-24
+[2152] INFO: Connection established - Host: server-19
+[4837] WARN: High CPU utilization - Host: server-43
+[7517] ERROR: Connection timeout - Host: server-10
+[9239] INFO: Database sync complete - Host: server-35
+[5686] ERROR: Connection timeout - Host: server-9
+[2083] ERROR: Connection timeout - Host: server-44
+[9375] WARN: High CPU utilization - Host: server-22
+[3902] ERROR: Connection timeout - Host: server-33
+[7313] INFO: Connection established - Host: server-20
+[2356] DEBUG: Session token refreshed - Host: server-38
+[6998] INFO: Database sync complete - Host: server-42
+[2630] WARN: High CPU utilization - Host: server-19
+[5042] DEBUG: Session token refreshed - Host: server-29
+[8272] INFO: Connection established - Host: server-35
+[8682] WARN: High CPU utilization - Host: server-32
+[6844] WARN: High CPU utilization - Host: server-41
+[2660] INFO: Connection established - Host: server-44
+[8049] INFO: Connection established - Host: server-26
+[7474] INFO: Connection established - Host: server-23
+[2003] DEBUG: Session token refreshed - Host: server-19
+[9833] INFO: Database sync complete - Host: server-22
+[9652] WARN: High CPU utilization - Host: server-28
+[8155] INFO: Connection established - Host: server-39
+[2053] WARN: High CPU utilization - Host: server-35
+[7172] INFO: Connection established - Host: server-49
+[1507] WARN: High CPU utilization - Host: server-5
+[9644] ERROR: Connection timeout - Host: server-11
+[5657] INFO: Connection established - Host: server-23
+[1970] INFO: Database sync complete - Host: server-16
+[3118] DEBUG: Session token refreshed - Host: server-14
+[4759] DEBUG: Session token refreshed - Host: server-21
+[3526] INFO: Connection established - Host: server-17
+[3381] INFO: Database sync complete - Host: server-21
+[7262] WARN: High CPU utilization - Host: server-41
+[3966] INFO: Database sync complete - Host: server-6
+[1851] DEBUG: Session token refreshed - Host: server-41
+[4917] INFO: Connection established - Host: server-48
+[8819] ERROR: Connection timeout - Host: server-40
+[6192] INFO: Database sync complete - Host: server-36
+[4121] WARN: High CPU utilization - Host: server-13
+[3312] INFO: Database sync complete - Host: server-43
+[9162] DEBUG: Session token refreshed - Host: server-33
+[3912] INFO: Connection established - Host: server-6
+[7286] WARN: High CPU utilization - Host: server-30
+[1235] WARN: High CPU utilization - Host: server-32
+[1880] INFO: Connection established - Host: server-33
+[6421] INFO: Database sync complete - Host: server-4
+[6653] INFO: Database sync complete - Host: server-34
+[8611] INFO: Database sync complete - Host: server-39
+[7259] INFO: Connection established - Host: server-16
+[4983] DEBUG: Session token refreshed - Host: server-35
+[3054] DEBUG: Session token refreshed - Host: server-25
+[9806] WARN: High CPU utilization - Host: server-11
+[3337] DEBUG: Session token refreshed - Host: server-24
+[2442] INFO: Connection established - Host: server-42
+[4625] WARN: High CPU utilization - Host: server-10
+[8243] ERROR: Connection timeout - Host: server-29
+[9611] DEBUG: Session token refreshed - Host: server-43
+[8711] INFO: Database sync complete - Host: server-37
+[5145] INFO: Connection established - Host: server-42
+[2087] DEBUG: Session token refreshed - Host: server-28
+[3837] WARN: High CPU utilization - Host: server-38
+[6796] ERROR: Connection timeout - Host: server-44
+[4579] INFO: Database sync complete - Host: server-24
+[9558] ERROR: Connection timeout - Host: server-31
+[1770] WARN: High CPU utilization - Host: server-38
+[4733] DEBUG: Session token refreshed - Host: server-29
+[1372] ERROR: Connection timeout - Host: server-17
+[3177] INFO: Connection established - Host: server-40
+[4993] DEBUG: Session token refreshed - Host: server-4
+[8744] WARN: High CPU utilization - Host: server-13
+[1203] ERROR: Connection timeout - Host: server-50
+[3568] WARN: High CPU utilization - Host: server-25
+[4285] ERROR: Connection timeout - Host: server-35
+[6980] WARN: High CPU utilization - Host: server-47
+[6183] DEBUG: Session token refreshed - Host: server-6
+[8988] INFO: Connection established - Host: server-44
+[8744] DEBUG: Session token refreshed - Host: server-45
+[2456] INFO: Database sync complete - Host: server-8
+[1863] WARN: High CPU utilization - Host: server-47
+[9424] INFO: Database sync complete - Host: server-32
+[5744] ERROR: Connection timeout - Host: server-14
+[7433] ERROR: Connection timeout - Host: server-12
+[2380] WARN: High CPU utilization - Host: server-39
+[1380] INFO: Connection established - Host: server-32
+[2712] ERROR: Connection timeout - Host: server-9
+[3179] INFO: Connection established - Host: server-3
+[2171] INFO: Connection established - Host: server-2
+[8488] INFO: Connection established - Host: server-45
+[3227] ERROR: Connection timeout - Host: server-4
+[9143] DEBUG: Session token refreshed - Host: server-40
+[6981] ERROR: Connection timeout - Host: server-12
+[8239] INFO: Database sync complete - Host: server-6
+[8830] INFO: Connection established - Host: server-27
+[3870] ERROR: Connection timeout - Host: server-35
+[7274] INFO: Database sync complete - Host: server-28
+[1510] INFO: Connection established - Host: server-31
+[3657] DEBUG: Session token refreshed - Host: server-36
+[4134] INFO: Connection established - Host: server-30
+[2053] INFO: Database sync complete - Host: server-30
+[5264] DEBUG: Session token refreshed - Host: server-50
+[3613] INFO: Connection established - Host: server-20
+[9145] WARN: High CPU utilization - Host: server-6
+[9959] ERROR: Connection timeout - Host: server-38
+[7728] DEBUG: Session token refreshed - Host: server-42
+[3455] WARN: High CPU utilization - Host: server-44
+[1503] DEBUG: Session token refreshed - Host: server-38
+[2249] WARN: High CPU utilization - Host: server-42
+[6082] INFO: Connection established - Host: server-14
+[3469] INFO: Connection established - Host: server-44
+[8641] ERROR: Connection timeout - Host: server-45
+[9444] ERROR: Connection timeout - Host: server-23
+[5231] INFO: Connection established - Host: server-14
+[9673] INFO: Connection established - Host: server-24
+[6161] DEBUG: Session token refreshed - Host: server-12
+[9771] DEBUG: Session token refreshed - Host: server-41
+[4179] WARN: High CPU utilization - Host: server-20
+[4569] DEBUG: Session token refreshed - Host: server-34
+[8372] ERROR: Connection timeout - Host: server-41
+[2418] INFO: Connection established - Host: server-50
+[8325] INFO: Database sync complete - Host: server-17
+[3756] DEBUG: Session token refreshed - Host: server-38
+[4343] INFO: Database sync complete - Host: server-13
+[5260] INFO: Connection established - Host: server-2
+[2699] WARN: High CPU utilization - Host: server-2
+[2946] ERROR: Connection timeout - Host: server-28
+[2163] DEBUG: Session token refreshed - Host: server-21
+[8493] DEBUG: Session token refreshed - Host: server-29
+[3230] DEBUG: Session token refreshed - Host: server-8
+[1737] WARN: High CPU utilization - Host: server-6
+[1048] ERROR: Connection timeout - Host: server-34
+[7608] INFO: Database sync complete - Host: server-1
+[8463] DEBUG: Session token refreshed - Host: server-12
+[2248] ERROR: Connection timeout - Host: server-18
+[9594] INFO: Database sync complete - Host: server-11
+[1580] DEBUG: Session token refreshed - Host: server-26
+[6737] INFO: Connection established - Host: server-30
+[6825] INFO: Connection established - Host: server-7
+[9389] ERROR: Connection timeout - Host: server-5
+[9770] DEBUG: Session token refreshed - Host: server-24
+[2883] INFO: Database sync complete - Host: server-10
+[6090] ERROR: Connection timeout - Host: server-12
+[6122] INFO: Connection established - Host: server-16
+[3873] INFO: Connection established - Host: server-10
+[9657] DEBUG: Session token refreshed - Host: server-27
+[2805] WARN: High CPU utilization - Host: server-11
+[6316] DEBUG: Session token refreshed - Host: server-19
+[9997] ERROR: Connection timeout - Host: server-14
+[8372] INFO: Database sync complete - Host: server-27
+[5454] DEBUG: Session token refreshed - Host: server-50
+[1293] ERROR: Connection timeout - Host: server-45
+[9326] INFO: Database sync complete - Host: server-2
+[2651] INFO: Database sync complete - Host: server-10
+[5194] INFO: Connection established - Host: server-40
+[5347] DEBUG: Session token refreshed - Host: server-35
+[8627] WARN: High CPU utilization - Host: server-28
+[4480] INFO: Database sync complete - Host: server-42
+[8975] DEBUG: Session token refreshed - Host: server-30
+[2833] INFO: Database sync complete - Host: server-26
+[2393] DEBUG: Session token refreshed - Host: server-31
+[1156] ERROR: Connection timeout - Host: server-32
+[8804] INFO: Connection established - Host: server-15
+[6226] ERROR: Connection timeout - Host: server-22
+[7184] INFO: Database sync complete - Host: server-4
+[7621] DEBUG: Session token refreshed - Host: server-28
+[9872] WARN: High CPU utilization - Host: server-50
+[3930] WARN: High CPU utilization - Host: server-16
+[8531] DEBUG: Session token refreshed - Host: server-50
+[1830] DEBUG: Session token refreshed - Host: server-32
+[6988] DEBUG: Session token refreshed - Host: server-49
+[1512] INFO: Connection established - Host: server-29
+[4899] ERROR: Connection timeout - Host: server-14
+[5903] ERROR: Connection timeout - Host: server-40
+[6889] INFO: Connection established - Host: server-9
+[2105] ERROR: Connection timeout - Host: server-26
+[2462] ERROR: Connection timeout - Host: server-18
+[4590] DEBUG: Session token refreshed - Host: server-11
+[6454] INFO: Database sync complete - Host: server-27
+[9822] DEBUG: Session token refreshed - Host: server-19
+[4145] DEBUG: Session token refreshed - Host: server-41
+[4247] DEBUG: Session token refreshed - Host: server-23
+[8339] WARN: High CPU utilization - Host: server-27
+[9430] ERROR: Connection timeout - Host: server-46
+[7774] WARN: High CPU utilization - Host: server-31
+[2892] WARN: High CPU utilization - Host: server-31
+[8033] DEBUG: Session token refreshed - Host: server-7
+[5472] DEBUG: Session token refreshed - Host: server-8
+[1795] INFO: Database sync complete - Host: server-30
+[1539] WARN: High CPU utilization - Host: server-48
+[9879] INFO: Database sync complete - Host: server-44
+[2304] ERROR: Connection timeout - Host: server-37
+[5191] INFO: Connection established - Host: server-20
+[4106] ERROR: Connection timeout - Host: server-41
+[2386] WARN: High CPU utilization - Host: server-17
+[3252] INFO: Database sync complete - Host: server-21
+[4885] WARN: High CPU utilization - Host: server-11
+[1146] DEBUG: Session token refreshed - Host: server-29
+[8006] WARN: High CPU utilization - Host: server-41
+[1100] DEBUG: Session token refreshed - Host: server-19
+[1295] INFO: Database sync complete - Host: server-22
+[9381] INFO: Connection established - Host: server-14
+[3783] DEBUG: Session token refreshed - Host: server-18
+[5344] INFO: Connection established - Host: server-5
+[7478] ERROR: Connection timeout - Host: server-50
+[7055] INFO: Database sync complete - Host: server-10
+[3589] INFO: Connection established - Host: server-24
+[8199] DEBUG: Session token refreshed - Host: server-10
+[3277] INFO: Connection established - Host: server-5
+[2670] WARN: High CPU utilization - Host: server-45
+[8879] DEBUG: Session token refreshed - Host: server-29
+[3583] ERROR: Connection timeout - Host: server-5
+[6161] INFO: Connection established - Host: server-9
+[4740] INFO: Database sync complete - Host: server-39
+[8066] INFO: Connection established - Host: server-2
+[9702] ERROR: Connection timeout - Host: server-48
+[8712] INFO: Connection established - Host: server-36
+[2246] INFO: Database sync complete - Host: server-18
+[2085] INFO: Connection established - Host: server-18
+[1102] INFO: Database sync complete - Host: server-10
+[4575] DEBUG: Session token refreshed - Host: server-47
+[2003] INFO: Connection established - Host: server-12
+[3351] WARN: High CPU utilization - Host: server-2
+[6881] DEBUG: Session token refreshed - Host: server-26
+[6533] DEBUG: Session token refreshed - Host: server-39
+[5265] ERROR: Connection timeout - Host: server-39
+[7037] DEBUG: Session token refreshed - Host: server-13
+[1069] INFO: Connection established - Host: server-6
+[6371] ERROR: Connection timeout - Host: server-45
+[4937] INFO: Database sync complete - Host: server-47
+[3279] INFO: Database sync complete - Host: server-32
+[9923] INFO: Database sync complete - Host: server-47
+[3874] WARN: High CPU utilization - Host: server-47
+[4519] WARN: High CPU utilization - Host: server-36
+[5911] INFO: Connection established - Host: server-17
+[3215] DEBUG: Session token refreshed - Host: server-38
+[9715] WARN: High CPU utilization - Host: server-8
+[4513] DEBUG: Session token refreshed - Host: server-38
+[6810] INFO: Database sync complete - Host: server-6
+[1006] ERROR: Connection timeout - Host: server-28
+[4293] WARN: High CPU utilization - Host: server-23
+[4582] DEBUG: Session token refreshed - Host: server-8
+[1192] INFO: Connection established - Host: server-38
+[1952] WARN: High CPU utilization - Host: server-16
+[1936] INFO: Connection established - Host: server-11
+[9843] WARN: High CPU utilization - Host: server-41
+[6939] INFO: Database sync complete - Host: server-33
+[2473] ERROR: Connection timeout - Host: server-6
+[9136] WARN: High CPU utilization - Host: server-23
+[6272] INFO: Connection established - Host: server-19
+[3070] INFO: Database sync complete - Host: server-9
+[8346] INFO: Connection established - Host: server-48
+[5201] DEBUG: Session token refreshed - Host: server-13
+[7031] ERROR: Connection timeout - Host: server-42
+[8819] ERROR: Connection timeout - Host: server-49
+[8036] INFO: Database sync complete - Host: server-13
+[4122] ERROR: Connection timeout - Host: server-34
+[7595] DEBUG: Session token refreshed - Host: server-50
+[1014] WARN: High CPU utilization - Host: server-29
+[2615] INFO: Connection established - Host: server-36
+[2516] DEBUG: Session token refreshed - Host: server-26
+[6111] DEBUG: Session token refreshed - Host: server-37
+[9689] INFO: Database sync complete - Host: server-43
+[4988] ERROR: Connection timeout - Host: server-13
+[5216] INFO: Connection established - Host: server-7
+[1302] WARN: High CPU utilization - Host: server-12
+[2086] DEBUG: Session token refreshed - Host: server-49
+[9959] INFO: Connection established - Host: server-10
+[8294] ERROR: Connection timeout - Host: server-12
+[5032] INFO: Connection established - Host: server-45
+[2765] DEBUG: Session token refreshed - Host: server-8
+[8555] DEBUG: Session token refreshed - Host: server-44
+[2626] INFO: Connection established - Host: server-13
+[6069] INFO: Connection established - Host: server-38
+[7750] WARN: High CPU utilization - Host: server-38
+[7188] ERROR: Connection timeout - Host: server-5
+[8638] DEBUG: Session token refreshed - Host: server-28
+[9726] WARN: High CPU utilization - Host: server-36
+[3646] DEBUG: Session token refreshed - Host: server-39
+[4984] INFO: Connection established - Host: server-28
+[8338] ERROR: Connection timeout - Host: server-39
+[8044] INFO: Database sync complete - Host: server-28
+[6271] WARN: High CPU utilization - Host: server-33
+[1769] INFO: Connection established - Host: server-41
+[3795] ERROR: Connection timeout - Host: server-18
+[7217] INFO: Database sync complete - Host: server-11
+[9355] WARN: High CPU utilization - Host: server-35
+[2713] WARN: High CPU utilization - Host: server-9
+[7271] DEBUG: Session token refreshed - Host: server-34
+[9955] WARN: High CPU utilization - Host: server-29
+[7984] DEBUG: Session token refreshed - Host: server-33
+[5640] INFO: Database sync complete - Host: server-38
+[5340] DEBUG: Session token refreshed - Host: server-3
+[2581] INFO: Database sync complete - Host: server-11
+[5904] WARN: High CPU utilization - Host: server-38
+[2710] INFO: Connection established - Host: server-13
+[2782] ERROR: Connection timeout - Host: server-7
+[8373] INFO: Connection established - Host: server-10
+[9137] ERROR: Connection timeout - Host: server-21
+[9701] ERROR: Connection timeout - Host: server-43
+[6835] INFO: Database sync complete - Host: server-2
+[2923] ERROR: Connection timeout - Host: server-23
+[1531] INFO: Connection established - Host: server-40
+[2897] INFO: Database sync complete - Host: server-36
+[6525] WARN: High CPU utilization - Host: server-1
+[9797] INFO: Database sync complete - Host: server-22
+[1253] INFO: Connection established - Host: server-36
+[9111] WARN: High CPU utilization - Host: server-3
+[4177] INFO: Connection established - Host: server-20
+[1379] WARN: High CPU utilization - Host: server-19
+[2610] ERROR: Connection timeout - Host: server-6
+[9870] DEBUG: Session token refreshed - Host: server-27
+[4599] WARN: High CPU utilization - Host: server-37
+[2213] DEBUG: Session token refreshed - Host: server-25
+[8984] ERROR: Connection timeout - Host: server-46
+[3393] INFO: Connection established - Host: server-8
+[7266] ERROR: Connection timeout - Host: server-26
+[8810] DEBUG: Session token refreshed - Host: server-23
+[3232] WARN: High CPU utilization - Host: server-35
+[2395] WARN: High CPU utilization - Host: server-31
+[9720] DEBUG: Session token refreshed - Host: server-14
+[7612] DEBUG: Session token refreshed - Host: server-12
+[2134] WARN: High CPU utilization - Host: server-21
+[1383] DEBUG: Session token refreshed - Host: server-19
+[8776] DEBUG: Session token refreshed - Host: server-18
+[1666] WARN: High CPU utilization - Host: server-26
+[9565] INFO: Database sync complete - Host: server-4
+[3868] INFO: Connection established - Host: server-25
+[2807] INFO: Connection established - Host: server-44
+[5317] WARN: High CPU utilization - Host: server-29
+[8610] WARN: High CPU utilization - Host: server-27
+[6292] INFO: Database sync complete - Host: server-18
+[8464] DEBUG: Session token refreshed - Host: server-22
+[5270] INFO: Database sync complete - Host: server-25
+[3676] INFO: Database sync complete - Host: server-30
+[6065] DEBUG: Session token refreshed - Host: server-30
+[7707] DEBUG: Session token refreshed - Host: server-44
+[4103] WARN: High CPU utilization - Host: server-24
+[6538] INFO: Connection established - Host: server-43
+[7313] ERROR: Connection timeout - Host: server-10
+[6821] INFO: Database sync complete - Host: server-39
+[8909] INFO: Connection established - Host: server-35
+[4185] INFO: Database sync complete - Host: server-1
+[9832] ERROR: Connection timeout - Host: server-6
+[7596] INFO: Connection established - Host: server-34
+[2243] WARN: High CPU utilization - Host: server-48
+[4470] ERROR: Connection timeout - Host: server-12
+[7991] WARN: High CPU utilization - Host: server-25
+[5104] ERROR: Connection timeout - Host: server-30
+[3719] WARN: High CPU utilization - Host: server-23
+[3023] INFO: Connection established - Host: server-42
+[3768] WARN: High CPU utilization - Host: server-19
+[4671] INFO: Database sync complete - Host: server-37
+[8496] INFO: Connection established - Host: server-23
+[6111] DEBUG: Session token refreshed - Host: server-27
+[2975] ERROR: Connection timeout - Host: server-4
+[4710] ERROR: Connection timeout - Host: server-14
+[6471] INFO: Connection established - Host: server-38
+[9447] INFO: Database sync complete - Host: server-26
+[5572] DEBUG: Session token refreshed - Host: server-36
+[2174] WARN: High CPU utilization - Host: server-50
+[7398] INFO: Database sync complete - Host: server-21
+[7212] DEBUG: Session token refreshed - Host: server-12
+[4269] WARN: High CPU utilization - Host: server-1
+[3113] ERROR: Connection timeout - Host: server-4
+[2199] INFO: Connection established - Host: server-1
+[3333] INFO: Database sync complete - Host: server-23
+[5925] DEBUG: Session token refreshed - Host: server-5
+[3151] DEBUG: Session token refreshed - Host: server-14
+[6515] ERROR: Connection timeout - Host: server-31
+[2623] DEBUG: Session token refreshed - Host: server-11
+[2856] ERROR: Connection timeout - Host: server-21
+[7358] WARN: High CPU utilization - Host: server-45
+[4494] DEBUG: Session token refreshed - Host: server-40
+[3175] INFO: Database sync complete - Host: server-11
+[5672] INFO: Database sync complete - Host: server-3
+[2873] DEBUG: Session token refreshed - Host: server-2
+[6720] INFO: Database sync complete - Host: server-13
+[3203] DEBUG: Session token refreshed - Host: server-41
+[2358] INFO: Connection established - Host: server-27
+[5414] DEBUG: Session token refreshed - Host: server-8
+[5246] INFO: Database sync complete - Host: server-25
+[4378] INFO: Connection established - Host: server-9
+[9888] DEBUG: Session token refreshed - Host: server-11
+[9029] DEBUG: Session token refreshed - Host: server-26
+[2849] WARN: High CPU utilization - Host: server-37
+[2205] ERROR: Connection timeout - Host: server-27
+[8162] ERROR: Connection timeout - Host: server-4
+[3677] INFO: Database sync complete - Host: server-38
+[3955] WARN: High CPU utilization - Host: server-36
+[3563] INFO: Connection established - Host: server-2
+[5622] INFO: Database sync complete - Host: server-19
+[7704] ERROR: Connection timeout - Host: server-17
+[7559] DEBUG: Session token refreshed - Host: server-49
+[6314] WARN: High CPU utilization - Host: server-24
+[1801] DEBUG: Session token refreshed - Host: server-32
+[5021] WARN: High CPU utilization - Host: server-43
+[5917] DEBUG: Session token refreshed - Host: server-33
+[5634] DEBUG: Session token refreshed - Host: server-48
+[7446] WARN: High CPU utilization - Host: server-49
+[8473] WARN: High CPU utilization - Host: server-35
+[4326] ERROR: Connection timeout - Host: server-10
+[6986] ERROR: Connection timeout - Host: server-27
+[1820] WARN: High CPU utilization - Host: server-13
+[5336] INFO: Connection established - Host: server-13
+[4481] INFO: Connection established - Host: server-38
+[5625] DEBUG: Session token refreshed - Host: server-39
+[3237] ERROR: Connection timeout - Host: server-19
+[1662] ERROR: Connection timeout - Host: server-28
+[8119] INFO: Database sync complete - Host: server-38
+[5230] ERROR: Connection timeout - Host: server-45
+[5980] INFO: Connection established - Host: server-37
+[4879] ERROR: Connection timeout - Host: server-23
+[6089] WARN: High CPU utilization - Host: server-24
+[5345] DEBUG: Session token refreshed - Host: server-47
+[3134] INFO: Database sync complete - Host: server-47
+[6893] WARN: High CPU utilization - Host: server-19
+[7117] WARN: High CPU utilization - Host: server-9
+[6593] WARN: High CPU utilization - Host: server-8
+[7644] DEBUG: Session token refreshed - Host: server-39
+[1108] INFO: Database sync complete - Host: server-6
+[4232] ERROR: Connection timeout - Host: server-24
+[6844] INFO: Connection established - Host: server-27
+[3046] INFO: Database sync complete - Host: server-7
+[3693] ERROR: Connection timeout - Host: server-38
+[6568] DEBUG: Session token refreshed - Host: server-15
+[2245] INFO: Database sync complete - Host: server-30
+[6826] DEBUG: Session token refreshed - Host: server-44
+[3390] INFO: Database sync complete - Host: server-30
+[9516] INFO: Connection established - Host: server-13
+[9232] DEBUG: Session token refreshed - Host: server-47
+[8549] WARN: High CPU utilization - Host: server-12
+[7777] INFO: Database sync complete - Host: server-28
+[2867] INFO: Connection established - Host: server-13
+[6565] INFO: Connection established - Host: server-17
+[8304] INFO: Connection established - Host: server-9
+[5579] WARN: High CPU utilization - Host: server-16
+[4077] INFO: Connection established - Host: server-19
+[2003] INFO: Database sync complete - Host: server-9
+[7195] INFO: Connection established - Host: server-36
+[4807] WARN: High CPU utilization - Host: server-45
+[3627] ERROR: Connection timeout - Host: server-6
+[9044] INFO: Database sync complete - Host: server-13
+[1527] ERROR: Connection timeout - Host: server-24
+[6591] DEBUG: Session token refreshed - Host: server-22
+[6917] DEBUG: Session token refreshed - Host: server-23
+[6127] INFO: Database sync complete - Host: server-9
+[1700] INFO: Connection established - Host: server-36
+[1900] INFO: Connection established - Host: server-7
+[1090] DEBUG: Session token refreshed - Host: server-28
+[6508] INFO: Database sync complete - Host: server-3
+[7502] ERROR: Connection timeout - Host: server-45
+[2294] DEBUG: Session token refreshed - Host: server-49
+[7222] DEBUG: Session token refreshed - Host: server-32
+[3002] WARN: High CPU utilization - Host: server-22
+[3648] WARN: High CPU utilization - Host: server-22
+[2088] INFO: Connection established - Host: server-1
+[6572] ERROR: Connection timeout - Host: server-21
+[9090] INFO: Database sync complete - Host: server-49
+[8024] ERROR: Connection timeout - Host: server-13
+[3420] ERROR: Connection timeout - Host: server-9
+[5472] INFO: Database sync complete - Host: server-6
+[4925] DEBUG: Session token refreshed - Host: server-34
+[7588] ERROR: Connection timeout - Host: server-9
+[5128] ERROR: Connection timeout - Host: server-19
+[1785] DEBUG: Session token refreshed - Host: server-22
+[3233] WARN: High CPU utilization - Host: server-19
+[2404] INFO: Database sync complete - Host: server-46
+[8029] DEBUG: Session token refreshed - Host: server-24
+[9376] ERROR: Connection timeout - Host: server-13
+[7228] INFO: Connection established - Host: server-34
+[7258] INFO: Connection established - Host: server-30
+[9674] WARN: High CPU utilization - Host: server-46
+[4873] INFO: Database sync complete - Host: server-14
+[6610] ERROR: Connection timeout - Host: server-35
+[8034] DEBUG: Session token refreshed - Host: server-29
+[1824] DEBUG: Session token refreshed - Host: server-7
+[1854] DEBUG: Session token refreshed - Host: server-17
+[3602] INFO: Database sync complete - Host: server-38
+[5226] INFO: Database sync complete - Host: server-31
+[6014] ERROR: Connection timeout - Host: server-15
+[5295] INFO: Database sync complete - Host: server-11
+[8267] WARN: High CPU utilization - Host: server-27
+[3599] DEBUG: Session token refreshed - Host: server-16
+[8096] DEBUG: Session token refreshed - Host: server-30
+[4429] ERROR: Connection timeout - Host: server-13
+[3180] INFO: Database sync complete - Host: server-43
+[5942] DEBUG: Session token refreshed - Host: server-48
+[4360] INFO: Connection established - Host: server-48
+[7453] ERROR: Connection timeout - Host: server-3
+[3557] WARN: High CPU utilization - Host: server-39
+[9330] DEBUG: Session token refreshed - Host: server-11
+[6568] INFO: Database sync complete - Host: server-24
+[4282] ERROR: Connection timeout - Host: server-22
+[5389] DEBUG: Session token refreshed - Host: server-27
+[4138] DEBUG: Session token refreshed - Host: server-50
+[7588] DEBUG: Session token refreshed - Host: server-32
+[3699] WARN: High CPU utilization - Host: server-14
+[2032] DEBUG: Session token refreshed - Host: server-36
+[3544] INFO: Database sync complete - Host: server-33
+[8962] INFO: Connection established - Host: server-27
+[3154] WARN: High CPU utilization - Host: server-42
+[2367] INFO: Connection established - Host: server-4
+[8233] WARN: High CPU utilization - Host: server-28
+[5589] INFO: Connection established - Host: server-45
+[6705] INFO: Database sync complete - Host: server-1
+[2477] INFO: Connection established - Host: server-44
+[4384] DEBUG: Session token refreshed - Host: server-23
+[5891] WARN: High CPU utilization - Host: server-50
+[1088] INFO: Connection established - Host: server-23
+[9308] DEBUG: Session token refreshed - Host: server-26
+[5974] INFO: Connection established - Host: server-32
+[4194] ERROR: Connection timeout - Host: server-44
+[1373] DEBUG: Session token refreshed - Host: server-7
+[7059] ERROR: Connection timeout - Host: server-21
+[1931] WARN: High CPU utilization - Host: server-26
+[5500] DEBUG: Session token refreshed - Host: server-18
+[8271] INFO: Connection established - Host: server-32
+[7766] WARN: High CPU utilization - Host: server-41
+[1253] WARN: High CPU utilization - Host: server-20
+[3833] DEBUG: Session token refreshed - Host: server-16
+[1528] WARN: High CPU utilization - Host: server-30
+[4143] ERROR: Connection timeout - Host: server-34
+[8601] INFO: Database sync complete - Host: server-36
+[5212] ERROR: Connection timeout - Host: server-46
+[2098] DEBUG: Session token refreshed - Host: server-40
+[3410] DEBUG: Session token refreshed - Host: server-27
+[8959] DEBUG: Session token refreshed - Host: server-4
+[4946] ERROR: Connection timeout - Host: server-33
+[7325] WARN: High CPU utilization - Host: server-34
+[8587] WARN: High CPU utilization - Host: server-7
+[3599] WARN: High CPU utilization - Host: server-49
+[2233] ERROR: Connection timeout - Host: server-41
+[1638] INFO: Database sync complete - Host: server-27
+[1700] ERROR: Connection timeout - Host: server-48
+[7615] DEBUG: Session token refreshed - Host: server-13
+[9046] INFO: Connection established - Host: server-23
+[5392] INFO: Connection established - Host: server-33
+[8783] INFO: Connection established - Host: server-40
+[1528] INFO: Connection established - Host: server-1
+[5094] ERROR: Connection timeout - Host: server-4
+[3882] WARN: High CPU utilization - Host: server-42
+[6971] DEBUG: Session token refreshed - Host: server-7
+[3178] WARN: High CPU utilization - Host: server-11
+[3935] DEBUG: Session token refreshed - Host: server-42
+[5822] DEBUG: Session token refreshed - Host: server-28
+[6259] INFO: Database sync complete - Host: server-23
+[2959] WARN: High CPU utilization - Host: server-1
+[5638] ERROR: Connection timeout - Host: server-10
+[8571] INFO: Connection established - Host: server-6
+[2019] INFO: Database sync complete - Host: server-39
+[1490] INFO: Database sync complete - Host: server-34
+[9545] INFO: Database sync complete - Host: server-30
+[6636] INFO: Connection established - Host: server-16
+[6860] WARN: High CPU utilization - Host: server-8
+[7336] WARN: High CPU utilization - Host: server-14
+[6527] DEBUG: Session token refreshed - Host: server-50
+[3968] INFO: Database sync complete - Host: server-40
+[7208] INFO: Connection established - Host: server-11
+[4239] INFO: Connection established - Host: server-13
+[6726] INFO: Connection established - Host: server-8
+[6927] ERROR: Connection timeout - Host: server-13
+[8972] WARN: High CPU utilization - Host: server-15
+[5079] INFO: Database sync complete - Host: server-21
+[6194] INFO: Connection established - Host: server-20
+[3563] ERROR: Connection timeout - Host: server-25
+[2158] INFO: Database sync complete - Host: server-17
+[2472] INFO: Database sync complete - Host: server-9
+[8367] INFO: Database sync complete - Host: server-20
+[7628] WARN: High CPU utilization - Host: server-7
+[6213] ERROR: Connection timeout - Host: server-8
+[4638] INFO: Connection established - Host: server-14
+[8525] INFO: Database sync complete - Host: server-31
+[6450] DEBUG: Session token refreshed - Host: server-15
+[2210] ERROR: Connection timeout - Host: server-19
+[5876] INFO: Connection established - Host: server-4
+[9819] INFO: Connection established - Host: server-48
+[2183] WARN: High CPU utilization - Host: server-7
+[9738] INFO: Database sync complete - Host: server-34
+[4083] INFO: Database sync complete - Host: server-37
+[9974] ERROR: Connection timeout - Host: server-24
+[7462] ERROR: Connection timeout - Host: server-44
+[8375] DEBUG: Session token refreshed - Host: server-34
+[4947] DEBUG: Session token refreshed - Host: server-17
+[2644] ERROR: Connection timeout - Host: server-30
+[9136] INFO: Database sync complete - Host: server-28
+[7491] INFO: Connection established - Host: server-18
+[7669] WARN: High CPU utilization - Host: server-24
+[1831] ERROR: Connection timeout - Host: server-5
+[9929] INFO: Database sync complete - Host: server-38
+[6179] INFO: Database sync complete - Host: server-3
+[4889] ERROR: Connection timeout - Host: server-8
+[1648] INFO: Connection established - Host: server-46
+[9586] INFO: Connection established - Host: server-41
+[2172] WARN: High CPU utilization - Host: server-39
+[6656] WARN: High CPU utilization - Host: server-43
+[5961] INFO: Connection established - Host: server-48
+[5571] WARN: High CPU utilization - Host: server-41
+[7462] WARN: High CPU utilization - Host: server-3
+[7423] INFO: Connection established - Host: server-41
+[2088] DEBUG: Session token refreshed - Host: server-6
+[6773] INFO: Database sync complete - Host: server-20
+[7297] WARN: High CPU utilization - Host: server-25
+[3017] DEBUG: Session token refreshed - Host: server-10
+[9378] ERROR: Connection timeout - Host: server-7
+[8334] INFO: Connection established - Host: server-19
+[9957] INFO: Database sync complete - Host: server-5
+[8951] WARN: High CPU utilization - Host: server-7
+[2003] INFO: Connection established - Host: server-38
+[3430] DEBUG: Session token refreshed - Host: server-20
+[3515] WARN: High CPU utilization - Host: server-34
+[2546] INFO: Database sync complete - Host: server-31
+[6905] DEBUG: Session token refreshed - Host: server-10
+[3717] INFO: Connection established - Host: server-2
+[2382] WARN: High CPU utilization - Host: server-31
+[3804] WARN: High CPU utilization - Host: server-13
+[9269] DEBUG: Session token refreshed - Host: server-22
+[8463] INFO: Database sync complete - Host: server-1
+[2126] DEBUG: Session token refreshed - Host: server-4
+[1825] INFO: Database sync complete - Host: server-49
+[5967] INFO: Database sync complete - Host: server-40
+[5575] ERROR: Connection timeout - Host: server-33
+[6940] ERROR: Connection timeout - Host: server-48
+[3946] DEBUG: Session token refreshed - Host: server-43
+[4032] INFO: Connection established - Host: server-6
+[3481] INFO: Connection established - Host: server-10
+[1911] INFO: Database sync complete - Host: server-12
+[7743] INFO: Connection established - Host: server-17
+[7572] ERROR: Connection timeout - Host: server-43
+[3298] WARN: High CPU utilization - Host: server-15
+[1446] WARN: High CPU utilization - Host: server-42
+[8737] ERROR: Connection timeout - Host: server-2
+[1449] WARN: High CPU utilization - Host: server-12
+[9772] WARN: High CPU utilization - Host: server-40
+[4765] INFO: Database sync complete - Host: server-13
+[2942] WARN: High CPU utilization - Host: server-28
+[9590] ERROR: Connection timeout - Host: server-4
+[5960] INFO: Database sync complete - Host: server-32
+[5294] WARN: High CPU utilization - Host: server-2
+[2654] ERROR: Connection timeout - Host: server-25
+[5391] INFO: Database sync complete - Host: server-40
+[8626] WARN: High CPU utilization - Host: server-9
+[2442] INFO: Connection established - Host: server-1
+[8000] INFO: Connection established - Host: server-45
+[6926] DEBUG: Session token refreshed - Host: server-33
+[5566] ERROR: Connection timeout - Host: server-29
+[5374] INFO: Connection established - Host: server-40
+[9790] ERROR: Connection timeout - Host: server-4
+[1784] INFO: Connection established - Host: server-33
+[1074] INFO: Database sync complete - Host: server-22
+[3561] DEBUG: Session token refreshed - Host: server-26
+[9342] ERROR: Connection timeout - Host: server-30
+[6965] DEBUG: Session token refreshed - Host: server-4
+[7712] WARN: High CPU utilization - Host: server-19
+[9258] INFO: Database sync complete - Host: server-42
+[9907] WARN: High CPU utilization - Host: server-25
+[1587] WARN: High CPU utilization - Host: server-40
+[1142] ERROR: Connection timeout - Host: server-7
+[6810] WARN: High CPU utilization - Host: server-15
+[1856] INFO: Connection established - Host: server-22
+[4743] INFO: Database sync complete - Host: server-10
+[8524] DEBUG: Session token refreshed - Host: server-48
+[5678] DEBUG: Session token refreshed - Host: server-42
+[7922] ERROR: Connection timeout - Host: server-3
+[3645] INFO: Database sync complete - Host: server-32
+[7028] DEBUG: Session token refreshed - Host: server-48
+[7073] INFO: Database sync complete - Host: server-23
+[5075] DEBUG: Session token refreshed - Host: server-13
+[6901] ERROR: Connection timeout - Host: server-45
+[8308] DEBUG: Session token refreshed - Host: server-48
+[1171] DEBUG: Session token refreshed - Host: server-11
+[4213] DEBUG: Session token refreshed - Host: server-23
+[2167] INFO: Connection established - Host: server-21
+[5605] INFO: Connection established - Host: server-15
+[1074] INFO: Database sync complete - Host: server-23
+[8935] INFO: Connection established - Host: server-33
+[2435] ERROR: Connection timeout - Host: server-24
+[8851] WARN: High CPU utilization - Host: server-3
+[3823] DEBUG: Session token refreshed - Host: server-47
+[1926] INFO: Database sync complete - Host: server-4
+[8839] WARN: High CPU utilization - Host: server-9
+[6243] INFO: Connection established - Host: server-41
+[8992] DEBUG: Session token refreshed - Host: server-47
+[7547] INFO: Database sync complete - Host: server-37
+[2847] INFO: Database sync complete - Host: server-6
+[9569] INFO: Connection established - Host: server-34
+[3092] WARN: High CPU utilization - Host: server-4
+[1349] DEBUG: Session token refreshed - Host: server-16
+[4173] INFO: Connection established - Host: server-18
+[9374] INFO: Database sync complete - Host: server-13
+[7940] WARN: High CPU utilization - Host: server-8
+[6552] DEBUG: Session token refreshed - Host: server-43
+[4457] DEBUG: Session token refreshed - Host: server-41
+[1186] INFO: Connection established - Host: server-8
+[1366] WARN: High CPU utilization - Host: server-46
+[8346] DEBUG: Session token refreshed - Host: server-9
+[8065] DEBUG: Session token refreshed - Host: server-46
+[3753] INFO: Connection established - Host: server-4
+[8716] WARN: High CPU utilization - Host: server-25
+[3991] DEBUG: Session token refreshed - Host: server-33
+[9229] INFO: Database sync complete - Host: server-27
+[7446] INFO: Connection established - Host: server-41
+[3608] INFO: Connection established - Host: server-47
+[1934] INFO: Connection established - Host: server-44
+[6506] INFO: Database sync complete - Host: server-39
+[9652] DEBUG: Session token refreshed - Host: server-38
+[7887] INFO: Connection established - Host: server-7
+[1741] ERROR: Connection timeout - Host: server-28
+[1240] WARN: High CPU utilization - Host: server-11
+[2711] INFO: Connection established - Host: server-14
+[6381] INFO: Connection established - Host: server-50
+[1072] INFO: Database sync complete - Host: server-3
+[9809] INFO: Database sync complete - Host: server-23
+[7442] INFO: Database sync complete - Host: server-6
+[4601] INFO: Database sync complete - Host: server-6
+[9519] WARN: High CPU utilization - Host: server-17
+[7546] INFO: Connection established - Host: server-16
+[8703] ERROR: Connection timeout - Host: server-2
+[2477] ERROR: Connection timeout - Host: server-4
+[6893] WARN: High CPU utilization - Host: server-18
+[8413] INFO: Connection established - Host: server-22
+[3699] ERROR: Connection timeout - Host: server-15
+[5944] INFO: Connection established - Host: server-35
+[6331] ERROR: Connection timeout - Host: server-15
+[8190] WARN: High CPU utilization - Host: server-21
+[1423] DEBUG: Session token refreshed - Host: server-46
+[9916] ERROR: Connection timeout - Host: server-5
+[2189] INFO: Database sync complete - Host: server-22
+[1437] INFO: Database sync complete - Host: server-20
+[9465] ERROR: Connection timeout - Host: server-35
+[7883] ERROR: Connection timeout - Host: server-2
+[2814] ERROR: Connection timeout - Host: server-49
+[3657] DEBUG: Session token refreshed - Host: server-29
+[9665] WARN: High CPU utilization - Host: server-47
+[4121] WARN: High CPU utilization - Host: server-29
+[4185] INFO: Database sync complete - Host: server-29
+[5159] WARN: High CPU utilization - Host: server-6
+[2392] ERROR: Connection timeout - Host: server-32
+[5954] INFO: Database sync complete - Host: server-6
+[6628] INFO: Connection established - Host: server-35
+[2402] INFO: Database sync complete - Host: server-29
+[7466] ERROR: Connection timeout - Host: server-7
+[9872] DEBUG: Session token refreshed - Host: server-19
+[7050] ERROR: Connection timeout - Host: server-31
+[1986] WARN: High CPU utilization - Host: server-34
+[9148] INFO: Connection established - Host: server-35
+[2616] DEBUG: Session token refreshed - Host: server-48
+[5364] WARN: High CPU utilization - Host: server-46
+[8509] INFO: Database sync complete - Host: server-48
+[5344] ERROR: Connection timeout - Host: server-14
+[6327] DEBUG: Session token refreshed - Host: server-16
+[3457] ERROR: Connection timeout - Host: server-44
+[9333] INFO: Database sync complete - Host: server-17
+[8966] DEBUG: Session token refreshed - Host: server-44
+[9077] INFO: Database sync complete - Host: server-6
+[8859] INFO: Database sync complete - Host: server-31
+[3956] DEBUG: Session token refreshed - Host: server-50
+[8705] ERROR: Connection timeout - Host: server-48
+[8277] INFO: Database sync complete - Host: server-48
+[4064] DEBUG: Session token refreshed - Host: server-30
+[1771] INFO: Database sync complete - Host: server-34
+[3282] INFO: Connection established - Host: server-24
+[7141] INFO: Connection established - Host: server-3
+[3057] DEBUG: Session token refreshed - Host: server-49
+[8127] INFO: Database sync complete - Host: server-6
+[5463] DEBUG: Session token refreshed - Host: server-10
+[5484] DEBUG: Session token refreshed - Host: server-6
+[2823] INFO: Connection established - Host: server-48
+[5642] ERROR: Connection timeout - Host: server-26
+[4282] INFO: Database sync complete - Host: server-20
+[1752] ERROR: Connection timeout - Host: server-39
+[6790] INFO: Connection established - Host: server-43
+[9672] INFO: Database sync complete - Host: server-8
+[8280] DEBUG: Session token refreshed - Host: server-21
+[1559] DEBUG: Session token refreshed - Host: server-24
+[8327] INFO: Connection established - Host: server-18
+[7160] WARN: High CPU utilization - Host: server-21
+[8867] WARN: High CPU utilization - Host: server-13
+[1541] ERROR: Connection timeout - Host: server-6
+[5450] WARN: High CPU utilization - Host: server-26
+[4727] INFO: Database sync complete - Host: server-8
+[5865] WARN: High CPU utilization - Host: server-5
+[2933] DEBUG: Session token refreshed - Host: server-46
+[9590] INFO: Database sync complete - Host: server-32
+[3385] ERROR: Connection timeout - Host: server-5
+[2535] ERROR: Connection timeout - Host: server-10
+[5838] ERROR: Connection timeout - Host: server-36
+[2590] INFO: Connection established - Host: server-29
+[9726] INFO: Connection established - Host: server-42
+[7824] ERROR: Connection timeout - Host: server-32
+[9519] ERROR: Connection timeout - Host: server-22
+[4372] WARN: High CPU utilization - Host: server-20
+[2429] DEBUG: Session token refreshed - Host: server-36
+[3760] INFO: Database sync complete - Host: server-17
+[4593] INFO: Connection established - Host: server-28
+[1770] WARN: High CPU utilization - Host: server-4
+[2178] INFO: Connection established - Host: server-31
+[4971] DEBUG: Session token refreshed - Host: server-41
+[9020] ERROR: Connection timeout - Host: server-20
+[5269] ERROR: Connection timeout - Host: server-24
+[2322] DEBUG: Session token refreshed - Host: server-1
+[9388] INFO: Connection established - Host: server-23
+[6998] ERROR: Connection timeout - Host: server-23
+[9908] INFO: Database sync complete - Host: server-15
+[2106] DEBUG: Session token refreshed - Host: server-3
+[7655] DEBUG: Session token refreshed - Host: server-30
+[6779] ERROR: Connection timeout - Host: server-47
+[3362] ERROR: Connection timeout - Host: server-40
+[5521] ERROR: Connection timeout - Host: server-29
+[1736] DEBUG: Session token refreshed - Host: server-17
+[7184] DEBUG: Session token refreshed - Host: server-33
+[4740] DEBUG: Session token refreshed - Host: server-21
+[6903] ERROR: Connection timeout - Host: server-42
+[4760] INFO: Connection established - Host: server-50
+[8868] INFO: Connection established - Host: server-28
+[1086] ERROR: Connection timeout - Host: server-35
+[8893] INFO: Database sync complete - Host: server-35
+[6913] INFO: Database sync complete - Host: server-30
+[9422] DEBUG: Session token refreshed - Host: server-3
+[3229] INFO: Database sync complete - Host: server-28
+[2560] ERROR: Connection timeout - Host: server-22
+[3978] DEBUG: Session token refreshed - Host: server-28
+[5654] WARN: High CPU utilization - Host: server-21
+[3835] WARN: High CPU utilization - Host: server-48
+[2141] INFO: Database sync complete - Host: server-23
+[3779] ERROR: Connection timeout - Host: server-23
+[9818] WARN: High CPU utilization - Host: server-46
+[2359] ERROR: Connection timeout - Host: server-16
+[4334] INFO: Connection established - Host: server-19
+[9472] INFO: Connection established - Host: server-3
+[8358] ERROR: Connection timeout - Host: server-14
+[9325] INFO: Database sync complete - Host: server-35
+[6310] INFO: Connection established - Host: server-12
+[7232] DEBUG: Session token refreshed - Host: server-5
+[6881] INFO: Database sync complete - Host: server-47
+[1389] WARN: High CPU utilization - Host: server-32
+[2893] INFO: Connection established - Host: server-17
+[5777] ERROR: Connection timeout - Host: server-1
+[4183] ERROR: Connection timeout - Host: server-3
+[3499] INFO: Database sync complete - Host: server-36
+[7893] ERROR: Connection timeout - Host: server-17
+[3785] DEBUG: Session token refreshed - Host: server-13
+[5412] INFO: Connection established - Host: server-24
+[7056] DEBUG: Session token refreshed - Host: server-40
+[3453] DEBUG: Session token refreshed - Host: server-28
+[5280] WARN: High CPU utilization - Host: server-49
+[4541] INFO: Connection established - Host: server-40
+[1191] DEBUG: Session token refreshed - Host: server-32
+[7612] WARN: High CPU utilization - Host: server-42
+[8155] WARN: High CPU utilization - Host: server-24
+[7228] INFO: Database sync complete - Host: server-15
+[7804] WARN: High CPU utilization - Host: server-15
+[9137] INFO: Database sync complete - Host: server-33
+[5624] INFO: Database sync complete - Host: server-16
+[2848] WARN: High CPU utilization - Host: server-42
+[2938] DEBUG: Session token refreshed - Host: server-24
+[1483] DEBUG: Session token refreshed - Host: server-45
+[5440] INFO: Database sync complete - Host: server-34
+[5506] INFO: Connection established - Host: server-47
+[7830] INFO: Connection established - Host: server-16
+[6297] WARN: High CPU utilization - Host: server-48
+[2831] WARN: High CPU utilization - Host: server-26
+[3586] WARN: High CPU utilization - Host: server-43
+[3071] INFO: Connection established - Host: server-40
+[3771] INFO: Connection established - Host: server-25
+[4928] WARN: High CPU utilization - Host: server-19
+[5172] INFO: Database sync complete - Host: server-11
+[7187] DEBUG: Session token refreshed - Host: server-9
+[9082] WARN: High CPU utilization - Host: server-15
+[2650] INFO: Database sync complete - Host: server-42
+[7430] INFO: Database sync complete - Host: server-37
+[2354] ERROR: Connection timeout - Host: server-15
+[4564] DEBUG: Session token refreshed - Host: server-1
+[2513] DEBUG: Session token refreshed - Host: server-47
+[3762] INFO: Database sync complete - Host: server-5
+[3594] INFO: Connection established - Host: server-42
+[9458] INFO: Database sync complete - Host: server-41
+[1657] DEBUG: Session token refreshed - Host: server-43
+[6301] WARN: High CPU utilization - Host: server-28
+[4689] ERROR: Connection timeout - Host: server-47
+[6776] ERROR: Connection timeout - Host: server-43
+[6621] INFO: Database sync complete - Host: server-35
+[5548] INFO: Database sync complete - Host: server-44
+[9483] INFO: Connection established - Host: server-16
+[1051] DEBUG: Session token refreshed - Host: server-18
+[5528] ERROR: Connection timeout - Host: server-21
+[8815] INFO: Connection established - Host: server-20
+[8566] DEBUG: Session token refreshed - Host: server-19
+[7758] INFO: Connection established - Host: server-49
+[2123] INFO: Database sync complete - Host: server-29
+[7131] ERROR: Connection timeout - Host: server-13
+[3417] INFO: Database sync complete - Host: server-44
+[1765] INFO: Database sync complete - Host: server-2
+[4951] INFO: Connection established - Host: server-4
+[4407] WARN: High CPU utilization - Host: server-35
+[5465] INFO: Connection established - Host: server-20
+[7881] DEBUG: Session token refreshed - Host: server-43
+[3224] INFO: Connection established - Host: server-49
+[2888] WARN: High CPU utilization - Host: server-32
+[6630] INFO: Database sync complete - Host: server-11
+[5845] DEBUG: Session token refreshed - Host: server-48
+[9832] ERROR: Connection timeout - Host: server-2
+[2820] DEBUG: Session token refreshed - Host: server-39
+[7972] ERROR: Connection timeout - Host: server-11
+[6441] WARN: High CPU utilization - Host: server-40
+[1652] INFO: Connection established - Host: server-29
+[3882] INFO: Connection established - Host: server-38
+[9923] INFO: Connection established - Host: server-41
+[4507] INFO: Database sync complete - Host: server-5
+[5429] INFO: Database sync complete - Host: server-37
+[1462] WARN: High CPU utilization - Host: server-21
+[1306] ERROR: Connection timeout - Host: server-11
+[3637] DEBUG: Session token refreshed - Host: server-16
+[9330] INFO: Database sync complete - Host: server-26
+[4098] WARN: High CPU utilization - Host: server-35
+[3361] WARN: High CPU utilization - Host: server-26
+[3818] WARN: High CPU utilization - Host: server-23
+[7615] INFO: Database sync complete - Host: server-2
+[6556] INFO: Database sync complete - Host: server-49
+[5417] INFO: Connection established - Host: server-45
+[5472] DEBUG: Session token refreshed - Host: server-11
+[5629] INFO: Connection established - Host: server-22
+[8898] DEBUG: Session token refreshed - Host: server-41
+[4753] DEBUG: Session token refreshed - Host: server-40
+[6554] WARN: High CPU utilization - Host: server-4
+[9612] WARN: High CPU utilization - Host: server-17
+[9451] WARN: High CPU utilization - Host: server-48
+[4820] ERROR: Connection timeout - Host: server-32
+[1017] INFO: Database sync complete - Host: server-18
+[8736] INFO: Connection established - Host: server-24
+[5104] DEBUG: Session token refreshed - Host: server-15
+[1854] INFO: Database sync complete - Host: server-38
+[7416] ERROR: Connection timeout - Host: server-34
+[1526] WARN: High CPU utilization - Host: server-48
+[1097] INFO: Database sync complete - Host: server-21
+[2320] WARN: High CPU utilization - Host: server-36
+[8282] INFO: Database sync complete - Host: server-7
+[4645] DEBUG: Session token refreshed - Host: server-6
+[9347] WARN: High CPU utilization - Host: server-5
+[8452] INFO: Connection established - Host: server-16
+[4581] DEBUG: Session token refreshed - Host: server-21
+[9529] ERROR: Connection timeout - Host: server-7
+[9707] INFO: Connection established - Host: server-25
+[3607] INFO: Database sync complete - Host: server-46
+[9851] DEBUG: Session token refreshed - Host: server-44
+[7438] WARN: High CPU utilization - Host: server-21
+[8811] WARN: High CPU utilization - Host: server-1
+[7814] INFO: Database sync complete - Host: server-4
+[2616] INFO: Database sync complete - Host: server-15
+[4900] INFO: Connection established - Host: server-47
+[7643] INFO: Connection established - Host: server-28
+[4404] DEBUG: Session token refreshed - Host: server-7
+[7551] DEBUG: Session token refreshed - Host: server-33
+[6343] INFO: Database sync complete - Host: server-45
+[5203] INFO: Database sync complete - Host: server-48
+[1467] WARN: High CPU utilization - Host: server-34
+[1407] WARN: High CPU utilization - Host: server-32
+[6332] INFO: Database sync complete - Host: server-9
+[7886] ERROR: Connection timeout - Host: server-6
+[2641] DEBUG: Session token refreshed - Host: server-42
+[8453] ERROR: Connection timeout - Host: server-31
+[6680] DEBUG: Session token refreshed - Host: server-8
+[2098] INFO: Connection established - Host: server-39
+[7691] ERROR: Connection timeout - Host: server-46
+[8989] DEBUG: Session token refreshed - Host: server-26
+[4513] DEBUG: Session token refreshed - Host: server-30
+[8543] DEBUG: Session token refreshed - Host: server-13
+[4294] WARN: High CPU utilization - Host: server-30
+[6756] INFO: Database sync complete - Host: server-37
+[9933] INFO: Connection established - Host: server-12
+[3682] INFO: Connection established - Host: server-50
+[2673] ERROR: Connection timeout - Host: server-27
+[4543] WARN: High CPU utilization - Host: server-9
+[1951] INFO: Connection established - Host: server-22
+[6839] INFO: Database sync complete - Host: server-18
+[8448] INFO: Connection established - Host: server-37
+[8372] INFO: Database sync complete - Host: server-23
+[9270] ERROR: Connection timeout - Host: server-2
+[2912] ERROR: Connection timeout - Host: server-17
+[5477] ERROR: Connection timeout - Host: server-19
+[3550] ERROR: Connection timeout - Host: server-19
+[1040] INFO: Database sync complete - Host: server-25
+[2372] INFO: Database sync complete - Host: server-45
+[9777] INFO: Database sync complete - Host: server-36
+[7562] DEBUG: Session token refreshed - Host: server-2
+[8972] INFO: Connection established - Host: server-17
+[4273] WARN: High CPU utilization - Host: server-32
+[4622] INFO: Connection established - Host: server-6
+[2606] WARN: High CPU utilization - Host: server-13
+[7462] DEBUG: Session token refreshed - Host: server-17
+[3803] WARN: High CPU utilization - Host: server-32
+[8716] DEBUG: Session token refreshed - Host: server-27
+[3510] ERROR: Connection timeout - Host: server-10
+[7651] INFO: Database sync complete - Host: server-34
+[6205] ERROR: Connection timeout - Host: server-28
+[8358] ERROR: Connection timeout - Host: server-21
+[4996] WARN: High CPU utilization - Host: server-13
+[1221] ERROR: Connection timeout - Host: server-44
+[5531] ERROR: Connection timeout - Host: server-40
+[6465] INFO: Database sync complete - Host: server-25
+[7842] WARN: High CPU utilization - Host: server-35
+[6985] INFO: Database sync complete - Host: server-49
+[9708] DEBUG: Session token refreshed - Host: server-20
+[1343] INFO: Database sync complete - Host: server-23
+[6567] INFO: Database sync complete - Host: server-5
+[8185] WARN: High CPU utilization - Host: server-3
+[8872] INFO: Connection established - Host: server-43
+[5219] ERROR: Connection timeout - Host: server-27
+[5949] ERROR: Connection timeout - Host: server-33
+[1504] INFO: Connection established - Host: server-44
+[1590] INFO: Connection established - Host: server-45
+[3494] DEBUG: Session token refreshed - Host: server-15
+[8144] INFO: Connection established - Host: server-36
+[5483] INFO: Connection established - Host: server-29
+[8352] WARN: High CPU utilization - Host: server-43
+[9439] DEBUG: Session token refreshed - Host: server-44
+[9878] ERROR: Connection timeout - Host: server-43
+[6546] WARN: High CPU utilization - Host: server-36
+[6745] DEBUG: Session token refreshed - Host: server-38
+[6703] DEBUG: Session token refreshed - Host: server-23
+[3742] INFO: Connection established - Host: server-36
+[6970] INFO: Connection established - Host: server-44
+[9099] WARN: High CPU utilization - Host: server-36
+[8564] ERROR: Connection timeout - Host: server-48
+[7836] DEBUG: Session token refreshed - Host: server-14
+[7595] DEBUG: Session token refreshed - Host: server-18
+[4677] INFO: Database sync complete - Host: server-27
+[9997] WARN: High CPU utilization - Host: server-12
+[8900] ERROR: Connection timeout - Host: server-42
+[3168] DEBUG: Session token refreshed - Host: server-24
+[9416] ERROR: Connection timeout - Host: server-29
+[5364] DEBUG: Session token refreshed - Host: server-23
+[2140] ERROR: Connection timeout - Host: server-24
+[8658] DEBUG: Session token refreshed - Host: server-32
+[3278] INFO: Database sync complete - Host: server-31
+[6959] DEBUG: Session token refreshed - Host: server-22
+[2807] WARN: High CPU utilization - Host: server-33
+[5684] INFO: Connection established - Host: server-48
+[8141] WARN: High CPU utilization - Host: server-12
+[9004] DEBUG: Session token refreshed - Host: server-2
+[9208] ERROR: Connection timeout - Host: server-27
+[8761] ERROR: Connection timeout - Host: server-2
+[8689] INFO: Database sync complete - Host: server-4
+[7110] INFO: Database sync complete - Host: server-34
+[8317] DEBUG: Session token refreshed - Host: server-6
+[1821] INFO: Connection established - Host: server-41
+[1990] INFO: Connection established - Host: server-3
+[7702] INFO: Database sync complete - Host: server-34
+[4460] INFO: Connection established - Host: server-39
+[3487] DEBUG: Session token refreshed - Host: server-11
+[4782] WARN: High CPU utilization - Host: server-31
+[6023] ERROR: Connection timeout - Host: server-11
+[8995] ERROR: Connection timeout - Host: server-21
+[9147] INFO: Connection established - Host: server-28
+[6022] DEBUG: Session token refreshed - Host: server-13
+[8575] INFO: Database sync complete - Host: server-40
+[5613] INFO: Database sync complete - Host: server-32
+[3390] WARN: High CPU utilization - Host: server-41
+[9316] ERROR: Connection timeout - Host: server-35
+[6962] INFO: Database sync complete - Host: server-25
+[5277] ERROR: Connection timeout - Host: server-28
+[2684] ERROR: Connection timeout - Host: server-45
+[7465] INFO: Database sync complete - Host: server-40
+[3651] INFO: Connection established - Host: server-10
+[8107] DEBUG: Session token refreshed - Host: server-2
+[7111] WARN: High CPU utilization - Host: server-35
+[8635] INFO: Connection established - Host: server-27
+[2811] INFO: Database sync complete - Host: server-38
+[5362] INFO: Connection established - Host: server-48
+[4209] INFO: Connection established - Host: server-28
+[7866] WARN: High CPU utilization - Host: server-24
+[1329] WARN: High CPU utilization - Host: server-15
+[3863] ERROR: Connection timeout - Host: server-50
+[1010] INFO: Database sync complete - Host: server-41
+[1508] DEBUG: Session token refreshed - Host: server-33
+[1668] INFO: Connection established - Host: server-49
+[4745] ERROR: Connection timeout - Host: server-4
+[1001] ERROR: Connection timeout - Host: server-19
+[9948] DEBUG: Session token refreshed - Host: server-41
+[3227] WARN: High CPU utilization - Host: server-35
+[3192] INFO: Database sync complete - Host: server-4
+[3659] DEBUG: Session token refreshed - Host: server-14
+[2559] INFO: Connection established - Host: server-9
+[9696] INFO: Connection established - Host: server-19
+[1273] ERROR: Connection timeout - Host: server-14
+[3807] INFO: Database sync complete - Host: server-5
+[3932] INFO: Database sync complete - Host: server-29
+[3848] INFO: Database sync complete - Host: server-9
+[8268] ERROR: Connection timeout - Host: server-25
+[8073] INFO: Database sync complete - Host: server-4
+[9859] INFO: Connection established - Host: server-20
+[6041] WARN: High CPU utilization - Host: server-50
+[8822] WARN: High CPU utilization - Host: server-49
+[1974] INFO: Connection established - Host: server-1
+[3005] ERROR: Connection timeout - Host: server-6
+[3182] ERROR: Connection timeout - Host: server-4
+[5289] INFO: Connection established - Host: server-13
+[2537] WARN: High CPU utilization - Host: server-31
+[2899] WARN: High CPU utilization - Host: server-4
+[1381] INFO: Database sync complete - Host: server-5
+[4114] DEBUG: Session token refreshed - Host: server-29
+[5207] DEBUG: Session token refreshed - Host: server-15
+[6572] INFO: Connection established - Host: server-31
+[3374] DEBUG: Session token refreshed - Host: server-23
+[1679] INFO: Database sync complete - Host: server-15
+[9970] INFO: Connection established - Host: server-3
+[9980] INFO: Connection established - Host: server-5
+[1762] ERROR: Connection timeout - Host: server-28
+[6862] WARN: High CPU utilization - Host: server-42
+[3037] INFO: Database sync complete - Host: server-31
+[1346] ERROR: Connection timeout - Host: server-11
+[2613] INFO: Database sync complete - Host: server-7
+[6359] INFO: Database sync complete - Host: server-7
+[2558] DEBUG: Session token refreshed - Host: server-12
+[9803] DEBUG: Session token refreshed - Host: server-36
+[3853] INFO: Database sync complete - Host: server-14
+[4300] ERROR: Connection timeout - Host: server-31
+[2472] INFO: Connection established - Host: server-5
+[8607] INFO: Database sync complete - Host: server-34
+[7988] WARN: High CPU utilization - Host: server-21
+[3366] DEBUG: Session token refreshed - Host: server-36
+[9204] INFO: Database sync complete - Host: server-24
+[9710] INFO: Database sync complete - Host: server-28
+[6503] INFO: Connection established - Host: server-48
+[1038] ERROR: Connection timeout - Host: server-1
+[4217] INFO: Connection established - Host: server-5
+[1544] DEBUG: Session token refreshed - Host: server-3
+[9164] INFO: Connection established - Host: server-29
+[1342] WARN: High CPU utilization - Host: server-17
+[6178] WARN: High CPU utilization - Host: server-11
+[8742] ERROR: Connection timeout - Host: server-35
+[6088] WARN: High CPU utilization - Host: server-21
+[8300] WARN: High CPU utilization - Host: server-2
+[6751] INFO: Database sync complete - Host: server-6
+[6150] DEBUG: Session token refreshed - Host: server-32
+[4771] INFO: Database sync complete - Host: server-17
+[9211] DEBUG: Session token refreshed - Host: server-47
+[3421] DEBUG: Session token refreshed - Host: server-41
+[3414] WARN: High CPU utilization - Host: server-18
+[6123] INFO: Connection established - Host: server-13
+[5869] INFO: Database sync complete - Host: server-3
+[4382] INFO: Connection established - Host: server-22
+[6233] DEBUG: Session token refreshed - Host: server-35
+[2952] ERROR: Connection timeout - Host: server-40
+[3031] INFO: Connection established - Host: server-14
+[7790] ERROR: Connection timeout - Host: server-41
+[2275] ERROR: Connection timeout - Host: server-15
+[8625] WARN: High CPU utilization - Host: server-36
+[4301] ERROR: Connection timeout - Host: server-28
+[8467] ERROR: Connection timeout - Host: server-48
+[1545] INFO: Connection established - Host: server-43
+[1117] ERROR: Connection timeout - Host: server-39
+[3331] WARN: High CPU utilization - Host: server-49
+[2376] INFO: Connection established - Host: server-10
+[2904] INFO: Database sync complete - Host: server-23
+[9542] INFO: Database sync complete - Host: server-27
+[4468] DEBUG: Session token refreshed - Host: server-34
+[1406] WARN: High CPU utilization - Host: server-46
+[9452] ERROR: Connection timeout - Host: server-50
+[6586] ERROR: Connection timeout - Host: server-42
+[3851] INFO: Connection established - Host: server-12
+[6155] DEBUG: Session token refreshed - Host: server-9
+[1010] DEBUG: Session token refreshed - Host: server-44
+[3553] INFO: Database sync complete - Host: server-46
+[1711] ERROR: Connection timeout - Host: server-21
+[7085] ERROR: Connection timeout - Host: server-24
+[9965] INFO: Connection established - Host: server-22
+[9318] WARN: High CPU utilization - Host: server-24
+[5347] ERROR: Connection timeout - Host: server-48
+[2231] INFO: Database sync complete - Host: server-33
+[7962] WARN: High CPU utilization - Host: server-46
+[1587] ERROR: Connection timeout - Host: server-10
+[1163] INFO: Connection established - Host: server-17
+[2027] INFO: Connection established - Host: server-5
+[1057] INFO: Database sync complete - Host: server-28
+[4316] WARN: High CPU utilization - Host: server-41
+[1369] DEBUG: Session token refreshed - Host: server-40
+[3336] ERROR: Connection timeout - Host: server-50
+[6339] WARN: High CPU utilization - Host: server-4
+[8196] INFO: Connection established - Host: server-33
+[7655] INFO: Connection established - Host: server-13
+[6182] WARN: High CPU utilization - Host: server-21
+[1102] DEBUG: Session token refreshed - Host: server-36
+[9225] DEBUG: Session token refreshed - Host: server-31
+[2084] DEBUG: Session token refreshed - Host: server-45
+[9603] ERROR: Connection timeout - Host: server-34
+[2300] DEBUG: Session token refreshed - Host: server-3
+[1994] ERROR: Connection timeout - Host: server-25
+[5946] INFO: Connection established - Host: server-14
+[2676] INFO: Connection established - Host: server-20
+[2726] INFO: Database sync complete - Host: server-21
+[6473] ERROR: Connection timeout - Host: server-1
+[5099] INFO: Database sync complete - Host: server-42
+[2690] WARN: High CPU utilization - Host: server-41
+[7975] ERROR: Connection timeout - Host: server-49
+[4502] WARN: High CPU utilization - Host: server-35
+[2816] INFO: Connection established - Host: server-45
+[6631] ERROR: Connection timeout - Host: server-34
+[2228] INFO: Connection established - Host: server-25
+[9015] ERROR: Connection timeout - Host: server-37
+[8219] INFO: Database sync complete - Host: server-24
+[7779] DEBUG: Session token refreshed - Host: server-20
+[8129] INFO: Connection established - Host: server-43
+[9650] ERROR: Connection timeout - Host: server-28
+[8703] INFO: Connection established - Host: server-20
+[9004] WARN: High CPU utilization - Host: server-30
+[7671] ERROR: Connection timeout - Host: server-17
+[2703] INFO: Database sync complete - Host: server-35
+[5107] INFO: Connection established - Host: server-28
+[8242] INFO: Database sync complete - Host: server-41
+[7961] INFO: Database sync complete - Host: server-43
+[4788] ERROR: Connection timeout - Host: server-27
+[2053] INFO: Database sync complete - Host: server-37
+[5282] INFO: Connection established - Host: server-17
+[5967] DEBUG: Session token refreshed - Host: server-24
+[8802] INFO: Database sync complete - Host: server-12
+[6055] WARN: High CPU utilization - Host: server-6
+[4076] INFO: Database sync complete - Host: server-25
+[1462] INFO: Database sync complete - Host: server-4
+[5054] WARN: High CPU utilization - Host: server-37
+[7790] WARN: High CPU utilization - Host: server-23
+[6071] INFO: Connection established - Host: server-4
+[3152] INFO: Connection established - Host: server-34
+[1852] ERROR: Connection timeout - Host: server-23
+[1817] INFO: Database sync complete - Host: server-23
+[3732] INFO: Database sync complete - Host: server-37
+[1662] INFO: Connection established - Host: server-8
+[9385] WARN: High CPU utilization - Host: server-7
+[9878] ERROR: Connection timeout - Host: server-31
+[2286] DEBUG: Session token refreshed - Host: server-38
+[8305] ERROR: Connection timeout - Host: server-4
+[6044] WARN: High CPU utilization - Host: server-18
+[7172] INFO: Database sync complete - Host: server-48
+[4436] INFO: Database sync complete - Host: server-23
+[7438] INFO: Database sync complete - Host: server-41
+[7545] DEBUG: Session token refreshed - Host: server-31
+[9788] INFO: Database sync complete - Host: server-48
+[2726] INFO: Database sync complete - Host: server-27
+[5242] WARN: High CPU utilization - Host: server-15
+[3221] DEBUG: Session token refreshed - Host: server-13
+[6861] INFO: Database sync complete - Host: server-2
+[8457] INFO: Connection established - Host: server-5
+[1524] DEBUG: Session token refreshed - Host: server-38
+[5736] INFO: Database sync complete - Host: server-7
+[6835] INFO: Connection established - Host: server-36
+[6518] INFO: Connection established - Host: server-8
+[7740] INFO: Connection established - Host: server-17
+[6692] INFO: Connection established - Host: server-17
+[8140] INFO: Database sync complete - Host: server-24
+[3049] INFO: Database sync complete - Host: server-24
+[2251] DEBUG: Session token refreshed - Host: server-13
+[4731] ERROR: Connection timeout - Host: server-45
+[1806] INFO: Connection established - Host: server-9
+[1523] WARN: High CPU utilization - Host: server-23
+[4173] WARN: High CPU utilization - Host: server-35
+[2097] INFO: Database sync complete - Host: server-1
+[4136] ERROR: Connection timeout - Host: server-4
+[1086] INFO: Database sync complete - Host: server-5
+[4638] DEBUG: Session token refreshed - Host: server-38
+[8315] INFO: Connection established - Host: server-28
+[8085] ERROR: Connection timeout - Host: server-35
+[8070] INFO: Database sync complete - Host: server-19
+[7662] INFO: Connection established - Host: server-20
+[6791] INFO: Connection established - Host: server-35
+[1019] INFO: Connection established - Host: server-34
+[1898] DEBUG: Session token refreshed - Host: server-1
+[9930] WARN: High CPU utilization - Host: server-30
+[4999] INFO: Connection established - Host: server-18
+[7386] WARN: High CPU utilization - Host: server-3
+[4099] ERROR: Connection timeout - Host: server-24
+[8155] INFO: Connection established - Host: server-34
+[3900] WARN: High CPU utilization - Host: server-25
+[9085] INFO: Connection established - Host: server-16
+[7419] WARN: High CPU utilization - Host: server-31
+[8241] WARN: High CPU utilization - Host: server-30
+[1844] INFO: Database sync complete - Host: server-42
+[9751] INFO: Connection established - Host: server-20
+[7766] INFO: Connection established - Host: server-14
+[2344] INFO: Connection established - Host: server-48
+[9637] WARN: High CPU utilization - Host: server-42
+[4357] ERROR: Connection timeout - Host: server-13
+[1114] INFO: Database sync complete - Host: server-13
+[5261] ERROR: Connection timeout - Host: server-38
+[3114] WARN: High CPU utilization - Host: server-16
+[6151] DEBUG: Session token refreshed - Host: server-37
+[2149] INFO: Connection established - Host: server-46
+[2735] INFO: Database sync complete - Host: server-2
+[5515] ERROR: Connection timeout - Host: server-15
+[5914] DEBUG: Session token refreshed - Host: server-7
+[8654] DEBUG: Session token refreshed - Host: server-27
+[4090] INFO: Database sync complete - Host: server-16
+[6899] WARN: High CPU utilization - Host: server-44
+[2144] WARN: High CPU utilization - Host: server-23
+[5923] DEBUG: Session token refreshed - Host: server-15
+[1874] DEBUG: Session token refreshed - Host: server-1
+[5364] DEBUG: Session token refreshed - Host: server-34
+[3539] ERROR: Connection timeout - Host: server-19
+[9394] ERROR: Connection timeout - Host: server-11
+[8328] DEBUG: Session token refreshed - Host: server-30
+[2867] INFO: Database sync complete - Host: server-25
+[3460] DEBUG: Session token refreshed - Host: server-32
+[1749] DEBUG: Session token refreshed - Host: server-38
+[5059] ERROR: Connection timeout - Host: server-17
+[7708] DEBUG: Session token refreshed - Host: server-32
+[1052] ERROR: Connection timeout - Host: server-13
+[6144] INFO: Connection established - Host: server-18
+[2377] INFO: Database sync complete - Host: server-11
+[5591] INFO: Connection established - Host: server-12
+[6005] WARN: High CPU utilization - Host: server-15
+[8275] INFO: Connection established - Host: server-24
+[8205] WARN: High CPU utilization - Host: server-21
+[7632] INFO: Database sync complete - Host: server-27
+[2895] WARN: High CPU utilization - Host: server-11
+[8632] INFO: Database sync complete - Host: server-35
+[7992] INFO: Connection established - Host: server-24
+[3188] INFO: Database sync complete - Host: server-2
+[4160] ERROR: Connection timeout - Host: server-41
+[2550] INFO: Connection established - Host: server-50
+[5009] WARN: High CPU utilization - Host: server-35
+[9195] ERROR: Connection timeout - Host: server-6
+[6831] INFO: Connection established - Host: server-9
+[3825] DEBUG: Session token refreshed - Host: server-33
+[5349] WARN: High CPU utilization - Host: server-15
+[2514] DEBUG: Session token refreshed - Host: server-30
+[4344] DEBUG: Session token refreshed - Host: server-23
+[1673] INFO: Database sync complete - Host: server-11
+[5613] INFO: Database sync complete - Host: server-7
+[3396] DEBUG: Session token refreshed - Host: server-47
+[2213] DEBUG: Session token refreshed - Host: server-27
+[6712] ERROR: Connection timeout - Host: server-26
+[3203] DEBUG: Session token refreshed - Host: server-10
+[3448] INFO: Database sync complete - Host: server-47
+[5652] DEBUG: Session token refreshed - Host: server-26
+[9021] ERROR: Connection timeout - Host: server-40
+[8461] INFO: Database sync complete - Host: server-21
+[2145] WARN: High CPU utilization - Host: server-32
+[9167] WARN: High CPU utilization - Host: server-27
+[3895] WARN: High CPU utilization - Host: server-49
+[6965] DEBUG: Session token refreshed - Host: server-14
+[4971] ERROR: Connection timeout - Host: server-49
+[2306] INFO: Database sync complete - Host: server-26
+[7289] INFO: Connection established - Host: server-2
+[1093] INFO: Database sync complete - Host: server-32
+[9720] INFO: Connection established - Host: server-39
+[5898] ERROR: Connection timeout - Host: server-45
+[2527] ERROR: Connection timeout - Host: server-46
+[4217] WARN: High CPU utilization - Host: server-45
+[7606] DEBUG: Session token refreshed - Host: server-7
+[4144] ERROR: Connection timeout - Host: server-42
+[4197] WARN: High CPU utilization - Host: server-24
+[5936] DEBUG: Session token refreshed - Host: server-4
+[6573] WARN: High CPU utilization - Host: server-46
+[6020] INFO: Database sync complete - Host: server-3
+[6150] INFO: Connection established - Host: server-33
+[2178] ERROR: Connection timeout - Host: server-23
+[9277] DEBUG: Session token refreshed - Host: server-18
+[2413] WARN: High CPU utilization - Host: server-18
+[2728] INFO: Connection established - Host: server-5
+[8275] DEBUG: Session token refreshed - Host: server-13
+[9407] DEBUG: Session token refreshed - Host: server-43
+[6159] WARN: High CPU utilization - Host: server-20
+[1233] ERROR: Connection timeout - Host: server-20
+[9570] ERROR: Connection timeout - Host: server-14
+[7903] INFO: Connection established - Host: server-25
+[8989] WARN: High CPU utilization - Host: server-11
+[4185] ERROR: Connection timeout - Host: server-7
+[7872] WARN: High CPU utilization - Host: server-35
+[2559] DEBUG: Session token refreshed - Host: server-49
+[8246] DEBUG: Session token refreshed - Host: server-45
+[8285] DEBUG: Session token refreshed - Host: server-47
+[2330] INFO: Connection established - Host: server-26
+[4492] INFO: Connection established - Host: server-1
+[4609] WARN: High CPU utilization - Host: server-45
+[5929] DEBUG: Session token refreshed - Host: server-27
+[6749] ERROR: Connection timeout - Host: server-33
+[6165] ERROR: Connection timeout - Host: server-2
+[2109] INFO: Connection established - Host: server-6
+[7430] INFO: Database sync complete - Host: server-23
+[3621] WARN: High CPU utilization - Host: server-7
+[5395] INFO: Database sync complete - Host: server-43
+[5562] INFO: Database sync complete - Host: server-39
+[2225] ERROR: Connection timeout - Host: server-25
+[8960] ERROR: Connection timeout - Host: server-25
+[5967] WARN: High CPU utilization - Host: server-30
+[6250] ERROR: Connection timeout - Host: server-2
+[5621] DEBUG: Session token refreshed - Host: server-35
+[3623] ERROR: Connection timeout - Host: server-13
+[7831] ERROR: Connection timeout - Host: server-40
+[1058] INFO: Database sync complete - Host: server-30
+[8963] INFO: Database sync complete - Host: server-31
+[7364] DEBUG: Session token refreshed - Host: server-20
+[4459] DEBUG: Session token refreshed - Host: server-3
+[3188] ERROR: Connection timeout - Host: server-33
+[1787] WARN: High CPU utilization - Host: server-42
+[1289] ERROR: Connection timeout - Host: server-45
+[8891] WARN: High CPU utilization - Host: server-16
+[8561] ERROR: Connection timeout - Host: server-21
+[1520] INFO: Connection established - Host: server-32
+[7800] INFO: Connection established - Host: server-44
+[6638] ERROR: Connection timeout - Host: server-26
+[9599] DEBUG: Session token refreshed - Host: server-7
+[6047] WARN: High CPU utilization - Host: server-9
+[9792] INFO: Database sync complete - Host: server-4
+[6661] INFO: Database sync complete - Host: server-44
+[9362] INFO: Database sync complete - Host: server-18
+[3169] INFO: Connection established - Host: server-18
+[6359] INFO: Database sync complete - Host: server-31
+[8175] WARN: High CPU utilization - Host: server-6
+[3626] INFO: Database sync complete - Host: server-22
+[9691] INFO: Database sync complete - Host: server-9
+[3269] WARN: High CPU utilization - Host: server-4
+[1615] INFO: Connection established - Host: server-40
+[6189] INFO: Database sync complete - Host: server-35
+[4588] ERROR: Connection timeout - Host: server-14
+[6541] ERROR: Connection timeout - Host: server-16
+[8429] INFO: Database sync complete - Host: server-48
+[5188] INFO: Database sync complete - Host: server-42
+[2913] DEBUG: Session token refreshed - Host: server-4
+[3241] INFO: Connection established - Host: server-37
+[6747] ERROR: Connection timeout - Host: server-20
+[8964] ERROR: Connection timeout - Host: server-38
+[2263] WARN: High CPU utilization - Host: server-5
+[7423] DEBUG: Session token refreshed - Host: server-43
+[3048] INFO: Connection established - Host: server-18
+[8316] INFO: Connection established - Host: server-41
+[5922] ERROR: Connection timeout - Host: server-36
+[3239] ERROR: Connection timeout - Host: server-13
+[6730] ERROR: Connection timeout - Host: server-11
+[4250] DEBUG: Session token refreshed - Host: server-41
+[3475] INFO: Connection established - Host: server-15
+[7911] INFO: Connection established - Host: server-13
+[5435] INFO: Database sync complete - Host: server-46
+[1733] INFO: Database sync complete - Host: server-13
+[5147] INFO: Connection established - Host: server-9
+[1082] ERROR: Connection timeout - Host: server-44
+[6030] INFO: Connection established - Host: server-45
+[9674] INFO: Database sync complete - Host: server-32
+[9206] DEBUG: Session token refreshed - Host: server-46
+[2545] INFO: Database sync complete - Host: server-43
+[9654] WARN: High CPU utilization - Host: server-43
+[7981] DEBUG: Session token refreshed - Host: server-46
+[5187] ERROR: Connection timeout - Host: server-38
+[2903] WARN: High CPU utilization - Host: server-35
+[2563] DEBUG: Session token refreshed - Host: server-1
+[6058] WARN: High CPU utilization - Host: server-16
+[6501] WARN: High CPU utilization - Host: server-35
+[1702] WARN: High CPU utilization - Host: server-23
+[4648] INFO: Connection established - Host: server-47
+[7800] INFO: Database sync complete - Host: server-7
+[3558] WARN: High CPU utilization - Host: server-20
+[3961] INFO: Connection established - Host: server-5
+[6463] WARN: High CPU utilization - Host: server-41
+[1360] ERROR: Connection timeout - Host: server-22
+[7584] INFO: Database sync complete - Host: server-34
+[7477] DEBUG: Session token refreshed - Host: server-30
+[7477] INFO: Database sync complete - Host: server-7
+[4742] DEBUG: Session token refreshed - Host: server-19
+[6314] INFO: Database sync complete - Host: server-42
+[1830] WARN: High CPU utilization - Host: server-17
+[5536] INFO: Connection established - Host: server-4
+[6494] INFO: Connection established - Host: server-28
+[1901] DEBUG: Session token refreshed - Host: server-9
+[5383] DEBUG: Session token refreshed - Host: server-35
+[3552] INFO: Connection established - Host: server-13
+[4663] DEBUG: Session token refreshed - Host: server-20
+[8195] ERROR: Connection timeout - Host: server-27
+[1428] INFO: Database sync complete - Host: server-20
+[1641] ERROR: Connection timeout - Host: server-31
+[2953] ERROR: Connection timeout - Host: server-33
+[1273] INFO: Database sync complete - Host: server-38
+[1067] DEBUG: Session token refreshed - Host: server-21
+[8658] ERROR: Connection timeout - Host: server-26
+[4335] ERROR: Connection timeout - Host: server-25
+[6910] DEBUG: Session token refreshed - Host: server-42
+[1393] INFO: Connection established - Host: server-24
+[1094] WARN: High CPU utilization - Host: server-41
+[7960] ERROR: Connection timeout - Host: server-15
+[9252] INFO: Connection established - Host: server-28
+[9099] WARN: High CPU utilization - Host: server-32
+[5108] ERROR: Connection timeout - Host: server-8
+[1079] ERROR: Connection timeout - Host: server-20
+[6709] DEBUG: Session token refreshed - Host: server-40
+[8609] ERROR: Connection timeout - Host: server-32
+[2893] INFO: Connection established - Host: server-20
+[8101] WARN: High CPU utilization - Host: server-21
+[2686] WARN: High CPU utilization - Host: server-2
+[2432] DEBUG: Session token refreshed - Host: server-46
+[5293] INFO: Database sync complete - Host: server-41
+[7445] INFO: Connection established - Host: server-29
+[3415] DEBUG: Session token refreshed - Host: server-44
+[8789] INFO: Database sync complete - Host: server-6
+[9224] WARN: High CPU utilization - Host: server-50
+[2069] WARN: High CPU utilization - Host: server-46
+[5327] ERROR: Connection timeout - Host: server-48
+[9614] INFO: Connection established - Host: server-25
+[6908] INFO: Database sync complete - Host: server-29
+[7758] WARN: High CPU utilization - Host: server-3
+[4872] INFO: Connection established - Host: server-9
+[5967] DEBUG: Session token refreshed - Host: server-30
+[2370] INFO: Database sync complete - Host: server-35
+[6381] WARN: High CPU utilization - Host: server-21
+[2993] DEBUG: Session token refreshed - Host: server-2
+[3124] INFO: Database sync complete - Host: server-47
+[4534] DEBUG: Session token refreshed - Host: server-36
+[4211] INFO: Connection established - Host: server-32
+[1213] DEBUG: Session token refreshed - Host: server-24
+[7267] INFO: Database sync complete - Host: server-46
+[3483] DEBUG: Session token refreshed - Host: server-28
+[9692] WARN: High CPU utilization - Host: server-11
+[6946] ERROR: Connection timeout - Host: server-34
+[3669] WARN: High CPU utilization - Host: server-18
+[6056] ERROR: Connection timeout - Host: server-29
+[3075] INFO: Connection established - Host: server-13
+[4580] INFO: Connection established - Host: server-9
+[3132] DEBUG: Session token refreshed - Host: server-24
+[6587] INFO: Connection established - Host: server-4
+[4221] DEBUG: Session token refreshed - Host: server-13
+[5345] WARN: High CPU utilization - Host: server-8
+[6302] INFO: Database sync complete - Host: server-11
+[9948] INFO: Database sync complete - Host: server-23
+[5402] DEBUG: Session token refreshed - Host: server-4
+[6299] ERROR: Connection timeout - Host: server-30
+[7731] DEBUG: Session token refreshed - Host: server-7
+[3455] INFO: Connection established - Host: server-16
+[2243] WARN: High CPU utilization - Host: server-22
+[1018] INFO: Connection established - Host: server-40
+[6775] WARN: High CPU utilization - Host: server-27
+[2952] DEBUG: Session token refreshed - Host: server-12
+[4732] ERROR: Connection timeout - Host: server-37
+[1143] INFO: Database sync complete - Host: server-44
+[6831] WARN: High CPU utilization - Host: server-5
+[7361] DEBUG: Session token refreshed - Host: server-37
+[4465] INFO: Database sync complete - Host: server-12
+[3681] ERROR: Connection timeout - Host: server-23
+[3980] INFO: Database sync complete - Host: server-43
+[8870] DEBUG: Session token refreshed - Host: server-43
+[4781] DEBUG: Session token refreshed - Host: server-26
+[8847] WARN: High CPU utilization - Host: server-16
+[7543] ERROR: Connection timeout - Host: server-12
+[4748] INFO: Connection established - Host: server-26
+[7322] INFO: Database sync complete - Host: server-2
+[8652] INFO: Database sync complete - Host: server-50
+[2803] INFO: Database sync complete - Host: server-22
+[2623] WARN: High CPU utilization - Host: server-6
+[6340] WARN: High CPU utilization - Host: server-27
+[5080] WARN: High CPU utilization - Host: server-11
+[8994] INFO: Connection established - Host: server-21
+[5554] WARN: High CPU utilization - Host: server-50
+[1881] WARN: High CPU utilization - Host: server-7
+[6590] WARN: High CPU utilization - Host: server-22
+[4181] ERROR: Connection timeout - Host: server-39
+[6358] ERROR: Connection timeout - Host: server-35
+[5656] WARN: High CPU utilization - Host: server-49
+[5897] DEBUG: Session token refreshed - Host: server-30
+[9436] INFO: Connection established - Host: server-26
+[4586] ERROR: Connection timeout - Host: server-9
+[3743] WARN: High CPU utilization - Host: server-20
+[4634] WARN: High CPU utilization - Host: server-3
+[1945] ERROR: Connection timeout - Host: server-44
+[4857] ERROR: Connection timeout - Host: server-21
+[3849] INFO: Database sync complete - Host: server-40
+[1838] ERROR: Connection timeout - Host: server-11
+[2570] WARN: High CPU utilization - Host: server-13
+[6719] ERROR: Connection timeout - Host: server-24
+[9511] DEBUG: Session token refreshed - Host: server-25
+[3962] ERROR: Connection timeout - Host: server-32
+[4377] ERROR: Connection timeout - Host: server-26
+[1720] ERROR: Connection timeout - Host: server-34
+[7426] INFO: Database sync complete - Host: server-50
+[5655] DEBUG: Session token refreshed - Host: server-10
+[3522] INFO: Connection established - Host: server-45
+[3448] INFO: Database sync complete - Host: server-44
+[7054] WARN: High CPU utilization - Host: server-21
+[8504] DEBUG: Session token refreshed - Host: server-48
+[5776] ERROR: Connection timeout - Host: server-24
+[4484] DEBUG: Session token refreshed - Host: server-47
+[9017] INFO: Connection established - Host: server-47
+[8379] WARN: High CPU utilization - Host: server-17
+[7644] INFO: Connection established - Host: server-44
+[8627] WARN: High CPU utilization - Host: server-7
+[6793] ERROR: Connection timeout - Host: server-19
+[8741] DEBUG: Session token refreshed - Host: server-7
+[1039] INFO: Database sync complete - Host: server-15
+[4288] WARN: High CPU utilization - Host: server-8
+[5572] INFO: Connection established - Host: server-21
+[9905] ERROR: Connection timeout - Host: server-46
+[3585] WARN: High CPU utilization - Host: server-22
+[2939] INFO: Connection established - Host: server-14
+[2024] DEBUG: Session token refreshed - Host: server-45
+[6609] ERROR: Connection timeout - Host: server-28
+[9470] WARN: High CPU utilization - Host: server-10
+[3462] INFO: Connection established - Host: server-1
+[7208] WARN: High CPU utilization - Host: server-4
+[4131] DEBUG: Session token refreshed - Host: server-30
+[7123] DEBUG: Session token refreshed - Host: server-44
+[4136] ERROR: Connection timeout - Host: server-5
+[7944] INFO: Connection established - Host: server-31
+[7233] WARN: High CPU utilization - Host: server-29
+[4903] WARN: High CPU utilization - Host: server-35
+[4155] INFO: Database sync complete - Host: server-5
+[8687] DEBUG: Session token refreshed - Host: server-49
+[8127] WARN: High CPU utilization - Host: server-17
+[2563] WARN: High CPU utilization - Host: server-46
+[8597] INFO: Connection established - Host: server-9
+[5961] ERROR: Connection timeout - Host: server-16
+[8918] ERROR: Connection timeout - Host: server-45
+[1788] INFO: Connection established - Host: server-34
+[9797] INFO: Database sync complete - Host: server-31
+[6904] INFO: Connection established - Host: server-47
+[8992] INFO: Connection established - Host: server-13
+[5756] INFO: Connection established - Host: server-22
+[6183] ERROR: Connection timeout - Host: server-11
+[9203] ERROR: Connection timeout - Host: server-26
+[3823] DEBUG: Session token refreshed - Host: server-48
+[5274] WARN: High CPU utilization - Host: server-48
+[6650] WARN: High CPU utilization - Host: server-41
+[7770] DEBUG: Session token refreshed - Host: server-41
+[8050] WARN: High CPU utilization - Host: server-20
+[2509] WARN: High CPU utilization - Host: server-46
+[2528] INFO: Database sync complete - Host: server-49
+[8237] ERROR: Connection timeout - Host: server-25
+[4075] INFO: Connection established - Host: server-33
+[5358] WARN: High CPU utilization - Host: server-20
+[6786] INFO: Database sync complete - Host: server-41
+[7603] WARN: High CPU utilization - Host: server-36
+[9152] DEBUG: Session token refreshed - Host: server-41
+[4658] INFO: Database sync complete - Host: server-32
+[3444] WARN: High CPU utilization - Host: server-18
+[2395] INFO: Database sync complete - Host: server-5
+[4028] INFO: Connection established - Host: server-44
+[1528] ERROR: Connection timeout - Host: server-32
+[3576] INFO: Connection established - Host: server-9
+[6945] INFO: Connection established - Host: server-15
+[8202] INFO: Connection established - Host: server-46
+[7094] ERROR: Connection timeout - Host: server-31
+[1805] INFO: Connection established - Host: server-6
+[1864] INFO: Database sync complete - Host: server-25
+[4207] ERROR: Connection timeout - Host: server-19
+[1229] INFO: Connection established - Host: server-2
+[6852] INFO: Connection established - Host: server-49
+[4656] ERROR: Connection timeout - Host: server-39
+[8757] INFO: Connection established - Host: server-4
+[3907] INFO: Connection established - Host: server-35
+[2536] INFO: Database sync complete - Host: server-19
+[4275] ERROR: Connection timeout - Host: server-10
+[4233] INFO: Connection established - Host: server-2
+[3733] DEBUG: Session token refreshed - Host: server-48
+[7670] INFO: Database sync complete - Host: server-23
+[8576] DEBUG: Session token refreshed - Host: server-15
+[8935] ERROR: Connection timeout - Host: server-4
+[6203] INFO: Database sync complete - Host: server-8
+[7258] ERROR: Connection timeout - Host: server-9
+[7719] WARN: High CPU utilization - Host: server-21
+[5571] INFO: Connection established - Host: server-10
+[2537] INFO: Connection established - Host: server-11
+[7837] INFO: Connection established - Host: server-31
+[6058] WARN: High CPU utilization - Host: server-29
+[8058] INFO: Database sync complete - Host: server-18
+[8186] WARN: High CPU utilization - Host: server-1
+[3146] DEBUG: Session token refreshed - Host: server-31
+[1116] ERROR: Connection timeout - Host: server-7
+[4346] DEBUG: Session token refreshed - Host: server-44
+[7573] DEBUG: Session token refreshed - Host: server-32
+[4298] ERROR: Connection timeout - Host: server-48
+[9637] ERROR: Connection timeout - Host: server-32
+[2190] DEBUG: Session token refreshed - Host: server-9
+[6600] DEBUG: Session token refreshed - Host: server-3
+[4300] INFO: Connection established - Host: server-42
+[7698] WARN: High CPU utilization - Host: server-35
+[5817] WARN: High CPU utilization - Host: server-29
+[6946] INFO: Connection established - Host: server-50
+[4273] INFO: Connection established - Host: server-49
+[3800] INFO: Database sync complete - Host: server-7
+[7162] INFO: Connection established - Host: server-34
+[9301] DEBUG: Session token refreshed - Host: server-11
+[5292] INFO: Connection established - Host: server-26
+[6818] WARN: High CPU utilization - Host: server-15
+[6761] INFO: Database sync complete - Host: server-20
+[5498] INFO: Database sync complete - Host: server-3
+[1414] ERROR: Connection timeout - Host: server-17
+[7181] WARN: High CPU utilization - Host: server-34
+[3804] ERROR: Connection timeout - Host: server-48
+[1241] INFO: Connection established - Host: server-44
+[3371] DEBUG: Session token refreshed - Host: server-26
+[6027] INFO: Database sync complete - Host: server-36
+[1057] WARN: High CPU utilization - Host: server-17
+[3749] INFO: Connection established - Host: server-6
+[5331] ERROR: Connection timeout - Host: server-40
+[6379] INFO: Database sync complete - Host: server-2
+[6454] DEBUG: Session token refreshed - Host: server-32
+[8434] WARN: High CPU utilization - Host: server-18
+[9821] WARN: High CPU utilization - Host: server-15
+[5373] WARN: High CPU utilization - Host: server-9
+[7284] DEBUG: Session token refreshed - Host: server-37
+[4791] WARN: High CPU utilization - Host: server-48
+[1275] DEBUG: Session token refreshed - Host: server-43
+[1554] DEBUG: Session token refreshed - Host: server-20
+[3694] WARN: High CPU utilization - Host: server-38
+[3400] INFO: Connection established - Host: server-23
+[9131] INFO: Connection established - Host: server-18
+[7393] INFO: Database sync complete - Host: server-13
+[2838] ERROR: Connection timeout - Host: server-12
+[1453] INFO: Database sync complete - Host: server-19
+[6597] WARN: High CPU utilization - Host: server-13
+[5482] ERROR: Connection timeout - Host: server-20
+[4651] ERROR: Connection timeout - Host: server-48
+[1188] INFO: Connection established - Host: server-4
+[3592] WARN: High CPU utilization - Host: server-44
+[7160] INFO: Database sync complete - Host: server-36
+[1095] INFO: Connection established - Host: server-4
+[9914] WARN: High CPU utilization - Host: server-43
+[6484] INFO: Connection established - Host: server-49
+[8149] INFO: Connection established - Host: server-50
+[6729] INFO: Database sync complete - Host: server-21
+[2472] INFO: Connection established - Host: server-4
+[2096] WARN: High CPU utilization - Host: server-27
+[8296] ERROR: Connection timeout - Host: server-33
+[8432] INFO: Connection established - Host: server-22
+[3877] ERROR: Connection timeout - Host: server-24
+[2990] INFO: Database sync complete - Host: server-48
+[9520] INFO: Database sync complete - Host: server-19
+[3151] DEBUG: Session token refreshed - Host: server-17
+[2943] ERROR: Connection timeout - Host: server-47
+[2866] ERROR: Connection timeout - Host: server-36
+[5192] WARN: High CPU utilization - Host: server-17
+[7007] WARN: High CPU utilization - Host: server-5
+[3044] INFO: Database sync complete - Host: server-34
+[7835] INFO: Database sync complete - Host: server-15
+[5825] INFO: Connection established - Host: server-39
+[7398] ERROR: Connection timeout - Host: server-21
+[1505] ERROR: Connection timeout - Host: server-31
+[1782] WARN: High CPU utilization - Host: server-41
+[9661] INFO: Connection established - Host: server-37
+[9015] INFO: Connection established - Host: server-29
+[5913] ERROR: Connection timeout - Host: server-29
+[9552] WARN: High CPU utilization - Host: server-47
+[4005] DEBUG: Session token refreshed - Host: server-30
+[6101] INFO: Database sync complete - Host: server-3
+[9274] ERROR: Connection timeout - Host: server-50
+[5557] ERROR: Connection timeout - Host: server-50
+[3461] ERROR: Connection timeout - Host: server-6
+[4530] INFO: Database sync complete - Host: server-38
+[4960] DEBUG: Session token refreshed - Host: server-42
+[4785] INFO: Connection established - Host: server-21
+[2588] DEBUG: Session token refreshed - Host: server-7
+[2214] DEBUG: Session token refreshed - Host: server-18
+[5939] DEBUG: Session token refreshed - Host: server-4
+[5263] INFO: Database sync complete - Host: server-30
+[3901] INFO: Database sync complete - Host: server-9
+[2973] ERROR: Connection timeout - Host: server-46
+[6989] WARN: High CPU utilization - Host: server-20
+[4166] DEBUG: Session token refreshed - Host: server-1
+[9218] DEBUG: Session token refreshed - Host: server-38
+[9974] WARN: High CPU utilization - Host: server-42
+[6355] DEBUG: Session token refreshed - Host: server-20
+[5522] INFO: Database sync complete - Host: server-37
+[8989] INFO: Database sync complete - Host: server-2
+[7083] ERROR: Connection timeout - Host: server-36
+[2135] INFO: Connection established - Host: server-35
+[1563] ERROR: Connection timeout - Host: server-2
+[5823] ERROR: Connection timeout - Host: server-21
+[7115] DEBUG: Session token refreshed - Host: server-19
+[9001] ERROR: Connection timeout - Host: server-21
+[8659] INFO: Connection established - Host: server-27
+[4579] INFO: Connection established - Host: server-34
+[6489] WARN: High CPU utilization - Host: server-3
+[6618] INFO: Database sync complete - Host: server-2
+[7107] INFO: Database sync complete - Host: server-38
+[3579] DEBUG: Session token refreshed - Host: server-24
+[5174] INFO: Database sync complete - Host: server-31
+[1481] ERROR: Connection timeout - Host: server-38
+[8969] ERROR: Connection timeout - Host: server-12
+[9969] ERROR: Connection timeout - Host: server-5
+[3786] ERROR: Connection timeout - Host: server-45
+[1919] INFO: Database sync complete - Host: server-38
+[6057] WARN: High CPU utilization - Host: server-43
+[8075] WARN: High CPU utilization - Host: server-34
+[8046] INFO: Database sync complete - Host: server-5
+[9105] INFO: Connection established - Host: server-34
+[8454] ERROR: Connection timeout - Host: server-24
+[3544] DEBUG: Session token refreshed - Host: server-47
+[7671] INFO: Connection established - Host: server-34
+[3397] WARN: High CPU utilization - Host: server-14
+[2849] ERROR: Connection timeout - Host: server-4
+[3875] ERROR: Connection timeout - Host: server-46
