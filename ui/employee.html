@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phantom Node</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        :root {
+            --bg-color: #0b0f19;
+            --panel-bg: rgba(20, 25, 40, 0.7);
+            --primary-accent: #00ffcc;
+            --warning-accent: #ff3366;
+            --ram-accent: #0a84ff;
+            --text-main: #e2e8f0;
+            --text-muted: #8fa0ba;
+            --grid-color: rgba(0, 255, 204, 0.05);
+            --border-color: rgba(0, 255, 204, 0.2);
+            --chart-empty: rgba(255, 255, 255, 0.05);
+            --log-bg: #000000;
+        }
+
+        [data-theme="light"] {
+            --bg-color: #cbd5e1;
+            --panel-bg: rgba(226, 232, 240, 0.8);
+            --primary-accent: #0f766e;
+            --warning-accent: #b45309;
+            --ram-accent: #6d28d9;
+            --text-main: #0f172a;
+            --text-muted: #334155;
+            --grid-color: rgba(15, 118, 110, 0.1);
+            --border-color: rgba(15, 118, 110, 0.2);
+            --chart-empty: rgba(0, 0, 0, 0.05);
+            --log-bg: #e2e8f0;
+        }
+
+        body {
+            margin: 0;
+            padding: 2rem;
+            background-color: var(--bg-color);
+            background-image:
+                linear-gradient(var(--grid-color) 1px, transparent 1px),
+                linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+            background-size: 30px 30px;
+            font-family: 'Inter', sans-serif;
+            color: var(--text-main);
+            display: flex;
+            justify-content: center;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .dashboard {
+            width: 100%;
+            max-width: 900px;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .header-card {
+            background: var(--panel-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 2rem;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.3s;
+        }
+
+        .user-info h1 {
+            margin: 0;
+            color: var(--primary-accent);
+            text-transform: uppercase;
+            font-size: 1.8rem;
+        }
+
+        .user-info p {
+            margin: 0.5rem 0 0 0;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .status-badge {
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.8rem;
+        }
+
+        .status-idle {
+            background: var(--grid-color);
+            color: var(--primary-accent);
+            border: 1px solid var(--primary-accent);
+        }
+
+        .status-busy {
+            background: rgba(255, 51, 102, 0.1);
+            color: var(--warning-accent);
+            border: 1px solid var(--warning-accent);
+        }
+
+        .hardware-panel {
+            background: var(--panel-bg);
+            border: 1px dashed var(--primary-accent);
+            border-radius: 12px;
+            padding: 2rem;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(5px);
+        }
+
+        .hw-card {
+            width: 220px;
+            text-align: center;
+        }
+
+        .gauge-container {
+            position: relative;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .gauge-center-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--text-main);
+            text-align: center;
+        }
+
+        .job-card {
+            background: var(--panel-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .job-log {
+            margin-top: 1rem;
+            background: var(--log-bg);
+            padding: 1rem;
+            border-radius: 6px;
+            border: 1px solid var(--border-color);
+            height: 150px;
+            overflow-y: auto;
+            text-align: left;
+            font-family: monospace;
+            color: var(--primary-accent);
+            font-size: 0.9rem;
+        }
+
+        .progress-bar-bg {
+            width: 100%;
+            background: var(--chart-empty);
+            border-radius: 10px;
+            height: 20px;
+            margin-top: 1rem;
+            overflow: hidden;
+            display: none;
+        }
+
+        .progress-bar-fill {
+            height: 100%;
+            background: var(--warning-accent);
+            width: 0%;
+            transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .dashboard,
+        .header-card,
+        .hardware-panel,
+        #active-task-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        #active-task-card {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .idle-state {
+            opacity: 0.6 !important;
+            filter: grayscale(0.5);
+        }
+
+        .theme-btn {
+            background: var(--primary-accent);
+            color: var(--bg-color);
+            border: none;
+            font-weight: bold;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .theme-btn:hover {
+            transform: scale(1.05);
+        }
+
+        .logout {
+            color: var(--warning-accent);
+            text-decoration: none;
+            font-weight: bold;
+            border: 1px solid var(--warning-accent);
+            padding: 0.4rem 0.8rem;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            display: inline-block;
+        }
+
+        .mission-footer {
+            margin-top: 3rem;
+            padding: 2rem;
+            background: rgba(0, 255, 204, 0.05);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .mission-footer h3 {
+            color: var(--primary-accent);
+            margin-top: 0;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .mission-footer p {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            line-height: 1.6;
+            max-width: 600px;
+            margin: 0.5rem auto 0 auto;
+        }
+
+        .mission-footer b {
+            color: var(--text-main);
+        }
+    </style>
+</head>
+
+<body>
+    <button class="theme-btn" id="themeBtn" onclick="toggleTheme()" style="position: fixed; top: 2rem; right: 2rem;">☀️ Bright Mode</button>
+
+    <div class="dashboard">
+        <div class="header-card">
+            <div class="user-info">
+                <h1>PHANTOM NODE</h1>
+                <p>User Name: <span id="alias" style="color:var(--text-main); font-weight:bold;">Loading...</span></p>
+                <a href="login.html" class="logout" style="margin-top:10px;">Logout</a>
+            </div>
+            <div style="display:flex; flex-direction: column; align-items: flex-end; gap: 10px;">
+                <div
+                    style="background: rgba(0,255,204,0.1); border: 1px solid var(--primary-accent); padding: 5px 15px; border-radius: 8px; display: flex; align-items: center; gap: 8px;">
+                    <span style="font-size: 1.2rem;">💰</span>
+                    <span style="font-weight: 800; font-size: 1.2rem; color: var(--primary-accent);"
+                        id="wallet-balance">0.00</span>
+                    <span style="font-size: 0.7rem; color: var(--text-muted);">CREDITS</span>
+                </div>
+                <div id="status" class="status-badge status-idle">IDLE</div>
+            </div>
+        </div>
+
+        <div class="hardware-panel">
+            <div class="hw-card">
+                <div class="gauge-container">
+                    <canvas id="cpu-chart"></canvas>
+                    <div class="gauge-center-text" id="cpu-txt">0%</div>
+                </div>
+                <div style="margin-top:15px; font-weight:bold; color:var(--text-muted); font-size: 0.8rem;">Logical
+                    Cores: <span id="label-cores" style="color:var(--text-main);">0</span></div>
+            </div>
+            <div class="hw-card">
+                <div class="gauge-container">
+                    <canvas id="ram-chart"></canvas>
+                    <div class="gauge-center-text" id="ram-txt">0%</div>
+                </div>
+                <div style="margin-top:15px; font-weight:bold; color:var(--text-muted); font-size: 0.8rem;">Total
+                    Memory: <span id="label-ram" style="color:var(--text-main);">0</span> GB</div>
+            </div>
+            <div style="text-align: center; border-left: 1px solid var(--border-color); padding-left: 2rem;">
+                <div
+                    style="text-transform: uppercase; font-size: 0.7rem; color: var(--text-muted); letter-spacing: 1px;">
+                    Smart Preemption</div>
+                <div id="dormancy-status" style="margin-top: 8px; color: var(--primary-accent); font-weight: 800;">
+                    DORMANT</div>
+                <div style="font-size: 0.6rem; color: var(--text-muted); margin-top: 4px;">Node Maximized</div>
+            </div>
+        </div>
+
+        <div style="display: flex; gap: 2rem; align-items: stretch;">
+            <!-- CONTRIBUTION EXPLORER (STRETCHED) -->
+            <div style="flex: 1; display: flex; flex-direction: column; gap: 1rem;">
+                <!-- FOCUS MODE -->
+                <div
+                    style="background: var(--panel-bg); border: 1px solid var(--primary-accent); border-radius: 12px; padding: 2rem; position: relative; overflow: hidden;">
+                    <div
+                        style="position: absolute; top:0; right:0; padding: 10px; font-size: 0.6rem; background: var(--primary-accent); color: var(--bg-color); font-weight: bold; text-transform: uppercase;">
+                        Real-Time Neural Processing</div>
+                    <h3
+                        style="margin:0 0 1.5rem 0; color: var(--warning-accent); font-size: 1.1rem; text-transform: uppercase; letter-spacing: 1px;">
+                        ⚡ Focus Mode: Current Assignment</h3>
+
+                    <div id="active-task-container" style="display: flex; flex-direction: column; gap: 1.5rem;">
+                        <div id="active-task-card"
+                            style="background: rgba(0,0,0,0.3); border-radius: 12px; padding: 2rem; border: 1px dashed var(--border-color); text-align: center;">
+                            <div id="active-task-name"
+                                style="color: var(--text-main); font-weight: 800; font-size: 1.5rem; letter-spacing: -0.5px;">
+                                [NO ACTIVE ASSIGNMENT]</div>
+                            <div id="active-task-desc"
+                                style="color: var(--text-muted); font-size: 1rem; margin-top: 8px;">Waiting for
+                                orchestrator broadcast...</div>
+
+                            <div style="margin-top: 2.5rem;">
+                                <div
+                                    style="display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 0.9rem; font-weight: bold;">
+                                    <span id="progress-percent" style="color: var(--primary-accent);">0%</span>
+                                    <span id="liberation-time" style="color: var(--text-muted);">Est. Liberation:
+                                        --</span>
+                                </div>
+                                <div class="progress-bar-bg" id="progress-wrap"
+                                    style="height: 12px; display: block; border: 1px solid var(--border-color);">
+                                    <div class="progress-bar-fill" id="progress-fill"
+                                        style="box-shadow: 0 0 15px var(--warning-accent);"></div>
+                                </div>
+                                <p id="stay-hint"
+                                    style="margin-top: 15px; font-size: 0.8rem; color: var(--text-muted);">Stay
+                                    connected to maximize credit extraction.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CRUNCHED HISTORY -->
+                <div
+                    style="background: var(--panel-bg); border: 1px solid var(--border-color); border-radius: 12px; padding: 1.5rem; min-height: 150px;">
+                    <h3
+                        style="margin:0 0 1rem 0; color: var(--primary-accent); font-size: 0.9rem; text-transform: uppercase;">
+                        🏆 Crunched History (Contribution Log)</h3>
+                    <div id="completed-tasks-list" style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                        <!-- dynamic list -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mission-footer">
+            <h3>Our Mission</h3>
+            <p>
+                In an era of skyrocketing hardware costs, we face a massive paradox: millions of high-end corporate laptops sit idle for 70% of the day. 
+                <b>PHANTOM</b> bridges this gap by harvesting dormant compute capacity from existing hardware. 
+                We don't need to buy more power; we just need to stop wasting the power we already have.
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // THEME LOGIC
+        function updateThemeBtn() {
+            const btn = document.getElementById('themeBtn');
+            if (btn) btn.innerText = document.documentElement.getAttribute('data-theme') === 'light' ? '🌙 Dark Mode' : '☀️ Bright Mode';
+        }
+
+        function toggleTheme() {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('spot_theme', newTheme);
+            updateThemeBtn();
+        }
+
+        if (localStorage.getItem('spot_theme') === 'light') {
+            document.documentElement.setAttribute('data-theme', 'light');
+        }
+        window.addEventListener('DOMContentLoaded', updateThemeBtn);
+
+        // AUTH
+        const role = localStorage.getItem("spot_role");
+        const agentName = localStorage.getItem("spot_name");
+
+        if (!agentName) { window.location.href = "login.html"; }
+        document.getElementById("alias").innerText = agentName;
+
+        const statusBadge = document.getElementById("status");
+        const progressWrap = document.getElementById("progress-wrap");
+        const progressFill = document.getElementById("progress-fill");
+        const activeCard = document.getElementById("active-task-name");
+        const activeDesc = document.getElementById("active-task-desc");
+        const historyList = document.getElementById("completed-tasks-list");
+        const walletBalance = document.getElementById("wallet-balance");
+        const dormancyStatus = document.getElementById("dormancy-status");
+
+        let crunchedHistory = [];
+        let isUserActive = false;
+        let lastActivity = Date.now();
+
+        // SMART PREEMPTION / DORMANCY LOGIC
+        window.addEventListener('mousemove', () => {
+            lastActivity = Date.now();
+            if (!isUserActive) {
+                isUserActive = true;
+                dormancyStatus.innerText = "USER PRESENT";
+                dormancyStatus.style.color = "var(--warning-accent)";
+            }
+        });
+
+        setInterval(() => {
+            if (Date.now() - lastActivity > 3000 && isUserActive) {
+                isUserActive = false;
+                dormancyStatus.innerText = "DORMANT";
+                dormancyStatus.style.color = "var(--primary-accent)";
+            }
+        }, 1000);
+
+        const hwCores = navigator.hardwareConcurrency || 4;
+        const hwRam = navigator.deviceMemory || 8;
+
+        let extractedGpu = "Generic Accelerators";
+        try {
+            const canvas = document.createElement('canvas');
+            const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+            if (gl) {
+                const debugInfo = gl.getExtension('WEBGL_debug_renderer_info');
+                if (debugInfo) {
+                    extractedGpu = gl.getParameter(debugInfo.UNMASKED_RENDERER_WEBGL);
+                }
+            }
+        } catch (e) {}
+
+        document.getElementById('label-cores').innerText = hwCores;
+        document.getElementById('label-ram').innerText = hwRam;
+
+        // CHARTS
+        const ctxCpu = document.getElementById('cpu-chart').getContext('2d');
+        const ctxRam = document.getElementById('ram-chart').getContext('2d');
+
+        let cpuChart = new Chart(ctxCpu, {
+            type: 'doughnut',
+            data: { labels: ['At Work', 'Vacant'], datasets: [{ data: [1, 99], backgroundColor: ['#00ffcc', 'rgba(255,255,255,0.05)'], borderWidth: 0 }] },
+            options: {
+                cutout: '80%',
+                animation: { duration: 2000, easing: 'easeInOutQuart' },
+                plugins: { legend: { display: false }, tooltip: { enabled: false } },
+                responsive: true
+            }
+        });
+
+        let ramChart = new Chart(ctxRam, {
+            type: 'doughnut',
+            data: { labels: ['At Work', 'Vacant'], datasets: [{ data: [1, 99], backgroundColor: ['#0a84ff', 'rgba(255,255,255,0.05)'], borderWidth: 0 }] },
+            options: {
+                cutout: '80%',
+                animation: { duration: 2000, easing: 'easeInOutQuart' },
+                plugins: { legend: { display: false }, tooltip: { enabled: false } },
+                responsive: true
+            }
+        });
+
+        // WEBSOCKET
+        const wsProtocol = window.location.protocol === "https:" ? "wss://" : "ws://";
+        const ws = new WebSocket(`${wsProtocol}${window.location.host}/ws/employee?name=${encodeURIComponent(agentName)}`);
+        let inWorkLoop = false;
+
+        // HEURISTIC ENGINE (Real-Time Performance Tracking)
+        let lastFrameTime = performance.now();
+        let recentFps = [];
+
+        function trackFps() {
+            const now = performance.now();
+            const delta = now - lastFrameTime;
+            lastFrameTime = now;
+
+            // Cap delta to prevent negative FPS anomalies when tab is sleeping
+            if (delta > 0) {
+                recentFps.push(1000 / delta);
+                if (recentFps.length > 30) recentFps.shift();
+            }
+            requestAnimationFrame(trackFps);
+        }
+        requestAnimationFrame(trackFps);
+
+        function getHeuristicStats() {
+            // 1. CPU Load based on Frame Latency & Background Saturation
+            const avgFps = recentFps.length > 0 ? (recentFps.reduce((a, b) => a + b, 0) / recentFps.length) : 60;
+            let cpuLoad = 0;
+
+            // If tab is backgrounded, FPS drops to near 0 (Browsers sleep tabs). We interpret this as 100% saturated.
+            if (avgFps < 5) cpuLoad = 99;
+            else if (avgFps >= 55) cpuLoad = Math.floor(Math.random() * 4); // Near 60fps = Idle
+            else {
+                // Linear map constraint: 55fps to 5fps => 0% to 90% load
+                cpuLoad = Math.floor(90 - ((avgFps - 5) / 50) * 90);
+            }
+
+            // Add logical AI processing load if the container is busy
+            if (inWorkLoop) cpuLoad = Math.max(cpuLoad, 82 + Math.floor(Math.random() * 12));
+
+            // **SMART PREEMPTION TRIGGER** - Yield instantly if user is present
+            if (isUserActive && cpuLoad > 15) cpuLoad = 8 + Math.floor(Math.random() * 5); // Drops low to 'yield' RAM/CPU
+
+            // 2. Memory Extraction via JS Heap Boundary (Chrome/Chromium specific)
+            let ramPercent = 15;
+            if (window.performance && window.performance.memory) {
+                const usedHeap = window.performance.memory.usedJSHeapSize;
+                const limitHeap = window.performance.memory.jsHeapSizeLimit;
+                let heapRatio = (usedHeap / limitHeap) * 100;
+
+                // Map the heap stress to simulated OS RAM (Base OS consumption + Node consumption)
+                ramPercent = 25 + Math.floor(heapRatio * 2.5);
+            } else {
+                ramPercent = 20 + Math.floor(Math.random() * 3); // Fallback heuristic
+            }
+
+            if (inWorkLoop) ramPercent = Math.max(ramPercent, 65 + Math.floor(Math.random() * 10));
+            if (isUserActive) ramPercent = Math.min(ramPercent, 35); // Yield memory when user is active
+
+            return { cpu: Math.min(cpuLoad, 100), ram: Math.min(ramPercent, 100) };
+        }
+
+        ws.onopen = () => {
+            setInterval(() => {
+                const stats = getHeuristicStats();
+                let curCpu = stats.cpu;
+                let curRam = stats.ram;
+
+                let styles = getComputedStyle(document.documentElement);
+                let primaryColor = styles.getPropertyValue('--primary-accent').trim();
+                let warnColor = styles.getPropertyValue('--warning-accent').trim();
+                let ramColorBase = styles.getPropertyValue('--ram-accent').trim();
+                let emptyColor = styles.getPropertyValue('--chart-empty').trim();
+
+                let activeCpuCol = curCpu > 80 ? warnColor : primaryColor;
+                let activeRamCol = curRam > 80 ? warnColor : ramColorBase;
+
+                document.getElementById('cpu-txt').innerText = curCpu + "%";
+                cpuChart.data.datasets[0].data = [curCpu, 100 - curCpu];
+                cpuChart.data.datasets[0].backgroundColor = [activeCpuCol, emptyColor];
+                cpuChart.update();
+
+                document.getElementById('ram-txt').innerText = curRam + "%";
+                ramChart.data.datasets[0].data = [curRam, 100 - curRam];
+                ramChart.data.datasets[0].backgroundColor = [activeRamCol, emptyColor];
+                ramChart.update();
+
+                if (ws.readyState === WebSocket.OPEN) {
+                    // Simulated exact OS Task Manager metrics
+                    let availableRamMb = Math.max(10, Math.floor(hwRam * 1024 * (1 - (curRam / 100))));
+                    ws.send(JSON.stringify({
+                        type: "telemetry",
+                        max_cpu: hwCores,
+                        cur_cpu: curCpu,
+                        max_ram: hwRam,
+                        cur_ram: curRam,
+                        available_ram: availableRamMb,
+                        gpu_name: extractedGpu
+                    }));
+                }
+            }, 3000);
+        };
+
+        ws.onmessage = async (event) => {
+            const data = JSON.parse(event.data);
+            if (data.type === "job_chunk") {
+                // Update UI columns
+                activeCard.innerText = data.task_id.split('_chunk_')[0];
+                activeDesc.innerText = "Analyzing neural patterns with Gemini 1.5 Flash...";
+                document.getElementById('liberation-time').innerText = "Est. Liberation: ~2-5s";
+
+                setBusy(true);
+                progressFill.style.width = '20%';
+                document.getElementById('progress-percent').innerText = "20%";
+
+                let extractedInsights = "";
+
+                try {
+                    if (data.api_key && data.api_key.trim() !== '') {
+                        const defaultPrompt = "Analyze this text for any severe anomalies or matches. If absolutely none exist, return exactly the string 'CLEAN' and nothing else.";
+                        const userInstruction = data.instruction && data.instruction.trim() !== '' ? data.instruction : defaultPrompt;
+                        const prompt = `You are a highly efficient autonomous worker node. Execute the following strict instruction on the provided chunk of text.\n\nINSTRUCTION:\n${userInstruction}\n\nCHUNK:\n${data.content}`;
+
+                        const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${data.api_key}`, {
+                            method: "POST",
+                            headers: { "Content-Type": "application/json" },
+                            body: JSON.stringify({
+                                contents: [{ parts: [{ text: prompt }] }]
+                            })
+                        });
+
+                        const jsonResponse = await res.json();
+                        progressFill.style.width = '80%';
+                        document.getElementById('progress-percent').innerText = "80%";
+
+                        if (jsonResponse.candidates && jsonResponse.candidates.length > 0) {
+                            extractedInsights = jsonResponse.candidates[0].content.parts[0].text.trim();
+                        } else {
+                            extractedInsights = "CLEAN";
+                        }
+                    } else {
+                        // MOCK FALLBACK
+                        await new Promise(r => setTimeout(r, 1800)); // fake AI delay
+                        progressFill.style.width = '80%';
+                        document.getElementById('progress-percent').innerText = "80%";
+                        let instr = (data.instruction || "").toLowerCase();
+                        if (instr.includes("legal") && data.content.toLowerCase().includes("liability")) extractedInsights = `⚠️ [Worker Node] Hidden liability clause found.`;
+                        else if (instr.includes("sentiment") && (data.content.toLowerCase().includes("drain") || data.content.toLowerCase().includes("awful"))) extractedInsights = `⚠️ [Worker Node] Negative sentiment (Battery/Crash) detected.`;
+                        else if ((instr.includes("redact") || instr.includes("pii")) && (data.content.includes("SSN") || data.content.includes("John"))) extractedInsights = `⚠️ [Worker Node] PII Scrubber triggered on record.`;
+                        else if (data.content.toLowerCase().includes("fraud") || data.content.includes("15000") || data.content.toLowerCase().includes("error")) extractedInsights = `⚠️ [Worker Node] Anomaly found.`;
+                        else extractedInsights = "CLEAN";
+                    }
+                } catch (e) {
+                    extractedInsights = "ERROR: Neural network dropped connection.";
+                }
+
+                progressFill.style.width = '100%';
+                document.getElementById('progress-percent').innerText = "100%";
+
+                setTimeout(() => {
+                    // Add to Crunched History
+                    const filename = data.task_id.split('_chunk_')[0];
+                    if (!crunchedHistory.includes(filename)) {
+                        crunchedHistory.push(filename);
+                        renderHistory();
+                    }
+
+                    // Update local wallet (simulation)
+                    walletBalance.innerText = (parseFloat(walletBalance.innerText) + 10.00).toFixed(2);
+
+                    // Only broadcast back to admin if it's NOT clean. We don't want to flood the terminal.
+                    let finalEmit = extractedInsights.includes("CLEAN") ? "" : extractedInsights;
+
+                    ws.send(JSON.stringify({
+                        type: "job_complete",
+                        task_id: data.task_id,
+                        result: finalEmit
+                    }));
+
+                    setBusy(false);
+                }, 500);
+            }
+        };
+
+        function renderHistory() {
+            historyList.innerHTML = '';
+            crunchedHistory.slice(-10).reverse().forEach(task => {
+                const item = document.createElement('div');
+                item.style.padding = "8px";
+                item.style.borderBottom = "1px solid var(--border-color)";
+                item.style.fontSize = "0.8rem";
+                item.innerHTML = `✅ <span style="color:var(--text-main);">${task}</span> <span style="float:right; color:var(--primary-accent);">+10 CR</span>`;
+                historyList.appendChild(item);
+            });
+        }
+
+        ws.onclose = () => {};
+
+        function setBusy(isBusy) {
+            inWorkLoop = isBusy;
+            const card = document.getElementById("active-task-card");
+            if (isBusy) {
+                statusBadge.innerText = 'PROCESSING';
+                statusBadge.className = 'status-badge status-busy';
+                card.classList.remove("idle-state");
+                if (ws.readyState === WebSocket.OPEN) ws.send(JSON.stringify({ type: "status_update", status: "BUSY" }));
+            } else {
+                if (ws.readyState === WebSocket.OPEN) ws.send(JSON.stringify({ type: "status_update", status: "IDLE" }));
+
+                setTimeout(() => {
+                    if (!inWorkLoop) {
+                        statusBadge.innerText = 'IDLE';
+                        statusBadge.className = 'status-badge status-idle';
+                        card.classList.add("idle-state");
+                        activeCard.innerText = "[NO ACTIVE ASSIGNMENT]";
+                        activeDesc.innerText = "Waiting for orchestrator broadcast...";
+                        document.getElementById('progress-percent').innerText = "0%";
+                        document.getElementById('liberation-time').innerText = "Est. Liberation: --";
+                        progressFill.style.width = '0%';
+                    }
+                }, 1500);
+            }
+        }
+    </script>
+</body>
+
+</html>

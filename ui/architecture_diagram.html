@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agentic Spot Scheduler Architecture</title>
+    <style>
+        body {
+            background-color: #0d1117; /* Very Dark mode background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .container {
+            text-align: center;
+            background-color: #161b22;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.8);
+            border: 1px solid #30363d;
+        }
+        h2 { margin-top: 0; color: #58a6ff; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Architecture Flowchart</h2>
+    <div class="mermaid">
+    flowchart TD
+        classDef control fill:#1f2937,stroke:#3b82f6,stroke-width:2px,color:#ffffff
+        classDef worker fill:#374151,stroke:#10b981,stroke-width:2px,color:#ffffff
+        classDef danger fill:#7f1d1d,stroke:#ef4444,stroke-width:2px,color:#ffffff
+        classDef data fill:#064e3b,stroke:#047857,stroke-width:1px,color:#ffffff
+
+        subgraph Control_Plane ["💻 Master Orchestrator (Your Laptop)"]
+            TaskQueue["📋 Batch Task Queue\n(Waiting ML Jobs & Data Pipelines)"]:::data
+            Scheduler["🧠 Agentic Spot Scheduler\n(Matches Tasks to Hardware)"]:::control
+            TaskQueue -->|Reads Task Sizes| Scheduler
+        end
+
+        subgraph Data_Center ["🖥️ Private Data Center (Friends' Laptops)"]
+            direction LR
+            Node1["Server Node A\n(8GB RAM Idle)"]:::worker
+            Node2["Server Node B\n(4GB RAM Idle)"]:::worker
+        end
+
+        Node1 -.->|Step 1: Scans & Broadcasts \nIdle Hardware Capacity| Scheduler
+        Node2 -.->|Step 1: Scans & Broadcasts \nIdle Hardware Capacity| Scheduler
+        
+        Scheduler ==>|Step 2: Assigns 8GB Task| Node1
+        Scheduler ==>|Step 2: Assigns 4GB Task| Node2
+
+        Spike(("🚨 High-Priority\nProduction Traffic Spike")):::danger -.->|Step 3: Demands Resources| Node1
+        
+        Node1 -.->|Step 4: Warning! Hardware Strained| Scheduler
+        Scheduler ==>|Step 5: KILLS Spot Job \nInstantly Frees up 8GB| Node1
+    </div>
+</div>
+
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+  mermaid.initialize({ startOnLoad: true, theme: 'dark' });
+</script>
+
+</body>
+</html>

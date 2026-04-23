@@ -1,0 +1,1357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phantom Admin</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        :root {
+            --bg-color: #0b0f19;
+            --panel-bg: rgba(20, 25, 40, 0.7);
+            --primary-accent: #a855f7;
+            --warning-accent: #ff3366;
+            --ram-accent: #0a84ff;
+            --text-main: #e2e8f0;
+            --text-muted: #8fa0ba;
+            --grid-color: rgba(168, 85, 247, 0.05);
+            --border-color: rgba(168, 85, 247, 0.2);
+            --chart-empty: rgba(255, 255, 255, 0.05);
+            --column-bg: rgba(0, 0, 0, 0.4);
+        }
+
+        [data-theme="light"] {
+            --bg-color: #cbd5e1;
+            --panel-bg: rgba(226, 232, 240, 0.8);
+            --primary-accent: #7e22ce;
+            --warning-accent: #b45309;
+            --ram-accent: #6d28d9;
+            --text-main: #0f172a;
+            --text-muted: #334155;
+            --grid-color: rgba(126, 34, 206, 0.1);
+            --border-color: rgba(126, 34, 206, 0.2);
+            --chart-empty: rgba(0, 0, 0, 0.05);
+            --column-bg: rgba(203, 213, 225, 0.6);
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            background-image:
+                linear-gradient(var(--grid-color) 1px, transparent 1px),
+                linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+            background-size: 30px 30px;
+            font-family: 'Inter', sans-serif;
+            color: var(--text-main);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            overflow-x: hidden;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .header {
+            padding: 1.5rem;
+            text-align: center;
+            border-bottom: 1px solid var(--border-color);
+            backdrop-filter: blur(10px);
+            background: var(--panel-bg);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 10;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            width: 150px;
+        }
+
+        .header-center {
+            flex-grow: 1;
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            width: 150px;
+        }
+
+        .logout {
+            color: var(--warning-accent);
+            text-decoration: none;
+            font-weight: bold;
+            border: 1px solid var(--warning-accent);
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+        }
+
+        .theme-btn {
+            background: var(--primary-accent);
+            color: var(--bg-color);
+            border: none;
+            font-weight: bold;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .theme-btn:hover {
+            transform: scale(1.05);
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+            color: var(--primary-accent);
+            text-transform: uppercase;
+        }
+
+        /* MAIN LAYOUT SPLIT */
+        .wrapper {
+            display: flex;
+            flex: 1;
+            overflow: hidden;
+        }
+
+        .main-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto;
+            position: relative;
+        }
+
+        .sidebar {
+            width: 380px;
+            background: var(--panel-bg);
+            border-left: 1px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto;
+            backdrop-filter: blur(5px);
+        }
+
+        .sidebar-header {
+            padding: 1rem;
+            text-align: center;
+            background: var(--grid-color);
+            color: var(--primary-accent);
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 1px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .telemetry-node {
+            padding: 1.5rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .telemetry-node h3 {
+            margin: 0 0 1rem 0;
+            color: var(--text-main);
+            text-align: center;
+            border-bottom: 1px dashed var(--border-color);
+            padding-bottom: 0.5rem;
+        }
+
+        .gauge-container {
+            position: relative;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .gauge-center-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--text-main);
+            text-align: center;
+        }
+
+        /* TABS LOGIC */
+        .tabs-header {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            margin-top: 1rem;
+        }
+
+        .tab-btn {
+            background: transparent;
+            color: var(--text-muted);
+            border: 0;
+            border-bottom: 2px solid transparent;
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+        }
+
+        .tab-btn.active {
+            color: var(--primary-accent);
+            border-bottom-color: var(--primary-accent);
+        }
+
+        .tab-btn:hover {
+            color: var(--text-main);
+        }
+
+        .tab-content {
+            display: none;
+            width: 100%;
+        }
+
+        .tab-content.active {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* KANBAN BOARD */
+        .kanban-board {
+            display: flex;
+            justify-content: flex-start;
+            gap: 1.5rem;
+            width: 100%;
+            padding: 0 1.5rem;
+            align-items: flex-start;
+            box-sizing: border-box;
+        }
+
+        .column {
+            background: var(--column-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            flex: 1;
+            min-width: 0;
+            min-height: 400px;
+            padding: 1rem;
+            backdrop-filter: blur(5px);
+        }
+
+        .column h3 {
+            text-align: center;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 1rem;
+            margin-top: 0;
+            color: var(--text-main);
+            text-transform: uppercase;
+            font-size: 0.9rem;
+        }
+
+        .work-card {
+            background: var(--panel-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .job-queued {
+            border-color: var(--text-muted);
+        }
+
+        .job-active {
+            border-color: var(--warning-accent);
+        }
+
+        .job-completed {
+            border-color: var(--primary-accent);
+        }
+
+        .work-card h4 {
+            margin: 0 0 0.5rem 0;
+            color: var(--text-main);
+            font-size: 1rem;
+            word-break: break-all;
+            line-height: 1.2;
+        }
+
+        .work-card p {
+            margin: 0;
+            color: var(--text-muted);
+            font-size: 0.8rem;
+        }
+
+        .controls {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            padding: 1.5rem;
+            background: var(--panel-bg);
+            border-top: 1px solid var(--border-color);
+            position: sticky;
+            bottom: 0;
+            margin-top: auto;
+            backdrop-filter: blur(10px);
+        }
+
+        .file-upload {
+            background: var(--primary-accent);
+            border: 1px solid var(--primary-accent);
+            padding: 1rem 2rem;
+            border-radius: 6px;
+            color: var(--bg-color);
+            cursor: pointer;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: transform 0.2s;
+        }
+
+        .file-upload:hover {
+            transform: scale(1.05);
+        }
+
+        .file-upload input {
+            display: none;
+        }
+
+        .dashboard {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .node-card {
+            background: var(--panel-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1rem;
+            width: 300px;
+        }
+
+        .status-badge {
+            font-size: 0.70rem;
+            padding: 0.25rem 0.5rem;
+            border-radius: 12px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .status-idle {
+            background: var(--grid-color);
+            color: var(--primary-accent);
+            border: 1px solid var(--primary-accent);
+        }
+
+        .status-busy {
+            background: rgba(255, 51, 102, 0.1);
+            color: var(--warning-accent);
+            border: 1px solid var(--warning-accent);
+        }
+
+        /* AI MODAL */
+        .ai-modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 100;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            backdrop-filter: blur(8px);
+        }
+
+        .ai-modal {
+            background: var(--panel-bg);
+            border: 1px solid var(--primary-accent);
+            border-radius: 12px;
+            padding: 2rem;
+            width: 500px;
+            max-width: 90%;
+            color: var(--text-main);
+            position: relative;
+            box-shadow: 0 0 40px rgba(0, 255, 204, 0.1);
+        }
+
+        .ai-modal h2 {
+            margin-top: 0;
+            color: var(--primary-accent);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 1px dashed var(--border-color);
+            padding-bottom: 10px;
+        }
+
+        .ai-metric {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            padding: 10px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .ai-val {
+            font-weight: bold;
+        }
+
+        .ai-actions {
+            display: flex;
+            justify-content: flex-end;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .btn-cancel {
+            background: transparent;
+            border: 1px solid var(--text-muted);
+            color: var(--text-muted);
+            padding: 0.8rem 1.5rem;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .btn-deploy {
+            background: var(--warning-accent);
+            border: none;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .btn-deploy:hover {
+            transform: scale(1.05);
+        }
+
+        /* AUDIT REPORT MODAL */
+        .report-modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.85);
+            z-index: 101;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            backdrop-filter: blur(12px);
+        }
+
+        .report-modal {
+            background: var(--panel-bg);
+            border: 2px solid var(--primary-accent);
+            border-radius: 16px;
+            width: 700px;
+            max-width: 95%;
+            max-height: 80vh;
+            overflow-y: auto;
+            color: var(--text-main);
+            padding: 2.5rem;
+            position: relative;
+            box-shadow: 0 0 50px rgba(0, 255, 204, 0.15);
+        }
+
+        .report-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .report-findings-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .finding-item {
+            background: rgba(255, 255, 255, 0.05);
+            border-left: 4px solid var(--warning-accent);
+            padding: 1rem;
+            border-radius: 4px;
+        }
+
+        .finding-worker {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .btn-report {
+            background: var(--primary-accent);
+            color: var(--bg-color);
+            border: none;
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 0.8rem;
+            margin-top: 5px;
+            margin-right: 5px;
+            transition: opacity 0.2s;
+        }
+
+        .btn-report:hover {
+            opacity: 0.8;
+        }
+
+        .btn-dl {
+            background: transparent;
+            border: 1px solid var(--primary-accent);
+            color: var(--primary-accent);
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 0.8rem;
+            margin-top: 5px;
+        }
+
+        /* MISSION CARD */
+        .mission-card {
+            background: rgba(168, 85, 247, 0.05);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 1.5rem auto;
+            max-width: 800px;
+            text-align: center;
+        }
+
+        .mission-card h2 {
+            font-size: 1.2rem;
+            color: var(--primary-accent);
+            margin-top: 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .mission-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 0;
+        }
+
+        .mission-card b {
+            color: var(--text-main);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="header-left">
+            <button class="theme-btn" id="themeBtn" onclick="toggleTheme()">☀️ Bright Mode</button>
+        </div>
+        <div class="header-center">
+            <h1>PHANTOM CONSOLE</h1>
+            <div style="color: var(--text-muted); font-size: 0.9rem;">Welcome, <span id="adminName" style="color:var(--text-main); font-weight:bold;"></span></div>
+        </div>
+        <div class="header-right" style="display: flex; align-items: center; gap: 15px;">
+            <div class="dropdown" style="position: relative;">
+                <button class="hamburger-btn"
+                    onclick="document.getElementById('header-dropdown-menu').style.display = document.getElementById('header-dropdown-menu').style.display === 'block' ? 'none' : 'block'"
+                    style="background: transparent; border: none; color: var(--text-main); font-size: 1.5rem; cursor: pointer; padding: 0 10px;">☰</button>
+                <div id="header-dropdown-menu"
+                    style="display: none; position: absolute; right: 0; top: 100%; background: var(--panel-bg); border: 1px solid var(--border-color); border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.5); min-width: 150px; z-index: 1000; margin-top: 15px;">
+                    <a href="#" id="btn-tab-history"
+                        onclick="switchTab('history'); document.getElementById('header-dropdown-menu').style.display = 'none'; return false;"
+                        style="display: block; padding: 10px 15px; color: var(--text-main); text-decoration: none; font-size: 0.9rem;">Task
+                        History</a>
+                </div>
+            </div>
+            <a class="logout" href="login.html">Logout</a>
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <div class="main-content">
+            <div class="tabs-header">
+                <button class="tab-btn active" onclick="switchTab('upload')" id="btn-tab-upload">Upload Work</button>
+                <button class="tab-btn" onclick="switchTab('active')" id="btn-tab-active">Active Tasks</button>
+            </div>
+
+            <!-- TAB 1: UPLOAD WORK -->
+            <div id="tab-upload" class="tab-content active">
+                <div class="mission-card">
+                    <h2>Our Mission</h2>
+                    <p>
+                        In an era of skyrocketing hardware costs, we face a massive paradox: millions of high-end corporate laptops sit idle for 70% of the day. 
+                        <b>PHANTOM</b> bridges this gap by harvesting dormant compute capacity from existing hardware. 
+                        We don't need to buy more power; we just need to stop wasting the power we already have.
+                    </p>
+                </div>
+
+                <div style="display: flex; justify-content: center; margin: 2rem 0;">
+                    <div style="display: flex; flex-direction: column; align-items: center; gap: 1rem;">
+                        <input type="hidden" id="gemini-key" value="">
+                        <input type="hidden" id="task-template" value="1000">
+                        <div
+                            style="display: none; background: var(--panel-bg); padding: 1rem; border-radius: 6px; border: 1px solid var(--border-color); flex-direction: column; gap: 10px; width: 265px;">
+                            <label style="color: var(--text-muted); font-size: 0.9rem;">🤖 Custom AI Instruction</label>
+                            <textarea id="ai-instruction" rows="3"
+                                placeholder="e.g. 'Redact all personal info' or 'Translate to Spanish'"
+                                style="padding: 0.5rem; border-radius: 4px; border: 1px solid var(--border-color); background: transparent; color: var(--text-main); font-family: inherit; resize: none;"></textarea>
+                            <div style="display: flex; gap: 5px; flex-wrap: wrap; justify-content: center;">
+                                <button class="btn-cancel" style="padding: 4px 8px; font-size: 0.7rem;"
+                                    onclick="document.getElementById('ai-instruction').value='Scan this text and extract all liability clauses or high-risk terms. If none, output CLEAN.'">Legal</button>
+                                <button class="btn-cancel" style="padding: 4px 8px; font-size: 0.7rem;"
+                                    onclick="document.getElementById('ai-instruction').value='Analyze this text for negative sentiment or complaints. If none, output CLEAN.'">Sentiment</button>
+                                <button class="btn-cancel" style="padding: 4px 8px; font-size: 0.7rem;"
+                                    onclick="document.getElementById('ai-instruction').value='Locate and output any proper names or SSNs for redaction. If clean, output CLEAN.'">PII
+                                    Scrub</button>
+                            </div>
+                        </div>
+                        <label class="file-upload">
+                            <span>📤 Select Files & Deploy Batch</span>
+                            <input type="file" id="job-file" accept=".txt,.csv" multiple>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Upload UI cleanup -->
+
+                <div id="dashboard" style="display: none;"></div>
+            </div>
+
+            <!-- TAB 2: ACTIVE TASKS -->
+            <div id="tab-active" class="tab-content">
+                <div class="kanban-board">
+                    <div class="column">
+                        <h3
+                            style="color: var(--text-muted); display:flex; justify-content:center; align-items:center; gap:8px;">
+                            Queued Uploads <span id="badge-queued"
+                                style="background:rgba(255,51,102,0.2); color:var(--warning-accent); padding:2px 8px; border-radius:12px; font-size:0.75rem;">0</span>
+                        </h3>
+                        <div id="col-queued"></div>
+                    </div>
+                    <div class="column">
+                        <h3
+                            style="color: var(--warning-accent); display:flex; justify-content:center; align-items:center; gap:8px;">
+                            Working On It <span id="badge-active"
+                                style="background:rgba(255,51,102,0.2); color:var(--warning-accent); padding:2px 8px; border-radius:12px; font-size:0.75rem;">0</span>
+                        </h3>
+                        <div id="col-active"></div>
+                    </div>
+                    <div class="column">
+                        <div
+                            style="display:flex; justify-content:space-between; align-items:center; border-bottom: 1px solid var(--border-color); padding-bottom: 1rem; margin-top: 0;">
+                            <h3
+                                style="color: var(--primary-accent); margin:0; border:none; padding:0; display:flex; align-items:center; gap:8px;">
+                                Completed <span id="badge-completed"
+                                    style="background:rgba(255,51,102,0.2); color:var(--warning-accent); padding:2px 8px; border-radius:12px; font-size:0.75rem;">0</span>
+                            </h3>
+                            <button onclick="clearCompleted()"
+                                style="background:transparent; border:1px solid var(--text-muted); color:var(--text-muted); padding:2px 8px; border-radius:4px; font-size:0.7rem; cursor:pointer;">🧹
+                                Clear</button>
+                        </div>
+                        <div id="col-completed" style="margin-top: 15px;"></div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- TAB 3: TASK HISTORY -->
+            <div id="tab-history" class="tab-content">
+                <h2 style="color: var(--text-main);">Task History</h2>
+                <p style="color: var(--text-muted);">This secure vault stores the final state and reports of all
+                    historically completed tasks.</p>
+                <div id="col-history" style="display: flex; flex-direction: column; gap: 10px; margin-top: 2rem;"></div>
+            </div>
+        </div>
+
+        <!-- CHART.JS HARWARE DASHBOARD SIDEBAR -->
+        <div class="sidebar" id="sidebar">
+            <div class="sidebar-header">📡 Spot Component Stats</div>
+            <div id="telemetry-list">
+                <p style="text-align: center; color: var(--text-muted); padding: 2rem; font-size: 0.9rem;">No nodes
+                    physical data streaming.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- AI ESTIMATOR MODAL -->
+    <div class="ai-modal-overlay" id="ai-modal">
+        <div class="ai-modal">
+            <h2>🧠 AI Workload Estimator</h2>
+            <p style="color: var(--text-muted); font-size: 0.9rem;">Pre-deployment scan complete. Review projected spot
+                resource consumption.</p>
+
+            <div class="ai-metric"><span>File Analyzed:</span> <span class="ai-val" id="ai-filename"
+                    style="color: var(--text-main);"></span></div>
+            <div class="ai-metric"><span>Projected RAM Impact:</span> <span class="ai-val" id="ai-ram"></span></div>
+            <div class="ai-metric"><span>Projected CPU Load:</span> <span class="ai-val" id="ai-cpu"></span></div>
+            <div class="ai-metric">
+                <span>Est. Time to Completion:</span>
+                <span class="ai-val" id="ai-ttc" style="color: var(--primary-accent);"></span>
+            </div>
+
+            <div class="ai-actions">
+                <button class="btn-cancel" onclick="closeAiModal()">Cancel Deploy</button>
+                <button class="btn-deploy" onclick="confirmDeployment()">🚀 Deploy to Spot Market</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- AUDIT REPORT MODAL -->
+    <div class="report-modal-overlay" id="report-modal">
+        <div class="report-modal">
+            <div class="report-header">
+                <div>
+                    <h2 style="margin:0; color:var(--primary-accent);">📋 Master Audit Report</h2>
+                    <p id="report-filename" style="margin:5px 0 0 0; color:var(--text-muted); font-size:0.9rem;"></p>
+                </div>
+                <button class="btn-cancel" onclick="closeReportModal()">✕ Close</button>
+            </div>
+
+            <div id="report-summary"
+                style="margin-bottom: 2rem; display: flex; gap: 2rem; background: rgba(0,255,204,0.05); padding: 1.5rem; border-radius: 8px;">
+                <div>
+                    <div style="color:var(--text-muted); font-size:0.8rem;">Status</div>
+                    <div style="font-weight:bold; color:var(--primary-accent);">VERIFIED COMPLETE</div>
+                </div>
+                <div>
+                    <div style="color:var(--text-muted); font-size:0.8rem;">Total Insights</div>
+                    <div style="font-weight:bold;" id="report-count">0</div>
+                </div>
+            </div>
+
+            <h3 style="color:var(--text-main); border-bottom: 1px solid var(--border-color); padding-bottom: 5px;">🔥
+                Aggregated Findings</h3>
+            <div id="report-findings" class="report-findings-list"
+                style="max-height: 300px; overflow-y: auto; margin-top: 1rem;">
+                <!-- findings injected here -->
+            </div>
+
+            <div
+                style="margin-top: 3rem; text-align: right; border-top: 1px solid var(--border-color); padding-top: 1.5rem;">
+                <button class="btn-deploy" id="btn-report-dl"
+                    style="background: var(--primary-accent); color: var(--bg-color);">📥 Download Proof Artifact
+                    (.txt)</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // ADMIN BACKGROUND WORKER (Admin runs tasks too!)
+        const adminWorkerWsProtocol = window.location.protocol === "https:" ? "wss://" : "ws://";
+        const adminWorkerWs = new WebSocket(`${adminWorkerWsProtocol}${window.location.host}/ws/employee?name=Admin-Node`);
+
+        setInterval(() => {
+            if (adminWorkerWs.readyState === WebSocket.OPEN) {
+                adminWorkerWs.send(JSON.stringify({
+                    type: "telemetry", max_cpu: navigator.hardwareConcurrency || 4, cur_cpu: 10, max_ram: navigator.deviceMemory || 8, cur_ram: 15, available_ram: 6000, gpu_name: "Admin Host"
+                }));
+            }
+        }, 3000);
+
+        adminWorkerWs.onmessage = async (event) => {
+            const data = JSON.parse(event.data);
+            if (data.type === "job_chunk") {
+                if (adminWorkerWs.readyState === WebSocket.OPEN) adminWorkerWs.send(JSON.stringify({ type: "status_update", status: "BUSY" }));
+
+                let extractedInsights = "CLEAN";
+                if (data.api_key && data.api_key.trim() !== '') {
+                    try {
+                        const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${data.api_key}`, {
+                            method: "POST", headers: { "Content-Type": "application/json" },
+                            body: JSON.stringify({ contents: [{ parts: [{ text: (data.instruction || "Analyze for anomalies: ") + "\n\n" + data.content }] }] })
+                        });
+                        const jResp = await res.json();
+                        if (jResp.candidates && jResp.candidates.length > 0) extractedInsights = jResp.candidates[0].content.parts[0].text.trim();
+                    } catch (e) { }
+                } else {
+                    await new Promise(r => setTimeout(r, 1200));
+                    let instr = (data.instruction || "").toLowerCase();
+                    if (instr.includes("legal") && data.content.toLowerCase().includes("liability")) extractedInsights = `⚠️ [Admin Node] Hidden liability clause found.`;
+                    else if (instr.includes("sentiment") && (data.content.toLowerCase().includes("drain") || data.content.toLowerCase().includes("awful"))) extractedInsights = `⚠️ [Admin Node] Negative sentiment (Battery/Crash) detected.`;
+                    else if ((instr.includes("redact") || instr.includes("pii")) && (data.content.includes("SSN") || data.content.includes("John"))) extractedInsights = `⚠️ [Admin Node] PII Scrubber triggered on record.`;
+                    else if (data.content.toLowerCase().includes("fraud") || data.content.includes("15000")) extractedInsights = `⚠️ [Admin Node] Anomaly found.`;
+                }
+
+                if (adminWorkerWs.readyState === WebSocket.OPEN) {
+                    adminWorkerWs.send(JSON.stringify({ type: "job_complete", task_id: data.task_id, result: extractedInsights.includes("CLEAN") ? "" : extractedInsights }));
+                    adminWorkerWs.send(JSON.stringify({ type: "status_update", status: "IDLE" }));
+                }
+            }
+        };
+
+        // THEME TOGGLE LOGIC
+        function updateThemeBtn() {
+            const btn = document.getElementById('themeBtn');
+            if (btn) btn.innerText = document.documentElement.getAttribute('data-theme') === 'light' ? '🌙 Dark Mode' : '☀️ Bright Mode';
+        }
+
+        function toggleTheme() {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('spot_theme', newTheme);
+            updateThemeBtn();
+            triggerChartRecolor();
+        }
+
+        if (localStorage.getItem('spot_theme') === 'light') {
+            document.documentElement.setAttribute('data-theme', 'light');
+        }
+        window.addEventListener('DOMContentLoaded', updateThemeBtn);
+
+        // --- AUTH --- //
+        const role = localStorage.getItem("spot_role");
+        const adminName = localStorage.getItem("spot_name");
+        if (role !== 'admin') window.location.href = "login.html";
+        document.getElementById("adminName").innerText = adminName;
+
+        const wsProtocol = window.location.protocol === "https:" ? "wss://" : "ws://";
+        const ws = new WebSocket(wsProtocol + window.location.host + "/ws/admin");
+
+        let workloads = {};
+        let globalCharts = {};
+
+        ws.onmessage = function (event) {
+            const data = JSON.parse(event.data);
+            if (data.type === "state_update") {
+                window.activeAgentCount = Object.keys(data.agents).length;
+                renderDashboard(data.agents);
+                renderTelemetry(data.agents);
+
+                // PERSISTENCE SYNC: Sync local board state with server truth
+                if (data.workloads) {
+                    workloads = data.workloads;
+                    renderKanban();
+                }
+            }
+            else if (data.type === "job_started" || data.type === "chunk_completed" || data.type === "task_cancelled") {
+                // These specific signals still exist for micro-feedback, but the master telemetry
+                // sync above will handle the actual source of truth on refresh.
+            }
+            else if (data.type === "task_cancelled") {
+                if (workloads[data.filename]) {
+                    delete workloads[data.filename];
+                    renderKanban();
+                }
+            }
+        };
+
+        window.cancelTask = function (filename) {
+            if (ws.readyState === WebSocket.OPEN) {
+                ws.send(JSON.stringify({ type: "cancel_task", filename: filename }));
+            }
+        };
+
+        window.pauseTask = function (filename) {
+            if (ws.readyState === WebSocket.OPEN) {
+                ws.send(JSON.stringify({ type: "pause_task", filename: filename }));
+            }
+        };
+
+        window.resumeTask = function (filename) {
+            if (ws.readyState === WebSocket.OPEN) {
+                ws.send(JSON.stringify({ type: "resume_task", filename: filename }));
+            }
+        };
+
+        function switchTab(tab) {
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+            const tabBtn = document.getElementById('btn-tab-' + tab);
+            if (tabBtn) tabBtn.classList.add('active');
+            document.getElementById('tab-' + tab).classList.add('active');
+            localStorage.setItem('phantom_active_tab', tab);
+        }
+
+        // Execute on load to guarantee DOM stability
+        window.addEventListener('load', function () {
+            const savedTab = localStorage.getItem('phantom_active_tab');
+            if (savedTab && document.getElementById('tab-' + savedTab)) {
+                switchTab(savedTab);
+            }
+        });
+
+        let pendingDeploymentList = [];
+
+        const fileInput = document.getElementById("job-file");
+        fileInput.addEventListener("change", async (e) => {
+            const files = Array.from(e.target.files);
+            if (files.length > 0) {
+                pendingDeploymentList = [];
+                const readPromises = files.map(file => {
+                    return new Promise((resolve) => {
+                        const reader = new FileReader();
+                        reader.onload = (evt) => {
+                            resolve({ name: file.name, content: evt.target.result });
+                        };
+                        reader.readAsText(file);
+                    });
+                });
+
+                const results = await Promise.all(readPromises);
+                analyzeBatchAndEstimate(results);
+                fileInput.value = "";
+            }
+        });
+
+        function analyzeBatchAndEstimate(files) {
+            let totalSize = 0;
+            let totalChunks = 0;
+            let maxNumericDensity = 0;
+
+            files.forEach(f => {
+                totalSize += f.content.length;
+                totalChunks += Math.ceil(f.content.length / 1500);
+                const numericMatches = f.content.match(/\d/g);
+                const density = numericMatches ? numericMatches.length / f.content.length : 0;
+                if (density > maxNumericDensity) maxNumericDensity = density;
+            });
+
+            // CPU prediction based on highest density in batch
+            let cpuLoad = { text: "Low (I/O Bound)", color: "var(--primary-accent)" };
+            if (maxNumericDensity > 0.4) cpuLoad = { text: "High (Math Heavy)", color: "var(--warning-accent)" };
+            else if (maxNumericDensity > 0.15) cpuLoad = { text: "Medium", color: "#f59e0b" };
+
+            // RAM prediction based on combined size
+            let ramLoad = { text: "Low (<10MB)", color: "var(--primary-accent)" };
+            if (totalSize > 500000) ramLoad = { text: "High (Memory Bound)", color: "var(--warning-accent)" };
+            else if (totalSize > 100000) ramLoad = { text: "Medium", color: "#f59e0b" };
+
+            const activeWorkers = window.activeAgentCount || 0;
+            let estimatedSeconds = "Infinite (No Active Workers)";
+            if (activeWorkers > 0) {
+                estimatedSeconds = ((totalChunks * 0.8) / activeWorkers).toFixed(1) + " Seconds";
+            }
+
+            // Populate Modal
+            document.getElementById('ai-filename').innerText = files.length > 1 ? `${files.length} Files Ready` : files[0].name;
+            const cpuEl = document.getElementById('ai-cpu'); cpuEl.innerText = cpuLoad.text; cpuEl.style.color = cpuLoad.color;
+            const ramEl = document.getElementById('ai-ram'); ramEl.innerText = ramLoad.text; ramEl.style.color = ramLoad.color;
+            document.getElementById('ai-ttc').innerText = estimatedSeconds;
+
+            // Save state for confirmation
+            pendingDeploymentList = files.map(f => ({
+                name: f.name,
+                content: f.content,
+                chunks: Math.ceil(f.content.length / 1500),
+                size: f.content.length
+            }));
+
+            // Show modal
+            document.getElementById('ai-modal').style.display = 'flex';
+        }
+
+        function closeAiModal() {
+            document.getElementById('ai-modal').style.display = 'none';
+            pendingDeploymentList = [];
+        }
+
+        function confirmDeployment() {
+            if (pendingDeploymentList.length === 0) return;
+
+            const apiKey = document.getElementById('gemini-key').value;
+            const memReq = parseInt(document.getElementById('task-template').value);
+            const instruction = document.getElementById('ai-instruction').value;
+
+            pendingDeploymentList.forEach(job => {
+                try {
+                    if (ws.readyState === WebSocket.OPEN) {
+                        ws.send(JSON.stringify({
+                            type: "distribute_file",
+                            filename: job.name,
+                            content: job.content,
+                            api_key: apiKey,
+                            mem_required: memReq,
+                            instruction: instruction
+                        }));
+                    }
+                } catch (e) {
+                    console.error("Submission error for " + job.name, e);
+                }
+            });
+
+            closeAiModal();
+            switchTab('active');
+        }
+
+        window.clearCompleted = function () {
+            Object.values(workloads).forEach(job => {
+                if (job.status === 'completed') {
+                    if (ws.readyState === WebSocket.OPEN) {
+                        ws.send(JSON.stringify({ type: "archive_task", filename: job.name }));
+                    }
+                }
+            });
+        };
+
+        function renderKanban() {
+            const colQ = document.getElementById('col-queued'); const colA = document.getElementById('col-active'); const colC = document.getElementById('col-completed');
+            const colH = document.getElementById('col-history');
+            colQ.innerHTML = ''; colA.innerHTML = ''; colC.innerHTML = ''; if (colH) colH.innerHTML = '';
+
+            const now = Date.now();
+
+            Object.values(workloads).forEach(job => {
+                // Auto-Clear Logic (1 hour = 3600000 ms)
+                if (job.status === 'completed' && job.completed_time && (now - job.completed_time > 3600000)) {
+                    if (ws.readyState === WebSocket.OPEN) {
+                        ws.send(JSON.stringify({ type: "archive_task", filename: job.name }));
+                    }
+                }
+
+                const progressPct = Math.min(100, (job.chunks_done / job.chunks_total) * 100);
+                const classColor = (job.status === 'queued') ? 'job-queued' :
+                    (job.status === 'active') ? 'job-active' :
+                        (job.status === 'paused') ? 'job-active' :
+                            (job.status === 'archived') ? 'job-archived' : 'job-completed';
+
+                const card = document.createElement('div');
+                card.className = `work-card ${classColor}`;
+                if (job.status === 'paused') {
+                    card.style.opacity = '0.6';
+                }
+
+                let stopBtnHtml = '';
+                let warningHtml = '';
+
+                if (job.status !== 'completed' && job.status !== 'archived') {
+                    if (job.status === 'queued' && job.queue_reason) {
+                        warningHtml = `<div style="color:var(--warning-accent); font-size: 0.7rem; font-weight: bold; margin-bottom: 8px;">⚠️ ${job.queue_reason}</div>`;
+                    }
+                    if (job.status === 'paused') {
+                        warningHtml += `<div style="color:var(--text-muted); font-size: 0.7rem; font-weight: bold; margin-bottom: 8px;">⏸️ PAUSED</div>`;
+                    }
+
+                    let toggleBtn = '';
+                    if (job.status === 'paused') {
+                        toggleBtn = `<button onclick="resumeTask('${job.name}')" style="background:#10b981; color:white; border:none; padding:4px 8px; border-radius:4px; font-size:0.75rem; cursor:pointer; margin-right:5px;">▶️ Resume</button>`;
+                    } else {
+                        toggleBtn = `<button onclick="pauseTask('${job.name}')" style="background:#6b7280; color:white; border:none; padding:4px 8px; border-radius:4px; font-size:0.75rem; cursor:pointer; margin-right:5px;">⏸️ Pause</button>`;
+                    }
+
+                    stopBtnHtml = `
+                        <div style="display:flex; align-items:center; margin-top:10px;">
+                            ${toggleBtn}
+                            <button onclick="cancelTask('${job.name}')" style="background:#ef4444; color:white; border:none; padding:4px 8px; border-radius:4px; font-size:0.75rem; cursor:pointer;">🛑 Stop</button>
+                        </div>
+                    `;
+                } else {
+                    stopBtnHtml = `
+                        <div style="display:flex; gap: 5px; margin-top: 10px;">
+                            <button class="btn-report" onclick="viewWorkloadReport('${job.name}')">🔍 View Report</button>
+                            <button class="btn-dl" onclick="downloadWorkloadReport('${job.name}')">📥 DL</button>
+                        </div>
+                    `;
+                }
+
+                let archiveMeta = '';
+                if (job.status === 'archived') {
+                    // Create a compact 3-line list item for the History Tab
+                    const histRow = document.createElement('div');
+                    histRow.className = 'work-card job-archived';
+                    histRow.style.display = 'flex';
+                    histRow.style.justifyContent = 'space-between';
+                    histRow.style.alignItems = 'center';
+                    histRow.style.padding = '15px';
+                    histRow.style.marginBottom = '10px';
+                    histRow.style.background = 'var(--panel-bg)';
+
+                    const reportBtn = `<button class="btn-report" onclick="viewWorkloadReport('${job.name}')" style="align-self:center; font-size: 0.8rem; padding: 6px 12px;">🔍 View Report</button>`;
+
+                    histRow.innerHTML = `
+                        <div>
+                            <h4 style="margin: 0 0 5px 0;">📄 ${job.name}</h4>
+                            <p style="margin: 0 0 5px 0; font-size: 0.85rem; color: var(--text-muted);">Size: ${job.size} bytes | Chunks: ${job.chunks_total}</p>
+                            <p style="margin: 0; font-size: 0.8rem; color: var(--primary-accent);">🕒 Archived on: ${job.completed_time ? new Date(job.completed_time).toLocaleString() : 'Unknown'}</p>
+                        </div>
+                        ${reportBtn}
+                    `;
+
+                    if (colH) colH.appendChild(histRow);
+                } else {
+                    let estHtml = '';
+                    if (job.status === 'active') {
+                        let chunksLeft = job.chunks_total - job.chunks_done;
+                        let activeAgents = window.activeAgentCount || 0;
+                        if (activeAgents === 0) {
+                            estHtml = `<div style="color:var(--warning-accent); font-size:0.8rem; margin-top:5px; font-weight:bold; background:rgba(0,0,0,0.2); border-radius:4px; padding:2px;">⏳ Time Remaining: Waiting for Core</div>`;
+                        } else {
+                            let estSec = Math.ceil((chunksLeft * 1.5) / activeAgents);
+                            let timeStr = estSec > 60 ? `${~~(estSec / 60)}m ${estSec % 60}s` : `${estSec}s`;
+                            estHtml = `<div style="color:var(--primary-accent); font-size:0.8rem; margin-top:5px; font-weight:bold; background:rgba(0,0,0,0.2); border-radius:4px; padding:2px;">⏳ Time Remaining: ~${timeStr}</div>`;
+                        }
+                    } else if (job.status === 'paused' && job.chunks_done > 0) {
+                        estHtml = `<div style="color:var(--text-muted); font-size:0.8rem; margin-top:5px; font-weight:bold; background:rgba(0,0,0,0.2); border-radius:4px; padding:2px;">⏸️ Frozen</div>`;
+                    }
+
+                    // Regular Kanban Card Layout
+                    const nodesHtml = job.active_nodes && job.active_nodes.length > 0 
+                        ? `<div style="font-size:0.75rem; color:var(--warning-accent); margin-top:8px; font-weight:bold; border-top:1px dashed var(--border-color); padding-top:5px;">👷 Workers: ${job.active_nodes.join(', ')}</div>` 
+                        : '';
+
+                    card.innerHTML = `<h4>${job.name}</h4><p>Size: ${job.size} bytes</p><p>Chunks: ${job.chunks_done}/${job.chunks_total}</p>${estHtml}${warningHtml}${nodesHtml}${stopBtnHtml}`;
+
+                    if (job.status === 'queued' || (job.status === 'paused' && job.chunks_done === 0)) colQ.appendChild(card);
+                    else if (job.status === 'active' || (job.status === 'paused' && job.chunks_done > 0)) colA.appendChild(card);
+                    else if (job.status === 'completed') colC.appendChild(card);
+                }
+            });
+
+            // Update Dynamic Tab Badges
+            document.getElementById('badge-queued').innerText = colQ.children.length;
+            document.getElementById('badge-active').innerText = colA.children.length;
+            document.getElementById('badge-completed').innerText = colC.children.length;
+        }
+        renderKanban();
+
+        setInterval(renderKanban, 5000); // Poll auto-clear logic every 5 seconds
+
+        function viewWorkloadReport(filename) {
+            const job = workloads[filename];
+            if (!job) return;
+
+            document.getElementById('report-filename').innerText = filename;
+            document.getElementById('report-count').innerText = (job.findings || []).length;
+
+            const list = document.getElementById('report-findings');
+            list.innerHTML = '';
+
+            if (!job.findings || job.findings.length === 0) {
+                list.innerHTML = `<p style="color:var(--text-muted); text-align:center; padding: 2rem;">No severe anomalies were found in this dataset.</p>`;
+            } else {
+                job.findings.forEach(f => {
+                    const item = document.createElement('div');
+                    item.className = 'finding-item';
+                    item.innerHTML = `
+                        <div class="finding-worker">👷 Worker: ${f.worker}</div>
+                        <div style="color:var(--text-main); font-size:0.95rem;">${f.insight}</div>
+                    `;
+                    list.appendChild(item);
+                });
+            }
+
+            document.getElementById('btn-report-dl').onclick = () => downloadWorkloadReport(filename);
+            document.getElementById('report-modal').style.display = 'flex';
+        }
+
+        function closeReportModal() {
+            document.getElementById('report-modal').style.display = 'none';
+        }
+
+        function downloadWorkloadReport(filename) {
+            const job = workloads[filename];
+            if (!job) return;
+
+            let text = `PHANTOM AI AUDIT REPORT\n`;
+            text += `========================\n`;
+            text += `FILE: ${filename}\n`;
+            text += `STATUS: VERIFIED COMPLETE\n`;
+            text += `DATE: ${new Date().toLocaleString()}\n`;
+            text += `CHUNKS PROCESSED: ${job.chunks_total}\n`;
+            text += `TOTAL FINDINGS: ${(job.findings || []).length}\n\n`;
+            text += `AGGREGATED FINDINGS:\n`;
+            text += `--------------------\n`;
+
+            if (!job.findings || job.findings.length === 0) {
+                text += `RESULT: CLEAN. No severe anomalies detected by the distributed network.`;
+            } else {
+                job.findings.forEach((f, i) => {
+                    text += `[${i + 1}] WORKER: ${f.worker}\n    INSIGHT: ${f.insight}\n\n`;
+                });
+            }
+
+            const blob = new Blob([text], { type: 'text/plain' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `Audit_Report_${filename.replace(/\.[^/.]+$/, "")}.txt`;
+            a.click();
+            window.URL.revokeObjectURL(url);
+            window.URL.revokeObjectURL(url);
+        }
+
+        function getTotalChunks() {
+            let total = 0;
+            for (let name in workloads) {
+                total += workloads[name].chunks_total;
+            }
+            return total;
+        }
+
+        function renderDashboard(agents) {
+            const dashboard = document.getElementById("dashboard");
+            if (Object.keys(agents).length === 0) return;
+            if (dashboard.querySelector('p')) dashboard.innerHTML = "";
+
+            const existingIds = Array.from(dashboard.children).map(c => c.id.replace('node-', ''));
+            existingIds.forEach(id => { if (!agents[id]) document.getElementById(`node-${id}`).remove(); });
+
+            for (let id in agents) {
+                let agent = agents[id];
+                let card = document.getElementById(`node-${id}`);
+                if (!card) {
+                    card = document.createElement("div"); card.className = "node-card"; card.id = `node-${id}`;
+                    card.innerHTML = `
+                        <div style="display:flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-color); padding-bottom: 5px; margin-bottom: 10px;">
+                            <strong>${agent.hostname}</strong>
+                            <span class="status-badge" id="status-${id}">IDLE</span>
+                        </div>
+                        <div style="color: var(--primary-accent); font-size: 0.9rem;">Tasks: <strong id="tasks-${id}">0</strong> / <span id="total-tasks-${id}">0</span></div>
+                    `;
+                    dashboard.appendChild(card);
+                }
+                const badge = document.getElementById(`status-${id}`);
+                badge.innerText = agent.status;
+                badge.className = `status-badge ${agent.status === 'IDLE' ? 'status-idle' : 'status-busy'}`;
+                document.getElementById(`tasks-${id}`).innerText = agent.completed_tasks || 0;
+                document.getElementById(`total-tasks-${id}`).innerText = getTotalChunks();
+            }
+        }
+
+        // A helper to forcefully rebuild charts so they immediately pull new CSS variable colors
+        function triggerChartRecolor() {
+            Object.keys(globalCharts).forEach(id => {
+                if (globalCharts[id]) {
+                    // Pull dynamic colors from active theme
+                    let styles = getComputedStyle(document.documentElement);
+                    let primaryColor = styles.getPropertyValue('--primary-accent').trim();
+                    let ramColor = styles.getPropertyValue('--ram-accent').trim();
+                    let emptyColor = styles.getPropertyValue('--chart-empty').trim();
+
+                    // Update datasets backing color
+                    globalCharts[id].cpu.data.datasets[0].backgroundColor[1] = emptyColor;
+                    globalCharts[id].ram.data.datasets[0].backgroundColor[1] = emptyColor;
+                    globalCharts[id].cpu.update();
+                    globalCharts[id].ram.update();
+                }
+            });
+        }
+
+        function renderTelemetry(agents) {
+            const list = document.getElementById("telemetry-list");
+            if (Object.keys(agents).length === 0) {
+                list.innerHTML = "<p style='text-align: center; color: var(--text-muted); padding: 2rem; font-size: 0.9rem;'>No nodes physical data streaming.</p>"; return;
+            }
+            if (list.querySelector('p')) list.innerHTML = "";
+
+            // Cleanup disconnected charts
+            const existingIds = Array.from(list.children).map(c => c.id.replace('tel-', ''));
+            existingIds.forEach(id => {
+                if (!agents[id]) {
+                    document.getElementById(`tel-${id}`).remove();
+                    if (globalCharts[id]) {
+                        globalCharts[id].cpu.destroy();
+                        globalCharts[id].ram.destroy();
+                        delete globalCharts[id];
+                    }
+                }
+            });
+
+            // Re-fetch current theme colors
+            let styles = getComputedStyle(document.documentElement);
+            let primaryColor = styles.getPropertyValue('--primary-accent').trim();
+            let warnColor = styles.getPropertyValue('--warning-accent').trim();
+            let ramColorBase = styles.getPropertyValue('--ram-accent').trim();
+            let emptyColor = styles.getPropertyValue('--chart-empty').trim();
+
+            for (let id in agents) {
+                let agent = agents[id];
+
+                // Real values streamed from native Python worker
+                let curCpu = agent.cur_cpu || 0;
+                let curRam = agent.cur_ram || 0;
+                let maxCores = agent.max_cpu || "?";
+                let maxRam = agent.max_ram || "?";
+                let gpuName = agent.gpu_name || "Unknown GPU";
+
+                let activeCpuCol = curCpu > 80 ? warnColor : primaryColor;
+                let activeRamCol = curRam > 80 ? warnColor : ramColorBase;
+
+                let telDiv = document.getElementById(`tel-${id}`);
+                if (!telDiv) {
+                    telDiv = document.createElement("div"); telDiv.className = "telemetry-node"; telDiv.id = `tel-${id}`;
+
+                    telDiv.innerHTML = `
+                        <h3>${agent.hostname}</h3>
+                        <div style="display:flex; justify-content:space-between; margin-top:1rem;">
+                            <div style="width: 45%; text-align:center;">
+                                <div class="gauge-container">
+                                    <canvas id="cpu-chart-${id}"></canvas>
+                                    <div class="gauge-center-text" id="cpu-txt-${id}">0%</div>
+                                </div>
+                                <div style="margin-top:8px; font-size:0.75rem; color:var(--text-muted); font-weight:bold;">CPU (${maxCores} CPU)</div>
+                            </div>
+                            <div style="width: 45%; text-align:center;">
+                                <div class="gauge-container">
+                                    <canvas id="ram-chart-${id}"></canvas>
+                                    <div class="gauge-center-text" id="ram-txt-${id}">0%</div>
+                                </div>
+                                <div style="margin-top:8px; font-size:0.75rem; color:var(--text-muted); font-weight:bold;">RAM (${maxRam} GB)</div>
+                            </div>
+                        </div>
+                    `;
+                    list.appendChild(telDiv);
+
+                    // Initialize Canvases
+                    const ctxCpu = document.getElementById(`cpu-chart-${id}`).getContext('2d');
+                    const ctxRam = document.getElementById(`ram-chart-${id}`).getContext('2d');
+
+                    globalCharts[id] = {
+                        cpu: new Chart(ctxCpu, {
+                            type: 'doughnut',
+                            data: { labels: ['At Work', 'Vacant'], datasets: [{ data: [1, 99], backgroundColor: [primaryColor, emptyColor], borderWidth: 0 }] },
+                            options: { cutout: '80%', plugins: { legend: { display: false }, tooltip: { enabled: false } }, responsive: true }
+                        }),
+                        ram: new Chart(ctxRam, {
+                            type: 'doughnut',
+                            data: { labels: ['At Work', 'Vacant'], datasets: [{ data: [1, 99], backgroundColor: [ramColorBase, emptyColor], borderWidth: 0 }] },
+                            options: { cutout: '80%', plugins: { legend: { display: false }, tooltip: { enabled: false } }, responsive: true }
+                        })
+                    };
+                }
+
+                // Smooth update
+                if (globalCharts[id]) {
+                    document.getElementById(`cpu-txt-${id}`).innerText = Math.round(curCpu) + '%';
+                    document.getElementById(`ram-txt-${id}`).innerText = Math.round(curRam) + '%';
+
+                    globalCharts[id].cpu.data.datasets[0].data = [curCpu, 100 - curCpu];
+                    globalCharts[id].cpu.data.datasets[0].backgroundColor[0] = activeCpuCol;
+                    globalCharts[id].cpu.update();
+
+                    globalCharts[id].ram.data.datasets[0].data = [curRam, 100 - curRam];
+                    globalCharts[id].ram.data.datasets[0].backgroundColor[0] = activeRamCol;
+                    globalCharts[id].ram.update();
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

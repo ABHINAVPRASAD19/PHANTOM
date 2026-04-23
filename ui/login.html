@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phantom</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0b0f19;
+            --panel-bg: rgba(20, 25, 40, 0.7);
+            --primary-accent: #00ffcc;
+            --warning-accent: #ff3366;
+            --admin-accent: #a855f7;
+            --ram-accent: #0a84ff;
+            --text-main: #e2e8f0;
+            --text-muted: #8fa0ba;
+            --grid-color: rgba(0, 255, 204, 0.05);
+            --border-color: rgba(0, 255, 204, 0.2);
+            --input-bg: rgba(0, 0, 0, 0.5);
+        }
+
+        [data-theme="light"] {
+            --bg-color: #cbd5e1;
+            --panel-bg: rgba(226, 232, 240, 0.8);
+            --primary-accent: #0f766e;
+            --warning-accent: #b45309;
+            --admin-accent: #7e22ce;
+            --ram-accent: #6d28d9;
+            --text-main: #0f172a;
+            --text-muted: #334155;
+            --grid-color: rgba(15, 118, 110, 0.1);
+            --border-color: rgba(15, 118, 110, 0.2);
+            --input-bg: rgba(241, 245, 249, 0.9);
+        }
+
+        body {
+            margin: 0;
+            background-color: var(--bg-color);
+            background-image:
+                linear-gradient(var(--grid-color) 1px, transparent 1px),
+                linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+            background-size: 30px 30px;
+            font-family: 'Inter', sans-serif;
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .login-box {
+            position: relative;
+            background: var(--panel-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 3rem;
+            width: 400px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+            text-align: center;
+            transition: background-color 0.3s;
+        }
+
+        h1 {
+            color: var(--primary-accent);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 0.5rem;
+            margin-top: 0;
+            transition: color 0.3s;
+        }
+
+        .input-group {
+            margin: 2rem 0;
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        input {
+            width: 100%;
+            padding: 1rem;
+            background: var(--input-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            color: var(--text-main);
+            font-size: 1rem;
+            box-sizing: border-box;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        input:focus {
+            border-color: var(--primary-accent);
+        }
+
+        /* NEW TOGGLE UI */
+        .role-toggle {
+            display: flex;
+            background: var(--input-bg);
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            margin-bottom: 2.5rem;
+            margin-top: 1.5rem;
+            overflow: hidden;
+        }
+
+        .role-btn {
+            flex: 1;
+            padding: 1rem;
+            cursor: pointer;
+            font-size: 0.85rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            transition: all 0.3s ease;
+        }
+
+        .role-btn.active.emp {
+            background: var(--primary-accent);
+            color: var(--bg-color);
+        }
+
+        .role-btn.active.adm {
+            background: var(--admin-accent);
+            color: var(--bg-color);
+        }
+
+        /* PRIMARY SUBMIT BTN */
+        .submit-btn {
+            width: 100%;
+            padding: 1rem;
+            background: transparent;
+            color: var(--primary-accent);
+            border: 2px solid var(--primary-accent);
+            border-radius: 6px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+        }
+
+        .submit-btn:hover {
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            transform: scale(1.02);
+        }
+
+        .theme-btn {
+            position: fixed;
+            top: 2rem;
+            right: 2rem;
+            background: var(--primary-accent);
+            color: var(--bg-color);
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+            width: auto;
+            flex: none;
+            transition: transform 0.2s;
+        }
+
+        .theme-btn:hover {
+            transform: scale(1.05);
+        }
+
+        .mission-statement {
+            max-width: 500px;
+            margin-top: 2.5rem;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            line-height: 1.6;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .mission-statement b {
+            color: var(--primary-accent);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+
+<body>
+    <button class="theme-btn" id="themeBtn" onclick="toggleTheme()">☀️ Bright Mode</button>
+
+    <div class="login-box">
+        <h1 id="title-text">PHANTOM</h1>
+        <p style="color: var(--text-muted); margin: 0; font-size: 0.9rem;">Identify yourself to enter the protocol.</p>
+
+        <div class="role-toggle">
+            <div id="btn-role-emp" class="role-btn active emp" onclick="setRole('employee')">Employee</div>
+            <div id="btn-role-adm" class="role-btn adm" onclick="setRole('admin')">Admin Hub</div>
+        </div>
+
+        <div class="input-group">
+            <label>Enter Username</label>
+            <input type="text" id="username" placeholder="" autocomplete="off">
+        </div>
+
+        <div class="input-group" id="password-group" style="display: none; margin-top: -1rem;">
+            <label>Admin Passcode</label>
+            <input type="password" id="password" placeholder="Enter secure key" autocomplete="off">
+        </div>
+
+        <button id="submit-btn" class="submit-btn" onclick="executeLogin()">Join as Employee</button>
+    </div>
+
+    <div class="mission-statement">
+        In an era where AI demand has driven hardware prices to record highs, we face a massive paradox: millions of high-end corporate laptops sit idle for 70% of the day. <b>PHANTOM</b> bridges this gap by harvesting dormant compute capacity from existing hardware.
+    </div>
+
+    <script>
+        // MAIN ROLE TOGGLE LOGIC
+        let currentRole = 'employee';
+
+        function setRole(str) {
+            currentRole = str;
+            document.getElementById('btn-role-emp').classList.remove('active');
+            document.getElementById('btn-role-adm').classList.remove('active');
+
+            const submitBtn = document.getElementById('submit-btn');
+            const titleText = document.getElementById('title-text');
+            const inputField = document.getElementById('username');
+            const themeBtn = document.getElementById('themeBtn');
+
+            if (str === 'employee') {
+                document.getElementById('btn-role-emp').classList.add('active');
+                document.getElementById('password-group').style.display = 'none';
+                document.getElementById('password').value = '';
+
+                titleText.innerText = "Employee Login";
+                titleText.style.color = "var(--primary-accent)";
+
+                inputField.placeholder = "e.g. Employee Name";
+
+                submitBtn.innerText = "Join as Employee";
+                submitBtn.style.color = "var(--primary-accent)";
+                submitBtn.style.borderColor = "var(--primary-accent)";
+
+                // Hover effect logic
+                submitBtn.onmouseover = function () { submitBtn.style.background = "var(--primary-accent)"; submitBtn.style.color = "var(--bg-color)"; }
+                submitBtn.onmouseleave = function () { submitBtn.style.background = "transparent"; submitBtn.style.color = "var(--primary-accent)"; }
+
+                if (themeBtn) themeBtn.style.background = "var(--primary-accent)";
+
+            } else {
+                document.getElementById('btn-role-adm').classList.add('active');
+                document.getElementById('password-group').style.display = 'block';
+
+                titleText.innerText = "Admin Control";
+                titleText.style.color = "var(--admin-accent)";
+
+                inputField.placeholder = "e.g. Admin Name";
+
+                submitBtn.innerText = "Login as Admin";
+                submitBtn.style.color = "var(--admin-accent)";
+                submitBtn.style.borderColor = "var(--admin-accent)";
+
+                // Hover effect logic
+                submitBtn.onmouseover = function () { submitBtn.style.background = "var(--admin-accent)"; submitBtn.style.color = "var(--bg-color)"; }
+                submitBtn.onmouseleave = function () { submitBtn.style.background = "transparent"; submitBtn.style.color = "var(--admin-accent)"; }
+
+                if (themeBtn) themeBtn.style.background = "var(--admin-accent)";
+            }
+        }
+
+        // Ensure default hover state is correct
+        setRole('employee');
+
+        // THEME LOGIC
+        function updateThemeBtn() {
+            const btn = document.getElementById('themeBtn');
+            if (btn) btn.innerText = document.documentElement.getAttribute('data-theme') === 'light' ? '🌙 Dark Mode' : '☀️ Bright Mode';
+        }
+
+        function toggleTheme() {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('spot_theme', newTheme);
+            updateThemeBtn();
+        }
+
+        if (localStorage.getItem('spot_theme') === 'light') {
+            document.documentElement.setAttribute('data-theme', 'light');
+        }
+        window.addEventListener('DOMContentLoaded', updateThemeBtn);
+
+        // LOGIN SUBMIT
+        function executeLogin() {
+            const name = document.getElementById('username').value.trim();
+            if (!name) {
+                alert("Please enter a username.");
+                return;
+            }
+
+            localStorage.setItem("spot_role", currentRole);
+            localStorage.setItem("spot_name", name);
+
+            if (currentRole === 'admin') {
+                const pass = document.getElementById('password').value.trim();
+                // Extremely simple literal check for the hackathon demo
+                if (pass !== "123") {
+                    alert("⚠️ Access Denied: Incorrect Admin Passcode.");
+                    return;
+                }
+                window.location.href = "admin.html";
+            } else {
+                window.location.href = "employee.html";
+            }
+        }
+
+        // ENTER KEY SUBMISSION
+        document.getElementById('username').addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') executeLogin();
+        });
+
+        document.getElementById('password').addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') executeLogin();
+        });
+    </script>
+</body>
+
+</html>
